@@ -85,7 +85,8 @@
   background-size: 100% 100%;
 }
 .LeftSummary,
-.P6LeftSummary {
+.P6LeftSummary,
+.P2LeftSummary {
   left: 1rem;
 }
 .LeftHeader {
@@ -97,6 +98,7 @@
   font-size: 1rem;
   font-weight: 700;
   color: #00e4ff;
+  line-height: 1.2rem;
 }
 .XuanLine {
   width: 20rem;
@@ -218,9 +220,9 @@
 /***********************    Right      start      ******** */
 .RightBoxCon {
   position: absolute;
-  right: 1.5rem;
-  width: 13rem;
-  top: 1.45rem;
+  right: 24.875rem;
+  top: 34rem;
+  background: rgba(1, 39, 76, 0.5);
 }
 .titleTd {
   text-align: left;
@@ -420,6 +422,10 @@
 /*************part2  part  start  *********************/
 .P2LeftContent {
   padding: 0 2rem;
+  display: none;
+}
+.P2LeftContent.active {
+  display: block;
 }
 .LeftConTitle2 {
   margin-top: .9rem;
@@ -704,6 +710,61 @@
 .rotatel {
   transform: rotate(180deg);
   transform-origin: center;
+}
+.typePiecanvasBox,
+.radioPiecanvasBox {
+  width: 20rem;
+  position: relative;
+  left: -1.1rem;
+  height: 13.5rem;
+}
+.themeContent {
+  display: none;
+}
+.themeContent.active {
+  display: block;
+}
+.padding80 {
+  padding: 0 2rem;
+}
+.warnCon {
+  margin-bottom: 1rem;
+}
+.warnBox {
+  text-align: left;
+  line-height: 1.6rem;
+  font-size: .9rem;
+  color: #bbd4ff;
+}
+.warnBox .downItem {
+  color: #f7823c;
+}
+.P2LeftSummary .secondHeader {
+  height: 1.6rem;
+  padding-top: 0rem;
+}
+.P2LeftSummary .secondHeader .LeftHeaderTitle {
+  line-height: 1.6rem;
+  text-align: center;
+}
+.P2LeftSummary .splitLine {
+  margin: .5rem auto;
+  width: 82%;
+}
+.P2RightBoxCon {
+  top: 2rem;
+}
+.changeTable .upIcon,
+.changeTable .downIcon {
+  width: .55rem;
+  height: .65rem;
+  margin-right: 10px;
+}
+.changeTable .upIcon {
+  background: url(../img/yyl_up.png) no-repeat;
+}
+.changeTable .downIcon {
+  background: url(../img/yyl_down.png) no-repeat;
 }
 /*************part2  part  end  ******************  ***/
 /*************part3  part  end  ******************  ***/
@@ -1014,7 +1075,8 @@
 }
 /*************part5  part  end  ******************  ***/
 /*************part6 blueSky  end  ******************  ***/
-.blueSky {
+.blueSky,
+.WaterQulMonitor {
   position: relative;
   top: -2.5rem;
 }
@@ -1053,7 +1115,8 @@
 }
 .P6LeftSummary,
 .P6RightSummary,
-.P6RightSummary2 {
+.P6RightSummary2,
+.P2LeftSummary {
   top: 0;
   position: absolute;
   width: 21.075rem;
@@ -1062,17 +1125,17 @@
   background-size: 100% 100%;
   font-size: .75rem;
 }
-.P6LeftSummary .LeftHeader,
-.P6RightSummary .LeftHeader,
-.P6RightSummary2 .LeftHeader {
+.LeftHeader {
   height: 3.3rem;
   padding-top: 1.9rem;
 }
-.P6LeftSummary .LeftHeader {
+.P6LeftSummary .LeftHeader,
+.P2LeftSummary .LeftHeader {
   text-align: right;
   padding-right: 2.3rem;
 }
-.P6LeftSummary .title {
+.P6LeftSummary .title,
+.P2LeftSummary .title {
   font-size: .8rem;
 }
 .P6RightSummary {

@@ -405,3 +405,172 @@ function cloneObj(origin, target) {
 	}
 	return target;
 }
+/*************饼图 至少是设置一个高亮******* */
+/******
+ * chartNum  饼图原型对象
+ * data      需要需然的数据对象
+ */
+function PieAutoHighLight(chartNum,data){
+	
+    setTimeout(function() {
+		chartNum.dispatchAction({
+			type: 'highlight',
+			seriesIndex: 0,
+			dataIndex: 0
+		});
+        chartNum.on('mouseover', function(params) {
+            console.log('over');
+            if (params.name == data[0].name) {
+                chartNum.dispatchAction({
+                    type: 'highlight',
+                    seriesIndex: 0,
+                    dataIndex: 0
+                });
+            } else {
+                chartNum.dispatchAction({
+                    type: 'downplay',
+                    seriesIndex: 0,
+                    dataIndex: 0
+                });
+            }
+        });
+    
+        chartNum.on('mouseout', function(params) {
+            console.log('out');
+            chartNum.dispatchAction({
+                type: 'highlight',
+                seriesIndex: 0,
+                dataIndex: 0
+            });
+        });
+    }, 1000);
+}
+/**
+ * 
+ * @param {*} colors 图形的颜色设置组合
+ * @param {*} format label的内容的显示的各式设置
+ * @param {*} data   图形展示的基本数据
+ */
+function getPieOption(colors, format, data) {
+    var option = {
+        grid: {
+			top: 0,
+			left:20,
+			right:20
+        },
+        color: colors,
+        series: [{
+                name: '访问来源',
+                type: 'pie',
+                startAngle: 0,
+                center: ['48%', '50%'],
+                radius: ['45%', '55%'],
+                avoidLabelOverlap: false,
+				startAngle:98,
+                label: {
+                    normal: {
+                        show: true,
+                        //position: 'center',
+                        color: '#bbd4ff',
+                        //align: 'center',
+                        //verticalAlign: 'middle',
+                        formatter:format ,
+                        rich: {
+                            text1: {
+                                color: '#bbd4ff',
+                                fontSize: 29,
+                                padding: 3
+                            },
+                            value: {
+                                color: '#bbd4ff',
+                                fontSize: 36,
+                                padding: [6,0,6,0]
+                            },
+                            text2:{
+                                color: '#bbd4ff',
+                                fontSize: 32,
+                                padding: [5,0, 5,0]
+                            }
+                            
+                        },
+                    },
+                    emphasis: {
+						show: true,
+						color:'#ffffff'
+                    }
+                },
+                labelLine: {
+                    normal: {
+						show: true,
+						borderWidth:3,
+                    }
+                },
+                data: data
+            }
+
+        ]
+    };
+    return option;
+}
+function getPieOption2(colors, format,startRadio, data){
+	var option = {
+        grid: {
+			top: 0,
+			left:20,
+			right:20
+        },
+        color: colors,
+        series: [{
+                name: '访问来源',
+                type: 'pie',
+                startAngle: 0,
+                center: ['50%', '50%'],
+                radius: ['60%', '70%'],
+                avoidLabelOverlap: false,
+				startAngle:startRadio,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center',
+                        color: '#bbd4ff',
+                        align: 'center',
+                        verticalAlign: 'middle',
+                        formatter:format ,
+                        rich: {
+                            text1: {
+                                color: '#bbd4ff',
+                                fontSize: 36,
+                                padding: 3
+                            },
+                            value: {
+                                color: '#bbd4ff',
+								fontSize: 48,
+								fontWeight:'bolder',
+                                padding: [6,0,6,0]
+                            },
+                            text2:{
+                                color: '#bbd4ff',
+                                fontSize: 24,
+                                padding: [5,0, 5,0]
+                            }
+                            
+                        },
+                    },
+                    emphasis: {
+						show: true,
+						color:'#ffffff'
+                    }
+                },
+                labelLine: {
+                    normal: {
+						show: true,
+						borderWidth:3,
+                    }
+                },
+                data: data
+            }
+
+        ]
+    };
+    return option;
+}

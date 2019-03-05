@@ -95,7 +95,7 @@
 	background-size:100% 100%;
 	
 }
-.LeftSummary,.P6LeftSummary{
+.LeftSummary,.P6LeftSummary,.P2LeftSummary{
 	left:1rem;
 }
 .LeftHeader{
@@ -106,6 +106,7 @@
 		font-size: 1rem;
 		font-weight: 700;
 		color: #00e4ff;
+		line-height: 1.2rem;
 	}
 }
 
@@ -241,9 +242,9 @@
 /***********************    Right      start      ******** */
 .RightBoxCon{
 	position: absolute;
-	right: 1.5rem;
-	width: 13rem;
-	top: 1.45rem;
+	right: 24.875rem;
+	top:34rem;
+	background:@lightblue;
 }
 
 .titleTd{
@@ -462,7 +463,10 @@
 /*************part2  part  start  *********************/
 .P2LeftContent{
 	padding: 0 2rem;
-	
+	display: none;
+}
+.P2LeftContent.active{
+	display: block
 }
 .LeftConTitle2{
 	margin-top:.9rem;
@@ -790,7 +794,65 @@
 .rotatel{
 	transform:rotate(180deg);
 	transform-origin: center;
-}	 
+}	
+.typePiecanvasBox,.radioPiecanvasBox{
+	width: 20rem;
+    position: relative;
+    left: -1.1rem;
+    height: 13.5rem;
+	//border:1px solid yellow;
+}
+.themeContent{
+    display: none;
+}
+.themeContent.active{
+    display: block;
+}
+.padding80{
+	padding:0 2rem;
+}
+.warnCon{
+	margin-bottom: 1rem;
+}
+.warnBox{
+	text-align: left;
+	line-height: 1.6rem;
+    font-size: .9rem;
+	color: #bbd4ff;
+	.downItem{
+		color: #f7823c;
+ }
+}
+.P2LeftSummary{
+	.secondHeader{
+		height:1.6rem;
+		padding-top: 0rem;
+		.LeftHeaderTitle{
+			line-height:1.6rem;
+			text-align: center;
+		}
+	}
+	.splitLine {
+		margin: .5rem auto;
+		width: 82%;
+	}
+}
+.P2RightBoxCon{
+	top: 2rem;
+}
+.changeTable{
+	.upIcon,.downIcon{
+		width: .55rem;
+		height: .65rem;
+		margin-right:10px;
+	}
+	.upIcon{
+		background: url(../img/yyl_up.png) no-repeat;
+	}
+	.downIcon{
+		background: url(../img/yyl_down.png) no-repeat;
+	}
+}
 /*************part2  part  end  ******************  ***/
 /*************part3  part  end  ******************  ***/
 .P3LeftSummary{
@@ -1136,7 +1198,7 @@
 }
 /*************part5  part  end  ******************  ***/
 /*************part6 blueSky  end  ******************  ***/
-.blueSky {
+.blueSky,.WaterQulMonitor {
     position: relative;
     top: -2.5rem;
 }
@@ -1173,22 +1235,21 @@
 		background-size:100% 100%;
 	}
 }
-.P6LeftSummary,.P6RightSummary,.P6RightSummary2{
+.P6LeftSummary,.P6RightSummary,.P6RightSummary2,.P2LeftSummary{
 	top:0;
 	position: absolute;
 	width: 21.075rem;
 	height: 41.5rem; 
 	background: url(../img/part_air_div.png) no-repeat;
 	background-size:100% 100%;
-	.LeftHeader {
-		height: 3.3rem;
-		padding-top: 1.9rem;
-	}
 	font-size:.75rem;
 	
 }
-
-.P6LeftSummary{
+.LeftHeader {
+	height: 3.3rem;
+	padding-top: 1.9rem;
+}
+.P6LeftSummary,.P2LeftSummary{
 	.LeftHeader {
 		text-align: right;
 		padding-right: 2.3rem;
@@ -1297,6 +1358,7 @@
 .icon{
 	display: inline-block;
 }
+
 .downIcon,.upIcon{
 	width: .55rem;
 	height: .65rem;	

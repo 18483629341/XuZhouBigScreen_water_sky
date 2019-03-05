@@ -55,8 +55,10 @@ a:link {
 }
 .header .HeaderCenter .h28 {
   height: 58.9%;
-  font-size: 1.7rem;
-  line-height: 2.5rem;
+  font-size: 1.85rem;
+  line-height: 3.1rem;
+  font-weight: 700;
+  color: #00f8ff;
 }
 .header .HeaderCenter .TitleImg {
   display: none;
