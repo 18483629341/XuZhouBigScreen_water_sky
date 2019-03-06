@@ -9,36 +9,38 @@ $(document).ready(function () {
 		P2popContorl();
 		moduleToggle('.map2');
 		setRadio();
-		
+		mapToggle2();
+		autoScrollFun('#scrollBox1');
+        autoScrollFun('#scrollBox2');
 		
 		//纱帽弹窗上的线图   绘制
 		
-		initPopupObjByData0=new InitPopupObjByData('.PopUpBox_sha',dataSha);
-		popupObj0=initPopupObjByData0.init('P2comCanvas');
-		initPopCanvas = new InitPopCanvas(popupObj0);
-		initPopCanvas.initCanvas();
-
+		// initPopupObjByData0=new InitPopupObjByData('.PopUpBox_sha',dataSha);
+		// popupObj0=initPopupObjByData0.init('P2comCanvas');
+		// initPopCanvas = new InitPopCanvas(popupObj0);
+		// initPopCanvas.initCanvas();
+		//线图
+		initPopupObjByData0 = new InitPopupObjByData('.PopUpBox_sha', dataSha);
+		popupObj0 = initPopupObjByData0.init('P2comCanvas');
+		initPopCanvas0= new InitPopCanvas(popupObj0);
+		initPopCanvas0.initCanvas();
+        shaPraghToggle()
         //自动站弹窗上的线图   绘制
 		
-		initPopupObjByData10=new InitPopupObjByData('.PopUpBox_zi',dataZiDate);
-		popupObj10=initPopupObjByData10.init('P2ziCanvas');
-		initPopupObjByData11=new InitPopupObjByData('.PopUpBox_zi',dataZiHour);
-		popupObj11=initPopupObjByData11.init('P2ziCanvas');
+		// initPopupObjByData10=new InitPopupObjByData('.PopUpBox_zi',dataZiDate);
+		// popupObj10=initPopupObjByData10.init('P2ziCanvas');
+		// initPopupObjByData11=new InitPopupObjByData('.PopUpBox_zi',dataZiHour);
+		// popupObj11=initPopupObjByData11.init('P2ziCanvas');
 
-		initPopCanvas1 = new InitPopCanvas(popupObj10);
-		initPopCanvas1.initCanvas();
+		// initPopCanvas1 = new InitPopCanvas(popupObj10);
+		// initPopCanvas1.initCanvas();
 
 
 		var Pie1=echarts.init(document.getElementById('typePiecanvasBox'));
 		Pie1.setOption(option1);
 		var Pie2=echarts.init(document.getElementById('radioPiecanvasBox'));
 		Pie2.setOption(option2);
-		Pie2.dispatchAction({
-			type: 'highlight',
-			seriesIndex: 0,
-			dataIndex: 0
-		});
-		PieAutoHighLight(chartNum,qualifiedData);
+		PieAutoHighLight(Pie2,qualifiedData);
 	});
 });
 
@@ -47,13 +49,13 @@ window.onresize = function () {
 	autoFitNav();
 	autoFitContent();
 	setRadio();  
-	initPopCanvas.popUpChart.resize();  
-	initPopCanvas.initCanvas();
+	initPopCanvas0.popUpChart.resize();  
+	initPopCanvas0.initCanvas();
 	initPopCanvas1.popUpChart.resize();
 	initPopCanvas1.initCanvas();
 	
 }
-let initPopCanvas=null;
+let initPopCanvas0=null;
 let initPopCanvas1=null;
 var initPopupObjByData0=null;
 var popupObj0=null;
@@ -79,23 +81,26 @@ var startRidio=parseInt(90-qualifiedData[1].value/(qualifiedData[0].value+qualif
 var option1=getPieOption(['#4ea9ff','#0067ff','#00ff00','#ffff00','#ffd700','#fc0105'],'{text1|{b}}{value|{d}}{text2|%}',sectionData);
 var option2=getPieOption2(['#0067ff','transparent'],'{text1|{b}}\n{value|{d}}{text2|%}',startRidio,qualifiedData);
 /*********popup   线框图的相关数据 /纱帽  ***** */
-/*********popup1   线框图的相关数据 / 净化厂 的数据对象数组***** */
-var dataSha={                                              //！！！！！！！！！！！！！！！！！需要后台传输的数据
-	xData:['10-01','10-02','10-03','10-04','10-05','10-06','10-07','10-08','10-09','10-10','10-11','10-12'],
-	dataArr:[
-		{
-			name:"",
-			andanArr : [9.0, 6.0, 8.0,7.0, 6.0, 8.0, 9.0, 6.0, 8.0,  9.0, 6.0, 8.0],
-			MnArr : [4.0, 6.0, 5.5,5.5, 5.5, 4.0, 6.0, 5.5,  4.0,  5.5, 4.0, 6.0], 
-			PArr : [6.0, 5.5, 6.0, 8.8, 6.6, 5.0, 6.0, 5.5, 4.0, 6.0, 4.0, 5.6]
+/*********popup 手动站   线框图的相关数据 / 净化厂 的数据对象数组***** */
+var dataSha = { //！！！！！！！！！！！！！！！！！需要后台传输的数据
+	xData: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07', '10-08', '10-09', '10-10', '10-11', '10-12'],
+	promtArr: ['氨氮', '高锰酸钾指数', '化学需氧量', '溶解氧', '总磷'],
+	unit: ['mg/l'],
+	dataArr: [{
+			//name:"",
+			'andanArr': [9.0, 6.0, 8.0, 7.0, 6.0, 8.0, 9.0, 6.0, 8.0, 9.0, 6.0, 8.0],
+			'MnArr': [4.0, 6.0, 5.5, 5.5, 5.5, 4.0, 6.0, 5.5, 4.0, 5.5, 4.0, 6.0],
+			'CheOxyArr': [5.5, 4.0, 5.5, 4.0, 4.0, 6.0, 5.5, 5.5, 5.5, 4.0, 6.0, 6.0],
+			'DisOxyArr': [8.0, 9.0, 6.0, 9.0, 6.0, 12.0, 7.0, 6.0, 8.0, 9.0, 6.0, 8.0], //溶解氧
+			'PArr': [6.0, 5.5, 6.0, 8.8, 6.6, 5.0, 6.0, 5.5, 4.0, 6.0, 4.0, 5.6]
 		},
-		
-	]
-}
 
+	],
+	waterAssArr: []
+}
 $("body").on('click','.PopUpBox_sha .tabSpan',function(){
 	$(this).toggleClass('active');
-	initPopCanvas.initCanvas();
+	initPopCanvas0.initCanvas();
 })
 /*********popup1   线框图的相关数据 /  自动站 日期类型***** */
 var dataZiDate={                                              //！！！！！！！！！！！！！！！！！需要后台传输的数据
@@ -145,27 +150,32 @@ $("body").on('click','.PopUpBox_zi .timeTypeSpan',function(){
 })
 
 /* 地图div的交互   */
-var mainActive = 'map6'; //主页面活动的模块div
+var mainActive = 'map2'; //主页面活动的模块div
 function mapToggle2(){
 	//P1tabLi
 	$("body").on('click','.P6tabLi',function(){
 		$(this).siblings('.P6tabLi').removeClass('active');
 		$(this).addClass('active');
-	    if($(this).attr("data-map")=="PM1"){
-			$('.map6').removeClass('active');
-            $('.map61').addClass('active');
-            mainActive='map61';
-            $('.js_title').html('全省2018年PM<sub>2.5</sub>年均浓度变化趋势');           
-            myChart3.setOption(option32);
-            $('.P6legendBox1').addClass('show');
-		}else if($(this).attr("data-map")=="GoodWeath1"){
-			$('.map61').removeClass('active');
-            $('.map6').addClass('active');
-            mainActive='map6';
-            $('.js_title').html('全省2018年优良天数比例变化趋势');
-            myChart3.setOption(option31);
-            $('.P6legendBox1').removeClass('show');
+		var type=$(this).attr("data-type");
+		$('.MapBox').removeClass('active');
+		$('.MapBox[data-type='+type+']').addClass('active');
+		$('.P2LeftContent').removeClass('active');
+		$('.P2LeftContent[data-type='+type+']').addClass('active');
+	    if(type=="isQulified"){
+            mainActive='map21';
+            $('.js_title').html('水质达标状况');           
+		}else if(type=="waterMonitor"){
+            mainActive='map2';
+            $('.js_title').html('水质监测状况');
 		}
     })
+}
+function shaPraghToggle() {
+	$("body").on('click', '.PopUpBox_sha .lineGraph', function () {
+		console.log(1);
+		$(this).toggleClass('active');
+		$('.PopUpBox_sha .lineCanvas').addClass('active');
+		initPopCanvas0.initCanvas();
+	})
 }
 

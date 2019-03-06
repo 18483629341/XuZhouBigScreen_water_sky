@@ -16,7 +16,11 @@
   background-size: 100% 100%;
 }
 .map2 {
-  background: url(../img/map1.png) no-repeat;
+  background: url(../img/map3.png) no-repeat;
+  background-size: 100% 100%;
+}
+.map21 {
+  background: url(../img/map4.png) no-repeat;
   background-size: 100% 100%;
 }
 .map3 {
@@ -88,17 +92,6 @@
 .P6LeftSummary,
 .P2LeftSummary {
   left: 1rem;
-}
-.LeftHeader {
-  height: 3.4rem;
-  padding-top: 2rem;
-  padding-left: .5rem;
-}
-.LeftHeader .LeftHeaderTitle {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #00e4ff;
-  line-height: 1.2rem;
 }
 .XuanLine {
   width: 20rem;
@@ -432,7 +425,8 @@
 }
 .splitLine {
   margin: .5rem 0 .6rem 0;
-  width: 100%;
+  width: 82%;
+  margin-left: 9%;
   border-bottom: .025rem dashed #00d2ff;
 }
 .P2ContentList {
@@ -530,6 +524,12 @@
 }
 .P2PopUpBox .Popuplegend .ThreeLevel {
   background-color: #72e75e;
+}
+.P2PopUpBox .Popuplegend .FourLevel {
+  background-color: #ff1a1a;
+}
+.P2PopUpBox .Popuplegend .FiveLevel {
+  background-color: #b51663;
 }
 .P2PopUpBox .splitLineBox {
   padding: 0 .8rem;
@@ -739,15 +739,28 @@
 .warnBox .downItem {
   color: #f7823c;
 }
-.P2LeftSummary .secondHeader {
+.P2LeftSummary,
+.P2RightSummary {
+  top: 0;
+  position: absolute;
+  width: 21.075rem;
+  height: 41.5rem;
+  background: url(../img/part_air_div.png) no-repeat;
+  background-size: 100% 100%;
+  font-size: .75rem;
+}
+.P2RightSummary {
+  right: .8rem;
+}
+.P2RightSummary .secondHeader {
   height: 1.6rem;
   padding-top: 0rem;
 }
-.P2LeftSummary .secondHeader .LeftHeaderTitle {
+.P2RightSummary .secondHeader .LeftHeaderTitle {
   line-height: 1.6rem;
   text-align: center;
 }
-.P2LeftSummary .splitLine {
+.P2RightSummary .splitLine {
   margin: .5rem auto;
   width: 82%;
 }
@@ -765,6 +778,61 @@
 }
 .changeTable .downIcon {
   background: url(../img/yyl_down.png) no-repeat;
+}
+.P2RightSummary .LeftHeaderTitle {
+  text-align: left;
+  padding-left: 19%;
+}
+.P2RightSummary .citheadTr {
+  height: 1.3rem;
+}
+.P2RightSummary .citheadTr .td1,
+.P2RightSummary .citheadTr .td2,
+.P2RightSummary .citheadTr .td3,
+.P2RightSummary .citheadTr .td4 {
+  color: #00d2ff;
+}
+.P2RightSummary .citheadTr .td1,
+.P2RightSummary .tbodyTr .td1 {
+  width: 14%;
+  text-align: left;
+}
+.P2RightSummary .citheadTr .td2,
+.P2RightSummary .tbodyTr .td2 {
+  width: 26%;
+  text-align: center;
+}
+.P2RightSummary .citheadTr .td3,
+.P2RightSummary .tbodyTr .td3 {
+  width: 44%;
+}
+.P2RightSummary .citheadTr .td4,
+.P2RightSummary .tbodyTr .td4 {
+  text-align: right!important;
+  flex: 1;
+}
+.P2RightSummary .tbodyTr .td4 {
+  padding-right: 9px;
+}
+.P2RightSummary .tableContanier {
+  width: 17.5rem;
+  height: 11rem;
+  margin: initial;
+  overflow-y: hidden;
+}
+.P2RightSummary .SecondHeader {
+  height: 1.6rem;
+  padding-top: .5rem;
+}
+.P2RightContent {
+  padding: .6rem 1.85rem 0.5rem 2.08rem;
+}
+.P2RightContent .ListTitle2 {
+  font-size: .75rem;
+  line-height: .75rem;
+  color: #8297bd;
+  padding: .43rem 0;
+  text-align: left;
 }
 /*************part2  part  end  ******************  ***/
 /*************part3  part  end  ******************  ***/
@@ -1115,8 +1183,7 @@
 }
 .P6LeftSummary,
 .P6RightSummary,
-.P6RightSummary2,
-.P2LeftSummary {
+.P6RightSummary2 {
   top: 0;
   position: absolute;
   width: 21.075rem;
@@ -1126,16 +1193,34 @@
   font-size: .75rem;
 }
 .LeftHeader {
-  height: 3.3rem;
-  padding-top: 1.9rem;
+  height: 3.4rem;
+  padding-top: 2rem;
+  padding-left: .5rem;
 }
-.P6LeftSummary .LeftHeader,
+.LeftHeader .LeftHeaderTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00e4ff;
+  line-height: 1.2rem;
+}
 .P2LeftSummary .LeftHeader {
   text-align: right;
   padding-right: 2.3rem;
 }
-.P6LeftSummary .title,
+.P2LeftSummary .padding80 .LeftHeader {
+  text-align: center;
+  padding-right: 2.3rem;
+  padding-top: 0.9rem;
+  height: 2.3rem;
+}
 .P2LeftSummary .title {
+  font-size: .8rem;
+}
+.P6LeftSummary .LeftHeader {
+  text-align: right;
+  padding-right: 2.3rem;
+}
+.P6LeftSummary .title {
   font-size: .8rem;
 }
 .P6RightSummary {
@@ -1451,7 +1536,7 @@
   margin-right: .23rem;
 }
 .legendBox2 .OneLevel {
-  background-color: #1ad91a;
+  background-color: #fd4800;
 }
 .legendBox2 .TwoLevel {
   background-color: #ffff1a;
@@ -1779,7 +1864,7 @@
   margin-top: .6rem;
   display: inline-block;
 }
-.canvasTab .tabSpan {
+.canvasTab .tabLi {
   padding: 0 0.68rem;
   font-size: .75rem;
   display: inline-block;
@@ -1790,12 +1875,20 @@
   height: 1.63rem;
   line-height: 1.63rem;
 }
-.canvasTab .tabSpan + .tabSpan {
+.canvasTab .tabLi + .tabLi {
   margin-left: .5rem;
 }
-.canvasTab .tabSpan.active {
+.canvasTab .tabLi.active {
   background: #00e5ff;
   color: #0f0920;
+}
+.timeTab {
+  position: relative;
+}
+.timeTab .timeTypeBox {
+  position: absolute;
+  top: -2.4rem;
+  right: 0;
 }
 .P6PopUpBox {
   width: initial!important;

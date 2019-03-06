@@ -24,7 +24,11 @@
 	background-size:100% 100%;
 }
 .map2{
-	background: url(../img/map1.png) no-repeat;
+	background: url(../img/map3.png) no-repeat;
+	background-size:100% 100%; 
+}
+.map21{
+	background: url(../img/map4.png) no-repeat;
 	background-size:100% 100%; 
 }
 .map3{
@@ -98,17 +102,7 @@
 .LeftSummary,.P6LeftSummary,.P2LeftSummary{
 	left:1rem;
 }
-.LeftHeader{
-	height:3.4rem;
-	padding-top: 2rem;
-    padding-left: .5rem;
-	.LeftHeaderTitle{
-		font-size: 1rem;
-		font-weight: 700;
-		color: #00e4ff;
-		line-height: 1.2rem;
-	}
-}
+
 
 .XuanLine{
 	width:20rem; 
@@ -473,7 +467,8 @@
 }
 .splitLine{
 	margin: .5rem 0 .6rem 0;
-	width: 100%;
+    width: 82%;
+    margin-left: 9%;
 	border-bottom: .025rem dashed #00d2ff;
 }
 .P2ContentList{
@@ -599,6 +594,12 @@
 		 .ThreeLevel{
 			 background-color: #72e75e;
 		 }
+		 .FourLevel{
+			background-color: #ff1a1a;
+		}
+		.FiveLevel{
+			background-color: #b51663;
+		}
 	}
 	.splitLineBox{
 		padding: 0 .8rem;
@@ -823,7 +824,17 @@
 		color: #f7823c;
  }
 }
-.P2LeftSummary{
+.P2LeftSummary,.P2RightSummary{
+	top:0;
+	position: absolute;
+	width: 21.075rem;
+	height: 41.5rem; 
+	background: url(../img/part_air_div.png) no-repeat;
+	background-size:100% 100%;
+	font-size:.75rem;
+}
+.P2RightSummary{
+	right: .8rem;
 	.secondHeader{
 		height:1.6rem;
 		padding-top: 0rem;
@@ -851,6 +862,64 @@
 	}
 	.downIcon{
 		background: url(../img/yyl_down.png) no-repeat;
+	}
+}
+.P2RightSummary{
+	.LeftHeaderTitle{
+		text-align: left;
+		padding-left: 19%;
+	}
+	.citheadTr{
+		height: 1.3rem;
+		.td1,.td2,.td3,.td4{
+			color: #00d2ff;
+			
+		}
+	}
+	.citheadTr,.tbodyTr{
+		.td1{
+		
+			width:14%;
+			text-align: left;
+		}
+		.td2{
+			width: 26%;
+			text-align: center;
+		}
+		.td3{
+		
+			width: 44%;
+		}
+		.td4{
+			text-align: right!important;
+			flex:1;
+		}
+		
+	}
+	.tbodyTr{
+		.td4{
+			padding-right:9px;
+		}
+	}
+	.tableContanier{
+		width:17.5rem;
+		height: 11rem;
+		margin: initial;
+		overflow-y: hidden;
+	}
+	.SecondHeader {
+		height: 1.6rem;
+		padding-top: .5rem;
+	}
+}
+.P2RightContent {
+	padding: .6rem 1.85rem 0.5rem 2.08rem;
+	.ListTitle2 {
+		font-size: .75rem;
+		line-height: .75rem;
+		color: #8297bd;
+		padding: .43rem 0;
+		text-align: left;
 	}
 }
 /*************part2  part  end  ******************  ***/
@@ -1235,7 +1304,7 @@
 		background-size:100% 100%;
 	}
 }
-.P6LeftSummary,.P6RightSummary,.P6RightSummary2,.P2LeftSummary{
+.P6LeftSummary,.P6RightSummary,.P6RightSummary2{
 	top:0;
 	position: absolute;
 	width: 21.075rem;
@@ -1245,11 +1314,36 @@
 	font-size:.75rem;
 	
 }
-.LeftHeader {
-	height: 3.3rem;
-	padding-top: 1.9rem;
+.LeftHeader{
+	height:3.4rem;
+	padding-top: 2rem;
+    padding-left: .5rem;
+	.LeftHeaderTitle{
+		font-size: 1rem;
+		font-weight: 700;
+		color: #00e4ff;
+		line-height: 1.2rem;
+	}
 }
-.P6LeftSummary,.P2LeftSummary{
+.P2LeftSummary{
+	.LeftHeader {
+		text-align: right;
+		padding-right: 2.3rem;
+	}
+	.padding80{
+		.LeftHeader{
+			text-align: center;
+			padding-right: 2.3rem;
+			padding-top: 0.9rem;
+			height: 2.3rem;
+		}
+	}
+	
+	.title{
+		font-size: .8rem;
+	}
+}
+.P6LeftSummary{
 	.LeftHeader {
 		text-align: right;
 		padding-right: 2.3rem;
@@ -1258,6 +1352,7 @@
 		font-size: .8rem;
 	}
 }
+
 .P6RightSummary{
 	right: .8rem;
 }
@@ -1589,7 +1684,7 @@
 		margin-right: .23rem;
 	}
 	.OneLevel{
-		background-color: #1ad91a;
+		background-color: #fd4800;
 	}
 	.TwoLevel{
 		background-color: #ffff1a;
@@ -1930,7 +2025,7 @@
 	height: 2.68rem;
 	margin-top:.6rem;
 	display: inline-block;
-	.tabSpan{
+	.tabLi{
 		padding: 0 0.68rem;
 		font-size: .75rem;
 		display: inline-block;
@@ -1942,14 +2037,23 @@
 		line-height: 1.63rem;
 	}
 
-	.tabSpan+.tabSpan{
+	.tabLi+.tabLi{
 		margin-left:.5rem;
 	}
-	.tabSpan.active{
+	.tabLi.active{
 		background: #00e5ff;
 		color: #0f0920;
 	}
 }
+.timeTab{
+	position: relative;
+	.timeTypeBox{
+		position: absolute;
+		top:-2.4rem;
+		right:0;
+	}
+}
+
 .P6PopUpBox {
 	width: initial!important;
 	.canvasTab{

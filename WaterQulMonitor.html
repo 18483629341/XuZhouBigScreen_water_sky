@@ -22,76 +22,49 @@
 			<img class="HeaderBackImg" src="./img/header_back.png" alt="">
 			<div class="BackDiv">
 				<div class="HeaderCenter">
-					<div class="h28">徐州市数据中心综合展示大屏</div>
+					<div class="h28">
+						<!-- 徐州市数据中心综合展示大屏 -->
+					</div>
 					<div class="TitleImg"></div>
-					<div class="SubTitleP"></div>
+					<div class="SubTitleP">徐州水环境</div>
 				</div>
-				<!-- <nav class="nav">
-					<div class="LeftNav">
-						<ul>
-							<li class="tabli  " data-index="0">
-								<a href="index.html">
-									<div class="TabLiContent">水环境概况</div>
-								</a>
-							</li>
-							<li class="tabli active" data-index="1">
-								<div class="TabLiContent">水质监测</div>
-							</li>
-							<li class="tabli " data-index="2">
-								<a href="WaterQulAssess.html">
-									<div class="TabLiContent">水质考核</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="RightNav">
-						<ul>
-							<li class="tabli" data-index="3">
-								<a href="PolluDisSituation.html">
-									<div class="TabLiContent">排污情况</div>
-								</a>
-							</li>
-							<li class="tabli" data-index="4">
-								<a href="LawEnfSituation.html">
-									<div class="TabLiContent">执法情况</div>
-								</a>
-							</li>
-							<li class="tabli" style="visibility:hidden">
-								<div class="TabLiContent">1</div>
-							</li>
-						</ul>
-					</div>
-				</nav> -->
+				
 			</div>
 
 		</header>
 		<section class="section">
 			<!--水质监测   water quality monitoring  box-->
 			<div class="TabContent WaterQulMonitor" id='WaterQulMonitor' data-index="1">
-				<div class="MapBox  map2 active">
-					<div class="ax_default ax_default_shou" data-name="sha">
-							<img class="img " src="./img/icon_remark13.png">
-					</div>
-					<div class="ax_default ax_default_zi" data-name="zi">
-						<img class="img " src="./img/icon_remark14.png">
-					</div>
-					<div class="goWuhan show">进入市区</div>
-				</div>
-				<div class="MapBox mapWuhan ">
+				<div class="MapBox  map2 active" data-type="isQulified">
 					<div class="ax_default ax_default_shou" data-name="sha">
 						<img class="img " src="./img/icon_remark13.png">
 					</div>
 					<div class="ax_default ax_default_zi" data-name="zi">
 						<img class="img " src="./img/icon_remark14.png">
 					</div>
+					<!-- <div class="goWuhan show">进入市区</div> -->
 				</div>
+				<div class="MapBox  map21 " data-type="waterMonitor">
+					<!-- <div class="goWuhan show">进入市区</div> -->
+				</div>
+					<!-- <div class="MapBox map61 ">
+						<div class="goWuhan show">进入市区</div>
+					</div> -->
+				<!-- <div class="MapBox mapWuhan ">
+					<div class="ax_default ax_default_shou" data-name="sha">
+						<img class="img " src="./img/icon_remark13.png">
+					</div>
+					<div class="ax_default ax_default_zi" data-name="zi">
+						<img class="img " src="./img/icon_remark14.png">
+					</div>
+				</div> -->
 				<div class="P2LeftSummary ">
 
 					<div class="LeftHeader ">
-						<p class="LeftHeaderTitle">水质监测状况</p>
+						<p class="LeftHeaderTitle js_title">水质监测状况</p>
 					</div>
 					<div class="XuanLine"></div>
-					<div class=" P2LeftContent ">
+					<div class=" P2LeftContent " data-type="waterMonitor">
 						<div class="LeftConBox">
 							<p class="conTheme">
 								<i class="icon iconPoi"></i>
@@ -114,7 +87,7 @@
 						</ul>
 						<div class="typePiecanvasBox active" id="typePiecanvasBox"></div>
 					</div>
-					<div class="P2LeftContent active">
+					<div class="P2LeftContent active" data-type="isQulified">
 						<div class="LeftConBox">
 							<p class="conTheme">
 								<i class="icon iconPoi"></i>
@@ -168,90 +141,84 @@
 				</div>
 				<div class="RightBox2 P6RightBox show">
 					<div class="GisTabs flexBlock">
-						<div class="P6tabLi GisLeftTab active" data-map="GoodWeath1">水质监测</div>
-						<div class="P6tabLi GisRightTab " data-map="PM1">达标情况</div>
+						<div class="P6tabLi GisLeftTab active" data-type="waterMonitor">水质监测</div>
+						<div class="P6tabLi GisRightTab " data-type="isQulified">达标情况</div>
 					</div>
 				</div>
-				<div class="P6RightSummary P6RightSummary2  show">
+				<div class="P2RightSummary  show">
 					<div class="LeftHeader">
 						<p class="LeftHeaderTitle">区县水质达标率排名</p>
 					</div>
 					<div class="XuanLine"></div>
-					<div class="P6RightContent">
-						<!-- <div class="RightBox3">
-								<div class="GisTabs3 flexBlock">
-									<div class="P6tabLi3 GisLeftTab active" data-map="GoodWeath2">优良天数比例</div>
-									<div class="P6tabLi3 GisCenterTab " data-map="PM2">PM
-										<sub class="scale03">2.5</sub>年均浓度</div>
-									<div class="P6tabLi3 GisRightTab " data-map="AQI">AQI</div>
-								</div>
-							</div> -->
+					<div class="P2RightContent">
 						<p class="ListTitle2">统计时间：2018-10-11</p>
 						<div class="citheadTr flexBlock ">
-							<div class="inlineBlock theadTd td1">排名</div>
-							<div class="inlineBlock theadTd td2">区县</div>
-							<div class="inlineBlock theadTd td3">
+							<div class="td1">排名</div>
+							<div class="td2">区县</div>
+							<div class="td3">
 								<span>水质达标率（%）</span>
-								<span class="TableIconBox">
-									<div class="P6ArrowIcon triangle_border_up">
-									</div>
-									<div class="P6ArrowIcon triangle_border_down active">
-									</div>
-								</span>
 							</div>
-							<div class="inlineBlock theadTd td4">变化</div>
+							<div class="td4">变化</div>
 
 						</div>
-						<div class="tableContanier  content " id="scrollBox2">
+						<div class="tableContanier  content " id="scrollBox1">
 							<table class="table changeTable" style="margin-top: 0px;">
 								<tbody>
 									<tr class="tbodyTr" style="">
 										<td class="td1">1</td>
 										<td class="td2">丰县</td>
 										<td class="td3">91</td>
-										<td class="td4"><span class='icon upIcon'></span>1</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
 									<tr class="tbodyTr" style="">
 										<td class="td1">2</td>
 										<td class="td2">沛县</td>
 										<td class="td3">88</td>
-										<td class="td4"><span class='icon downIcon'></span>1</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
 									<tr class="tbodyTr" style="">
 										<td class="td1">3</td>
 										<td class="td2">鼓楼区</td>
 										<td class="td3">91</td>
-										<td class="td4"><span class='icon downIcon'></span>1</td>
-									</tr>
-									<tr class="tbodyTr" style="">
-										<td class="td1">7</td>
-										<td class="td2">泉山区</td>
-										<td class="td3">91</td>
-										<td class="td4"><span class='icon upIcon'></span>1</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
 									<tr class="tbodyTr" style="">
 										<td class="td1">4</td>
-										<td class="td2">贾汪区</td>
+										<td class="td2">泉山区</td>
 										<td class="td3">91</td>
-										<td class="td4"><span class='icon downIcon'></span>1</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
 									<tr class="tbodyTr" style="">
 										<td class="td1">5</td>
-										<td class="td2">邳州市</td>
+										<td class="td2">贾汪区</td>
 										<td class="td3">91</td>
-										<td class="td4"><span class='icon downIcon'></span>1</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
 									<tr class="tbodyTr" style="">
 										<td class="td1">6</td>
-										<td class="td2">新沂市</td>
+										<td class="td2">邳州市</td>
 										<td class="td3">91</td>
-										<td class="td4"><span class='icon upIcon'></span>1</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
 									<tr class="tbodyTr" style="">
 										<td class="td1">7</td>
 										<td class="td2">新沂市</td>
 										<td class="td3">91</td>
-										<td class="td4"><span class='icon downIcon'></span>1</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
+									</tr>
+									<tr class="tbodyTr" style="">
+										<td class="td1">8</td>
+										<td class="td2">新沂市</td>
+										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
 								</tbody>
 							</table>
@@ -261,68 +228,76 @@
 						<p class="LeftHeaderTitle">站点空气质量排名</p>
 					</div>
 					<div class="XuanLine"></div>
-
-					<div class="P6RightContent">
+					<div class="P2RightContent">
 						<p class="ListTitle2">统计时间：2018-10-11</p>
 						<div class="citheadTr flexBlock ">
-							<div class="inlineBlock theadTd td1">排名</div>
-							<div class="inlineBlock theadTd td2">城市</div>
-							<div class="inlineBlock theadTd td3 ">
-								<span>优良天气比例（%）</span>
-								<span class="TableIconBox">
-									<div class="P6ArrowIcon triangle_border_up">
-									</div>
-									<div class="P6ArrowIcon triangle_border_down active">
-									</div>
-								</span>
+							<div class="td1">排名</div>
+							<div class="td2">站点</div>
+							<div class="td3">
+								<span>断面水质</span>
 							</div>
-							<div class="inlineBlock theadTd td4">变化</div>
+							<div class="td4">变化</div>
+
 						</div>
-						<div class="tableContanier tableContanier2 content" id="scrollBox3">
-							<table class="table" style="margin-top: -68.8876px;">
+						<div class="tableContanier  content " id="scrollBox2">
+							<table class="table changeTable" style="margin-top: 0px;">
 								<tbody>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" style="">
 										<td class="td1">1</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-										<td class="td3">91</td>
+										<td class="td2">市政府</td>
+										<td class="td3">Ⅱ类</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" style="">
 										<td class="td1">2</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
+										<td class="td2">Ⅱ类</td>
+										<td class="td3">88</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" style="">
 										<td class="td1">3</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
+										<td class="td2">技术学院</td>
+										<td class="td3">Ⅲ类</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" style="">
 										<td class="td1">4</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
+										<td class="td2">大洞山</td>
+										<td class="td3">Ⅲ类</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" style="">
 										<td class="td1">5</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
+										<td class="td2">双沟镇</td>
+										<td class="td3">Ⅲ类</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
 									<tr class="tbodyTr" style="">
 										<td class="td1">6</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
+										<td class="td2">吕梁湖</td>
+										<td class="td3">Ⅲ类</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
 									<tr class="tbodyTr" style="">
 										<td class="td1">7</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
+										<td class="td2">铜山利国镇</td>
+										<td class="td3">Ⅳ类</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
 									<tr class="tbodyTr" style="">
 										<td class="td1">8</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
+										<td class="td2">铜山利国镇</td>
+										<td class="td3">Ⅳ类</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-
 								</tbody>
 							</table>
 						</div>
@@ -470,12 +445,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="canvasTab">
-						<span class="tabSpan active" data-name="goodWeather">氨氮</span>
-						<span class="tabSpan " data-name="pm2.5">高锰酸钾指数</span>
-						<span class="tabSpan " data-name="pm2.5">总磷</span>
-
-					</div>
+					<ul class="canvasTab flexBlock">
+						<li class="tabLi flex1 lineGraph active">氨氮</li>
+						<li class="tabLi longerText lineGraph ">高锰酸钾指数</li>
+						<li class="tabLi longerText lineGraph ">化学需氧量</li>
+						<li class="tabLi flex1 lineGraph">溶解氧</li>
+						<li class="tabLi flex1 lineGraph">总磷</li>
+					</ul>
 					<div class="popUpcanvasBox" id="P2comCanvas">
 					</div>
 					<div class="legend2 Popuplegend">
@@ -490,6 +466,14 @@
 							</li>
 							<li class="LegendLi2">
 								<span class="WaterQulLine ThreeLevel"></span>
+								<span class="RemarkName">化学需氧量</span>
+							</li>
+							<li class="LegendLi2">
+								<span class="WaterQulLine FourLevel"></span>
+								<span class="RemarkName">溶解氧</span>
+							</li>
+							<li class="LegendLi2">
+								<span class="WaterQulLine FiveLevel"></span>
 								<span class="RemarkName">总磷</span>
 							</li>
 						</ol>
@@ -513,7 +497,7 @@
 		<div class="PopUpBox  P2PopUpBox PopUpBox_zi" id="PopUpBox_zi">
 			<div class="PopUpHeader">
 				<div class="PaddingContent">
-					<h3>姚嘴王岭村水站</h3>
+					<h3>和平桥水站</h3>
 					<span class="inlineBlock PopUpclose"></span>
 				</div>
 			</div>
@@ -521,16 +505,16 @@
 			<div class="PopUpContent">
 				<div class="PaddingContent">
 					<p class="ListTitle floatLeft">统计时间：2018-10-11 12:00</p>
-					<p class="ListTitle floatRight">数据来源：湖北检测中心</p>
+					<p class="ListTitle floatRight">数据来源：江苏省监测中心</p>
 					<div class="clear"></div>
 					<div class="keyContent">
 						<div class="contentList">
 							<div class="contentLi flexBlock">
 								<div class="leftRow flex1">所属流域：
-									<span class="leftRowValue"> 长江干流</span>
+									<span class="leftRowValue">淮河</span>
 								</div>
 								<div class="rightRow flex1">所属区域：
-									<span class="leftRowValue"> 武汉市</span>
+									<span class="leftRowValue">徐州市-沛县</span>
 								</div>
 							</div>
 							<div class="contentLi flexBlock">
@@ -559,12 +543,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="canvasTab">
-						<span class="tabSpan active" data-name="goodWeather">氨氮</span>
-						<span class="tabSpan " data-name="pm2.5">高锰酸钾指数</span>
-						<span class="tabSpan " data-name="pm2.5">总磷</span>
-					</div>
-					<div class="canvasTab alignRight">
+					<ul class="canvasTab flexBlock">
+						<li class="tabLi flex1 lineGraph active">氨氮</li>
+						<li class="tabLi longerText lineGraph ">高锰酸钾指数</li>
+						<li class="tabLi flex1 lineGraph">总磷</li>
+					</ul>
+					<div class="timeTab">
 						<div class="timeTypeBox flexBlock">
 							<div class="timeTypeSpan active flex1" data-name="hour">小时</div>
 							<div class="timeTypeSpan flex1" data-name="date">日</div>
@@ -611,7 +595,7 @@
 	</div>
 	<script>
 	</script>
-	<table class="legendBar">
+	<!-- <table class="legendBar">
 		<tr class="firstTr">
 			<td class="RemarkName2 ">Ⅰ类</td>
 			<td class="RemarkName2">Ⅱ类</td>
@@ -629,7 +613,7 @@
 			<td class="SixLevel"></td>
 
 		</tr>
-	</table>
+	</table> -->
 </body>
 <!-- <script src="./js/jquery.min.js"></script> -->
 <script src="./js/echarts.min.js"></script>
