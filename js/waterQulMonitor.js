@@ -11,36 +11,29 @@ $(document).ready(function () {
 		setRadio();
 		mapToggle2();
 		autoScrollFun('#scrollBox1');
-        autoScrollFun('#scrollBox2');
-		
-		//纱帽弹窗上的线图   绘制
-		
-		// initPopupObjByData0=new InitPopupObjByData('.PopUpBox_sha',dataSha);
-		// popupObj0=initPopupObjByData0.init('P2comCanvas');
-		// initPopCanvas = new InitPopCanvas(popupObj0);
-		// initPopCanvas.initCanvas();
-		//线图
-		initPopupObjByData0 = new InitPopupObjByData('.PopUpBox_sha', dataSha);
-		popupObj0 = initPopupObjByData0.init('P2comCanvas');
-		initPopCanvas0= new InitPopCanvas(popupObj0);
-		initPopCanvas0.initCanvas();
-        shaPraghToggle()
+		autoScrollFun('#scrollBox2');
+		//绘制饼图 
+			var Pie1=echarts.init(document.getElementById('typePiecanvasBox'));
+			Pie1.setOption(option1);
+			var Pie2=echarts.init(document.getElementById('radioPiecanvasBox'));
+			Pie2.setOption(option2);
+			PieAutoHighLight(Pie2,qualifiedData);
+
+		//手动站 纱帽弹窗上的线图   绘制
+			initPopupObjByData0 = new InitPopupObjByData('.PopUpBox_sha', dataSha);
+			popupObj0 = initPopupObjByData0.init('P2comCanvas');
+			initPopCanvas0= new InitPopCanvas(popupObj0);
+			initPopCanvas0.initCanvas();
+			
         //自动站弹窗上的线图   绘制
+			initPopupObjByData10 = new InitPopupObjByData('.PopUpBox_zi', dataZiDate);
+			popupObj10 = initPopupObjByData10.init('P2ziCanvas');
+			initPopupObjByData11 = new InitPopupObjByData('.PopUpBox_zi', dataZiHour);
+			popupObj11 = initPopupObjByData11.init('P2ziCanvas');
+			initPopCanvas1 = new InitPopCanvas(popupObj10);
+			initPopCanvas1.initCanvas();
+    
 		
-		// initPopupObjByData10=new InitPopupObjByData('.PopUpBox_zi',dataZiDate);
-		// popupObj10=initPopupObjByData10.init('P2ziCanvas');
-		// initPopupObjByData11=new InitPopupObjByData('.PopUpBox_zi',dataZiHour);
-		// popupObj11=initPopupObjByData11.init('P2ziCanvas');
-
-		// initPopCanvas1 = new InitPopCanvas(popupObj10);
-		// initPopCanvas1.initCanvas();
-
-
-		var Pie1=echarts.init(document.getElementById('typePiecanvasBox'));
-		Pie1.setOption(option1);
-		var Pie2=echarts.init(document.getElementById('radioPiecanvasBox'));
-		Pie2.setOption(option2);
-		PieAutoHighLight(Pie2,qualifiedData);
 	});
 });
 
@@ -82,7 +75,7 @@ var option1=getPieOption(['#4ea9ff','#0067ff','#00ff00','#ffff00','#ffd700','#fc
 var option2=getPieOption2(['#0067ff','transparent'],'{text1|{b}}\n{value|{d}}{text2|%}',startRidio,qualifiedData);
 /*********popup   线框图的相关数据 /纱帽  ***** */
 /*********popup 手动站   线框图的相关数据 / 净化厂 的数据对象数组***** */
-var dataSha = { //！！！！！！！！！！！！！！！！！需要后台传输的数据
+var dataSha = {                                      //！！！！！！！！！！！！！！！！！需要后台传输的数据
 	xData: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07', '10-08', '10-09', '10-10', '10-11', '10-12'],
 	promtArr: ['氨氮', '高锰酸钾指数', '化学需氧量', '溶解氧', '总磷'],
 	unit: ['mg/l'],
@@ -102,12 +95,13 @@ $("body").on('click','.PopUpBox_sha .tabSpan',function(){
 	$(this).toggleClass('active');
 	initPopCanvas0.initCanvas();
 })
-/*********popup1   线框图的相关数据 /  自动站 日期类型***** */
+/*********popup自动站   线框图的相关数据 /  自动站 日期类型***** */
 var dataZiDate={                                              //！！！！！！！！！！！！！！！！！需要后台传输的数据
 	xData:['10-01','10-02','10-03','10-04','10-05','10-06','10-07','10-08','10-09','10-10','10-11','10-12'],
+	promtArr: ['氨氮', '高锰酸钾指数','总磷'],
+	unit: ['mg/l'],
 	dataArr:[
 		{
-			name:"",
 			andanArr : [ 6.0, 8.0, 9.0,9.0, 6.0, 8.0,7.0, 6.0, 8.0,  9.0, 6.0, 8.0],
 			MnArr : [ 4.0, 6.0, 5.5,  4.0,  5.5,4.0, 6.0, 5.5,5.5, 5.5, 4.0, 6.0], 
 			PArr : [6.0, 5.5, 6.0, 8.8, 6.6, 5.0, 6.0, 5.5, 4.0, 6.0, 4.0, 5.6]
@@ -115,12 +109,13 @@ var dataZiDate={                                              //！！！！！�
 		
 	]
 }
-/*********popup1   线框图的相关数据 /  自动站 小时类型***** */
+/*********popup自动站  线框图的相关数据 /  自动站 小时类型***** */
 var dataZiHour={                                              //！！！！！！！！！！！！！！！！！需要后台传输的数据
 	xData:['2:00','4:00','6:00','8:00','10:00','12:00','14:00','16:00','18:00','20:00','22:00','24:00'],
+	promtArr: ['氨氮', '高锰酸钾指数','总磷'],
+	unit: ['mg/l'],
 	dataArr:[
-		{
-			name:"",
+		{	
 			andanArr :[9.0, 6.0, 8.0,7.0, 6.0, 8.0, 9.0, 6.0, 8.0,  9.0, 6.0, 8.0],
 			MnArr :  [4.0, 6.0, 5.5,5.5, 5.5, 4.0, 6.0, 5.5,  4.0, 6.0, 5.5, 4.0, 6.0], 
 			PArr :[6.0, 5.5, 6.0, 8.8, 6.6, 5.0, 6.0, 5.5, 4.0, 6.0, 7.0, 4.0, 5.6]
@@ -129,7 +124,7 @@ var dataZiHour={                                              //！！！！！�
 	]
 }
 
-$("body").on('click','.PopUpBox_zi .tabSpan',function(){
+$("body").on('click','.PopUpBox_zi .tabLi',function(){
 	$(this).toggleClass('active');
 	initPopCanvas1.initCanvas();
 })
@@ -170,12 +165,12 @@ function mapToggle2(){
 		}
     })
 }
-function shaPraghToggle() {
+
 	$("body").on('click', '.PopUpBox_sha .lineGraph', function () {
 		console.log(1);
 		$(this).toggleClass('active');
 		$('.PopUpBox_sha .lineCanvas').addClass('active');
 		initPopCanvas0.initCanvas();
 	})
-}
+
 
