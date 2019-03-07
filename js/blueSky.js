@@ -4,10 +4,6 @@ $(document).ready(function () {
 	//
 	$(window).load(function () {
 		autoFit();
-		//autoFitNav();
-		autoFitContent();
-		//tabToggle();
-       
         RankToggle();
         P6moduleToggle();
         setRadio();
@@ -174,7 +170,7 @@ var goodWheatherData={
     label:'单位：%',
     formatter:'{value}',
     max:'100',
-    colors:["#72e75e","#00e4ff","#f7823c"]
+    colors:["#00e4ff","#f7823c","#72e75e"]
 } 
 
 var PMData={
@@ -188,7 +184,7 @@ var PMData={
         var a=value.max*1.2;
         return a.toFixed(1);
     },
-    colors:["#72e75e","#00e4ff","#f7823c"]
+    colors:["#00e4ff","#f7823c","#72e75e"]
 } 
 /*************
  * 
@@ -199,17 +195,17 @@ var PMData={
 var goodWheatherData1={
     arrMonth:['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月'],
     arrThisYear:['70', '60','80','90' ,'60','80','90', '60','80','90' ,'60','80'],
-    aIndex:'75',
+   // aIndex:'',
     arrLastYear:['55','55','40','60','55','40','60','55','40','60','55','40','60'],
     label:'单位：%',
     formatter:'{value}',
     max:'100',
-    colors:["#72e75e","#fbe83a","#00cdff"]
+    colors:["#00cdff","#fbe83a"]
 } 
 var PMData1={
     arrMonth:['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月'],
     arrThisYear:['250', '160','240','190' ,'160','80','90', '160','80','90' ,'160','180'],
-    aIndex:'',
+   // aIndex:'',
     arrLastYear:['155','155','140','160','155','140','160','155','140','160','155','140','160'],
     label:'ug/m3',
     formatter:'{value}',
@@ -217,19 +213,13 @@ var PMData1={
         var a=value.max*1.2;
         return a.toFixed(1);
     },
-    colors:["#72e75e","#fbe83a","#00cdff"]
+    colors:["#00cdff","#fbe83a"]
 } 
 var option31=getOption3(goodWheatherData);
 var option32=getOption3(PMData);
 var option41=getOption3(goodWheatherData1);
 var option42=getOption3(PMData1);
 function getOption3(obj){
-    
-        var arrIndex=[];
-        for(var i=0;i<12;i++){
-            arrIndex.push(obj.aIndex);
-        }
-    
     var option= {
         color:obj.colors,//调色板
         tooltip: {
@@ -239,12 +229,12 @@ function getOption3(obj){
                 type: 'line',
                 label: {
                     backgroundColor: '#6a7985',
-                    fontSize: 14
+                    fontSize: 7
                 }
             },
         },
         grid: {
-            top:120,
+            top:40,
             left: '0%',
             right: '0%',
             bottom: 20,
@@ -271,7 +261,7 @@ function getOption3(obj){
                 rotate: -45,
                 textStyle: {
                     color: '#c3d4ff',
-                    fontSize: 23,
+                    fontSize: 14,
                 }
             },
             data:obj.arrMonth,
@@ -284,8 +274,8 @@ function getOption3(obj){
             nameTextStyle:{
                 color:'#c3d4ff',
                 align:'left',
-                fontSize:23,
-                padding: [0,0,50,0]
+                fontSize:14,
+                padding: [0,0,0,0]
             },
             splitLine: {//Y轴线的设置
                 show: true,
@@ -299,7 +289,7 @@ function getOption3(obj){
                 show: true,
                 textStyle: {
                     color: '#c3d4ff',
-                    fontSize:26
+                    fontSize:14
                 },
                 formatter:obj.formatter
             },
@@ -321,17 +311,7 @@ function getOption3(obj){
             boundaryGap:['0%','0%']
         },
         series: [
-            {   
-                name:'考核目标',
-                data:arrIndex,
-                type: 'line',
-                lineStyle:{
-                   // color:"#72e75e",
-                    width:4,
-                },
-                smooth: true,
-                symbol:'none'
-            },
+           
             {   
                 name:'空气优良天气比例',
                 data: obj.arrThisYear,
@@ -340,7 +320,7 @@ function getOption3(obj){
                 smooth: true,
                 lineStyle:{
                   //  color:"#00e4ff",
-                    width:4,
+                    width:2,
                 },
                 areaStyle:{
                     color:areaBack
@@ -358,15 +338,35 @@ function getOption3(obj){
                 smooth: true,
                 lineStyle:{
                    // color:"#f7823c",
-                    width:4,
+                    width:2,
                 },
                 areaStyle:{
                     color:areaBack
                 },
                 symbol:'none'
             },
+            
         ]
     };
+    //如果有目标值，就创建目标数组，并加入到线图的series中
+    if(obj.aIndex){
+        var arrIndex=[];
+        for(var i=0;i<12;i++){
+            arrIndex.push(obj.aIndex);
+        }
+        var indexsery={   
+            name:'考核目标',
+            data:arrIndex,
+            type: 'line',
+            lineStyle:{
+               // color:"#72e75e",
+                width:2,
+            },
+            smooth: true,
+            symbol:'none'
+        }
+        option.series.push(indexsery);
+     }
     return option;
 }
 

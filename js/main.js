@@ -23,7 +23,7 @@ function autoFit(){
 
 
 function resize() {
-	var winratio = $(window).width()/3840;
+	var winratio = $(window).width()/1920;
 	$('.body1').css({
 	  transform: "scale("+winratio+")",
 	  transformOrigin: "left top"
@@ -35,15 +35,6 @@ function resize() {
 	//$(window).height(parseInt(winratio*2160));
 }
 
-//nav部分的全自适应方法
-
-function autoFitNav(){
-	
-}
-//nav部分的全自适应方法
-
-function autoFitContent(){
-}
 
 
 
@@ -251,7 +242,7 @@ function InitPopCanvas(obj) {
 					show: true,
 					textStyle: {
 						color: '#c3d4ff',
-						fontSize: 13,
+						fontSize: 14,
 
 					},
 					formatter: this._obj.formatter || '{value}'
@@ -322,7 +313,7 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 		var popupObj2 = {};
 		popupObj2.xData = Obj.xData; //注意Obj为原型参数
 		//cloneObj(origin, target)
-		popupObj2.colorArr = ["#fd4800", "#f1ec3f", "#72e75e", "#ff1a1a", "#b51663",'#a3062b','#ff00cc'];
+		popupObj2.colorArr = ["#fd4800", "#f1ec3f", "#72e75e",'#0067ff', '#ff00cc', "#b51663","#ff1a1a"];
 		popupObj2.unit = Obj.unit||'mg/l';
 		var keys = Object.keys(obj);
 		popupObj2.seriesArr = [];
@@ -423,8 +414,8 @@ function getPieOption(colors, format, data) {
     var option = {
         grid: {
 			top: 0,
-			left:20,
-			right:20
+			left:10,
+			right:10
         },
         color: colors,
         series: [{
@@ -438,25 +429,22 @@ function getPieOption(colors, format, data) {
                 label: {
                     normal: {
                         show: true,
-                        //position: 'center',
                         color: '#bbd4ff',
-                        //align: 'center',
-                        //verticalAlign: 'middle',
                         formatter:format ,
                         rich: {
                             text1: {
                                 color: '#bbd4ff',
-                                fontSize: 29,
+                                fontSize: 13,
                                 padding: 3
                             },
                             value: {
                                 color: '#bbd4ff',
-                                fontSize: 36,
+                                fontSize:16,
                                 padding: [6,0,6,0]
                             },
                             text2:{
                                 color: '#bbd4ff',
-                                fontSize: 32,
+                                fontSize: 14,
                                 padding: [5,0, 5,0]
                             }
                             
@@ -484,8 +472,8 @@ function getPieOption2(colors, format,startRadio, data){
 	var option = {
         grid: {
 			top: 0,
-			left:20,
-			right:20
+			left:10,
+			right:10
         },
         color: colors,
         series: [{
@@ -507,18 +495,18 @@ function getPieOption2(colors, format,startRadio, data){
                         rich: {
                             text1: {
                                 color: '#bbd4ff',
-                                fontSize: 36,
+                                fontSize: 18,
                                 padding: 3
                             },
                             value: {
                                 color: '#bbd4ff',
-								fontSize: 48,
+								fontSize: 24,
 								fontWeight:'bolder',
                                 padding: [6,0,6,0]
                             },
                             text2:{
                                 color: '#bbd4ff',
-                                fontSize: 24,
+                                fontSize: 12,
                                 padding: [5,0, 5,0]
                             }
                             
@@ -532,7 +520,7 @@ function getPieOption2(colors, format,startRadio, data){
                 labelLine: {
                     normal: {
 						show: true,
-						borderWidth:3,
+						borderWidth:1,
                     }
                 },
                 data: data

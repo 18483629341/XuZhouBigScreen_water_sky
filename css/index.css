@@ -314,6 +314,7 @@
   font-size: 0.7rem;
 }
 .LegendHeader td {
+  width: 4.5rem;
   height: 1.3rem;
   border-bottom: .025rem solid #00d2ff;
   white-space: nowrap;
@@ -531,10 +532,10 @@
   background-color: #72e75e;
 }
 .P2PopUpBox .Popuplegend .FourLevel {
-  background-color: #ff1a1a;
+  background-color: #0067ff;
 }
 .P2PopUpBox .Popuplegend .FiveLevel {
-  background-color: #b51663;
+  background-color: #ff00cc;
 }
 .P2PopUpBox .splitLineBox {
   padding: 0 .8rem;
@@ -773,7 +774,7 @@
 .changeTable .downIcon {
   width: .55rem;
   height: .65rem;
-  margin-right: 10px;
+  margin-right: .25rem;
 }
 .changeTable .upIcon {
   background: url(../img/yyl_up.png) no-repeat;
@@ -829,7 +830,7 @@
 }
 .P2RightSummary .tbodyTr .td4,
 .P6RightSummary2 .tbodyTr .td4 {
-  padding-right: 9px;
+  padding-right: .225rem;
 }
 .P2RightSummary .tableContanier,
 .P6RightSummary2 .tableContanier {
@@ -1254,6 +1255,9 @@
 .P6LeftSummary .title {
   font-size: .8rem;
 }
+.P6LeftSummary2 .warnBox {
+  line-height: 1.2rem;
+}
 .P6RightSummary {
   right: .8rem;
 }
@@ -1491,7 +1495,7 @@
   text-align: center;
 }
 .P6RightSummary2 .mCSB_inside > .mCSB_container {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .P6RightSummary2 .mCSB_scrollTools {
   right: 0;
@@ -1618,38 +1622,38 @@
   position: relative;
 }
 .mapTabCon .navTab {
-  top: 100px;
+  top: 2.5rem;
   position: absolute;
-  width: 500px;
+  width: 12.5rem;
   display: none;
 }
 .mapTabCon .navTab.active {
   display: block;
 }
 .navTab {
-  height: 62px;
+  height: 1.55rem;
   text-align: center;
 }
 .navTab .navLi {
-  line-height: 52px;
+  line-height: 1.3rem;
   color: #cedffe;
   background: #01163b;
   border-top: 1px solid #00bdff;
   border-bottom: 1px solid #00bdff;
   width: 50%;
-  height: 60px;
+  height: 1.5rem;
   float: left;
 }
 .navTab .navLi:first-child {
   border: 1px solid #00bdff;
   border-right: none;
   border-radius: 8px 0 0 8px;
-  border-radius: 12px 0 0 12px;
+  border-radius: 0.3rem 0 0 0.3rem;
 }
 .navTab .navLi:last-child {
   border: 1px solid #00bdff;
   border-radius: 0 8px 8px 0;
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 0.3rem 0.3rem 0;
 }
 .navTab .navLi.active {
   background: #00e5ff;
@@ -1947,7 +1951,7 @@
   padding-top: .13rem;
 }
 .canvasTab {
-  height: 2.68rem;
+  height: 2.1rem;
   margin-top: .6rem;
   display: inline-block;
 }
@@ -1963,7 +1967,7 @@
   line-height: 1.63rem;
 }
 .canvasTab .tabLi + .tabLi {
-  margin-left: .5rem;
+  margin-left: .3rem;
 }
 .canvasTab .tabLi.active {
   background: #00e5ff;
@@ -1997,27 +2001,24 @@
   background-size: 100% 100%;
 }
 /***popUP  end****/
-.translateBtn {
-  border: 1px solid;
-}
 .LoginDiv {
-  padding: 0 50px;
-  height: 80px;
+  padding: 0 1.25rem;
+  height: 2rem;
   background: #00e5ff;
-  border-radius: 40px;
+  border-radius: 1rem;
   position: absolute;
-  top: -80px;
-  right: 83px;
+  top: -2rem;
+  right: 2.075rem;
   z-index: 200;
 }
 .LoginDiv:hover {
-  transform: translateY(-1px);
-  box-shadow: 0px 2px 12px 2px rgba(11, 115, 203, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 24px 4px rgba(147, 229, 243, 0.671);
 }
 .LoginText {
   height: 100%;
-  line-height: 80px;
-  font-size: 40px;
+  line-height: 2rem;
+  font-size: 1rem;
   color: #01163b;
   font-weight: 700;
   text-align: center;

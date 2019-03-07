@@ -2,9 +2,6 @@ $(document).ready(function () {
 	//
 	$(window).load(function () {
 		autoFit();
-		autoFitNav();
-		autoFitContent();
-		//tabToggle();
 		listToggle();
 		P2popContorl();
 		moduleToggle('.map2');
