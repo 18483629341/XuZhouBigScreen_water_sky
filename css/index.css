@@ -778,9 +778,11 @@
 }
 .changeTable .upIcon {
   background: url(../img/yyl_up.png) no-repeat;
+  background-size: 100% 100%;
 }
 .changeTable .downIcon {
   background: url(../img/yyl_down.png) no-repeat;
+  background-size: 100% 100%;
 }
 .P2RightSummary .LeftHeaderTitle,
 .P6RightSummary2 .LeftHeaderTitle {
@@ -1980,9 +1982,6 @@
   position: absolute;
   top: -2.4rem;
   right: 0;
-}
-.P6PopUpBox {
-  width: initial!important;
 }
 .P6PopUpBox .canvasTab .tabSpan[data-name='pm2.5'] {
   width: 4rem;
