@@ -118,7 +118,8 @@ $("body").on('click', '.js_typeTab .navLi', function () {
     var type=$(this).attr("data-type")
     $('.MapBox').removeClass('active');
     $('.MapBox[data-type='+type+']').addClass('active');
-   
+    $('.P6LeftSummary').removeClass('show');
+    $('.P6LeftSummary[data-type='+type+']').addClass('show');
 })
    
 $("body").on('click','.P6tabLi',function(){
@@ -128,13 +129,11 @@ $("body").on('click','.P6tabLi',function(){
     if(!$(this).attr("data-type")){
         type=$(this).find('.navLi.active').attr("data-type");
         $('.mapTabCon .navTab').addClass('active');
-        $('.P6LeftSummary1').addClass('show');
-        $('.P6LeftSummary2').removeClass('show')
+       
     }else{
         type=$(this).attr("data-type");
         $('.mapTabCon .navTab').removeClass('active');
-        $('.P6LeftSummary2').addClass('show');
-        $('.P6LeftSummary1').removeClass('show')
+    
     }
     $('.MapBox').removeClass('active');
     $('.MapBox[data-type='+type+']').addClass('active');

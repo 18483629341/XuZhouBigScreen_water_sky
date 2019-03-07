@@ -161,10 +161,12 @@ function mapToggle2(){
 		$('.leftPane[data-type='+type+']').addClass('active');
 	    if(type=="isQulified"){
             mainActive='map21';
-            $('.js_title').html('水质达标状况');           
+			$('.js_title').html('水质达标状况');
+			$('.P2RightBox').css({display:'none'});           
 		}else if(type=="waterMonitor"){
             mainActive='map2';
-            $('.js_title').html('水质监测状况');
+			$('.js_title').html('水质监测状况');
+			$('.P2RightBox').css({display:'block'});  
 		}
     })
 }

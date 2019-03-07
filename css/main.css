@@ -71,6 +71,8 @@ a:link {
   display: none;
 }
 .header .HeaderCenter .SubTitleP {
+  width: 500px;
+  margin: 0 auto;
   font-size: 1.55rem;
   line-height: 1.55rem;
 }
