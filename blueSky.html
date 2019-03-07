@@ -44,13 +44,13 @@
 						<img id="u14643_img" class="img " src="./img/u14637.png">
 					</div>
 				</div>
-				<div class="P6LeftSummary">
+				<div class="P6LeftSummary P6LeftSummary1 show" data-type="GoodWeath1">
 					<div class="LeftHeader">
 						<p class="LeftHeaderTitle">2018年空气质量考核情况</p>
 					</div>
 					<div class="XuanLine"></div>
 					<div class="P6LeftContent">
-						<div class="showContentLi">
+						<div class="showContentLi show" >
 							<div class="P6CompRateBox">
 								<img class="P6imageDom" src='./img/part_air_div_yll.png' />
 								<div class="P6CompRateCanvas" id="CompRateCanvas021">
@@ -84,45 +84,18 @@
 								</div>
 							</div>
 						</div>
-						<div class="showContentLi">
-							<div class="P6CompRateBox2">
-								<div class="P6CompRate2">
-									<p class="rem092">44.62</p>
-									<p class="rem092 scale05">ug/m
-										<sup class="scale05">3</sup>
-									</p>
-								</div>
-							</div>
-							<div class="P6rightBox">
-								<div class="P6rightConTitleBox secondLine">
-									<span class="rightConTitle ">PM
-										<sub>2.5</sub>年均浓度同比</span>
-									<span class="rightMount upItem">
-										<i class="icon upIcon"></i>3.24%</span>
-									<!-- 下降class为downIcon,上升为upIcon  -->
-								</div>
-								<div class="desBox">
-									<p class="description">
-										目前未达到考核总目标(
-										<span>2018</span>年达到
-										<span>47.62</span>ug/m
-										<sup class="scale05">3</sup>)
-									</p>
-								</div>
-							</div>
-						</div>
 						<div class="splitLine"></div>
 						<div class="bottomBox">
 							<div class="navTimeBox CanvasNavBox">
 								<p class="LeftConTitle LeftConTitle2  ">统计时间：
 									<span>2018年11月</span>
 								</p>
-								<ul class="navTab js_graghTab">
+								<!-- <ul class="navTab js_graghTab">
 									<li class="navLi active" data-type="GoodWeath4">优良天数比例</li>
 									<li class="navLi" data-type="PM4">PM
 										<sub class="scale03">2.5</sub>年均浓度
 									</li>
-								</ul>
+								</ul> -->
 
 							</div>
 
@@ -146,15 +119,7 @@
 								</ol>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="P6LeftSummary P6LeftSummary2">
-					<div class="LeftHeader">
-						<p class="LeftHeaderTitle">空气质量告警信息</p>
-
-					</div>
-					<div class="XuanLine"></div>
-					<div class="P6LeftContent warnContainer" id="warnContainer">
+						<div class="splitLine"></div>
 						<div class="navTimeBox warnTimeBox">
 							<p class="LeftConTitle LeftConTitle2  ">统计时间：
 								<span>2018年11月</span>
@@ -165,7 +130,7 @@
 							</ul>
 
 						</div>
-						<div class="WarnPane">
+						<div class="WarnPane ">
 							<div class="LeftConBox">
 								<p class="conTheme">
 									<i class="icon iconPoi"></i>
@@ -184,6 +149,86 @@
 								</p>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="P6LeftSummary P6LeftSummary2 " data-type="PM1">
+					<div class="LeftHeader">
+						<p class="LeftHeaderTitle">2018年空气质量考核情况</p>
+					</div>
+					<div class="XuanLine"></div>
+					<div class="P6LeftContent">
+						<div class="showContentLi show" >
+							<div class="P6CompRateBox2">
+								<div class="P6CompRate2">
+									<p class="rem092">44.62</p>
+									<p class="rem092 scale05">ug/m
+										<sup class="scale05">3</sup>
+									</p>
+								</div>
+							</div>
+							<div class="P6rightBox">
+								<div class="P6rightConTitleBox secondLine">
+									<span class="rightConTitle ">PM
+										<sub>2.5</sub>年均浓度同比</span>
+									<span class="rightMount upItem">
+										<i class="icon upIcon"></i>3.24%</span>
+								</div>
+								<div class="desBox">
+									<p class="description">
+										目前未达到考核总目标(
+										<span>2018</span>年达到
+										<span>47.62</span>ug/m
+										<sup class="scale05">3</sup>)
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="splitLine"></div>
+						<div class="bottomBox">
+							<div class="navTimeBox CanvasNavBox">
+								<p class="LeftConTitle LeftConTitle2  ">统计时间：
+									<span>2018年11月</span>
+								</p>
+								<!-- <ul class="navTab js_graghTab">
+									<li class="navLi active" data-type="GoodWeath4">优良天数比例</li>
+									<li class="navLi" data-type="PM4">PM
+										<sub class="scale03">2.5</sub>年均浓度
+									</li>
+								</ul> -->
+
+							</div>
+
+							<p class="title js_title">全省2018年PM<sub>2.5</sub>年均浓度变化趋势</p>
+							<div class="goodWeatherCanvas" id="PMCanvas">
+							</div>
+							<div class=" legend2">
+								<ol class="LegendList">
+									<li class="LegendLi LegendLi2">
+										<span class="WaterQulLine  OneLevel"></span>
+										<span class="RemarkName">考核目标</span>
+									</li>
+									<li class="LegendLi LegendLi2">
+										<span class="WaterQulLine TwoLevel"></span>
+										<span class="RemarkName">空气优良天气比例</span>
+									</li>
+									<li class="LegendLi LegendLi2">
+										<span class="WaterQulLine ThreeLevel"></span>
+										<span class="RemarkName">2017年同期</span>
+									</li>
+								</ol>
+							</div>
+						</div>
+						<div class="splitLine"></div>
+						<div class="navTimeBox warnTimeBox">
+							<p class="LeftConTitle LeftConTitle2  ">统计时间：
+								<span>2018年11月</span>
+							</p>
+							<ul class="navTab js_warnTab">
+								<li class="navLi active">区县告警信息</li>
+								<li class="navLi">站点告警信息</li>
+							</ul>
+
+						</div>
 						<div class="WarnPane">
 							<div class="LeftConBox">
 								<p class="conTheme">
@@ -191,7 +236,7 @@
 									PM
 									<sub class="scale03">2.5</sub>年均浓度
 								</p>
-
+	
 							</div>
 							<div class="warnCon">
 								<p class="warnBox">PM
@@ -209,6 +254,7 @@
 							</div>
 						</div>
 					</div>
+					
 				</div>
 
 				<!-- 点击  返回后按钮   后显示的模块 start -->
@@ -621,7 +667,7 @@
 				<!-- 弹窗 end -->
 				 <!-- 页面跳转  -->
 				<div class="LoginDiv floatRight">
-						<a href="#" class="linkA">
+						<a href="WaterQulMonitor.html" target="_blank">
 							<p class="LoginText">水环境质量大屏</p>
 						</a>
 					</div>

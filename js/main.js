@@ -14,9 +14,9 @@ var W=null;
 
 function autoFit(){
 	 swidth = $(window).width();
-		if(swidth > 1366 || swidth === 1366){
+		//if(swidth > 1366 || swidth === 1366){
 			resize();
-		}
+		//}
 }
 //resize();
 //整屏等比缩放

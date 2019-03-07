@@ -1346,19 +1346,17 @@
 	top:0;
 	position: absolute;
 	width: 21.075rem;
-	height: 41.5rem; 
+	height: 44rem; 
 	background: url(../img/part_air_div.png) no-repeat;
 	background-size:100% 100%;
 	font-size:.75rem;
 	
 }
-.P6LeftSummary2{
-	top:42rem;
-	width: 21.075rem;
-	height:30rem; 
-	background: url(../img/warn_div.png) no-repeat;
-	background-size:100% 100%;
-	font-size:.75rem;
+.P6LeftSummary1,.P6LeftSummary2{
+	display: none;
+}
+.P6LeftSummary1.show,.P6LeftSummary2.show{
+	display: block;
 }
 .LeftHeader{
 	height:3.4rem;
@@ -1420,7 +1418,7 @@
 	
 }
 .showContentLi{
-	height:6.9rem;
+	height:5.6rem;
 	display: flex;
 	display: -webkit-box; 
     display: -moz-box;  
@@ -1770,8 +1768,8 @@
 }
 .goodWeatherCanvas{
 	position: relative;
-	margin-top: 1rem;
-	width: 100%;
+	// margin-top: .6rem;
+	width:17.2rem;
 	height:11.1rem;
 	// border: .025rem solid yellow;
 }
@@ -2196,10 +2194,12 @@
     border-radius: 40px;
     position: absolute;
     top: -80px;
-    right: 83px;
+	right: 83px;
+	
 }
 .LoginDiv:hover{
 	transform: translateY(-1px);
+	//box-shadow: 0px 2px 12px 2px rgba(11, 115, 203, 0.25);
 	box-shadow: 0px 2px 12px 2px rgba(11, 115, 203, 0.25);
 }
 .LoginText{
@@ -2208,7 +2208,8 @@
     font-size: 40px;
     color: #01163b;
     font-weight: 700;
-    text-align: center;
+	text-align: center;
+	cursor: pointer;
 }
 /*************part6  blueSky  end  ******************  ***/
 /************ 有滚动条的所有div *** ***/

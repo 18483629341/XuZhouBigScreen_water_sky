@@ -23,8 +23,9 @@ $(document).ready(function () {
          myChart24.setOption(option24);
          //左列表线图
          myChart3.setOption(option31);
+         myChart4.setOption(option32);
           //弹窗上的线图绘制
-          myChart4.setOption(option41);
+          myChart5.setOption(option41);
         // console.log(popupObj);
         // console.log(popupObj1);
         // initPopCanvas=new InitPopCanvas(popupObj);
@@ -45,7 +46,7 @@ window.onresize=function(){
     myChart23.resize();
     myChart24.resize();
     myChart3.resize();
-    myChart4.resize();
+    myChart5.resize();
     initPopCanvas.popUpChart.resize();
     initPopCanvas.initCanvas();
 }
@@ -117,6 +118,7 @@ $("body").on('click', '.js_typeTab .navLi', function () {
     var type=$(this).attr("data-type")
     $('.MapBox').removeClass('active');
     $('.MapBox[data-type='+type+']').addClass('active');
+   
 })
    
 $("body").on('click','.P6tabLi',function(){
@@ -126,12 +128,17 @@ $("body").on('click','.P6tabLi',function(){
     if(!$(this).attr("data-type")){
         type=$(this).find('.navLi.active').attr("data-type");
         $('.mapTabCon .navTab').addClass('active');
+        $('.P6LeftSummary1').addClass('show');
+        $('.P6LeftSummary2').removeClass('show')
     }else{
         type=$(this).attr("data-type");
         $('.mapTabCon .navTab').removeClass('active');
+        $('.P6LeftSummary2').addClass('show');
+        $('.P6LeftSummary1').removeClass('show')
     }
     $('.MapBox').removeClass('active');
     $('.MapBox[data-type='+type+']').addClass('active');
+    
 })
 
 /* 排名相关点击交互   */
@@ -154,7 +161,8 @@ function RankToggle(){
  * 
  * */
 var myChart3 = echarts.init(document.getElementById('goodWeatherCanvas'));
-var myChart4 = echarts.init(document.getElementById('P6popUpcanvas'));
+var myChart4 = echarts.init(document.getElementById('PMCanvas'));
+var myChart5 = echarts.init(document.getElementById('P6popUpcanvas'));
 var areaBack='rgba(1,53,91,.3)';
 
 //!!!!!!!需要后台引入的数据  全省年均值的数据
@@ -237,10 +245,10 @@ function getOption3(obj){
             },
         },
         grid: {
-            top:130,
+            top:120,
             left: '0%',
             right: '0%',
-            bottom: 0,
+            bottom: 20,
             containLabel: true,
             show:false
         },
@@ -264,7 +272,7 @@ function getOption3(obj){
                 rotate: -45,
                 textStyle: {
                     color: '#c3d4ff',
-                    fontSize: 14,
+                    fontSize: 23,
                 }
             },
             data:obj.arrMonth,
@@ -277,7 +285,7 @@ function getOption3(obj){
             nameTextStyle:{
                 color:'#c3d4ff',
                 align:'left',
-                fontSize:28,
+                fontSize:23,
                 padding: [0,0,50,0]
             },
             splitLine: {//Y轴线的设置
@@ -395,9 +403,9 @@ function P6moduleToggle(){
         $('.lineGraph').removeClass('active');
         $(this).addClass('active');
         if($(this).attr('data-name')=='goodWeather'){
-            myChart4.setOption(option41);
+            myChart5.setOption(option41);
         }else{
-            myChart4.setOption(option42);
+            myChart5.setOption(option42);
         }
     })
     //切换左列区域的线图  优良天数比例和PM2.5年均浓度
@@ -406,13 +414,7 @@ function P6moduleToggle(){
         $('.js_graghTab .navLi').removeClass('active');
 		$(this).addClass('active');
 		
-		if($(this).attr('data-type')=='GoodWeath4'){
-            $('.js_title').html('全省2018年优良天数比例变化趋势');
-            myChart3.setOption(option31);
-        }else{
-            $('.js_title').html('全省2018年PM<sub>2.5</sub>年均浓度变化趋势');           
-            myChart3.setOption(option32);
-        }
+		
     })
 $("body").on('click', '.js_warnTab .navLi', function () {
     console.log(2);

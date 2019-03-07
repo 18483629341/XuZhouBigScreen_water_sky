@@ -1210,18 +1210,18 @@
   top: 0;
   position: absolute;
   width: 21.075rem;
-  height: 41.5rem;
+  height: 44rem;
   background: url(../img/part_air_div.png) no-repeat;
   background-size: 100% 100%;
   font-size: .75rem;
 }
+.P6LeftSummary1,
 .P6LeftSummary2 {
-  top: 42rem;
-  width: 21.075rem;
-  height: 30rem;
-  background: url(../img/warn_div.png) no-repeat;
-  background-size: 100% 100%;
-  font-size: .75rem;
+  display: none;
+}
+.P6LeftSummary1.show,
+.P6LeftSummary2.show {
+  display: block;
 }
 .LeftHeader {
   height: 3.4rem;
@@ -1273,7 +1273,7 @@
   padding-right: .98rem;
 }
 .showContentLi {
-  height: 6.9rem;
+  height: 5.6rem;
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -1603,8 +1603,7 @@
 }
 .goodWeatherCanvas {
   position: relative;
-  margin-top: 1rem;
-  width: 100%;
+  width: 17.2rem;
   height: 11.1rem;
 }
 .legend2 .LegendList {
@@ -2021,6 +2020,7 @@
   color: #01163b;
   font-weight: 700;
   text-align: center;
+  cursor: pointer;
 }
 /*************part6  blueSky  end  ******************  ***/
 /************ 有滚动条的所有div *** ***/
