@@ -28,7 +28,11 @@ function resize() {
 	  transform: "scale("+winratio+")",
 	  transformOrigin: "left top"
 	});
-	$(window).height(parseInt(winratio*2160));
+	$('.body2').css({
+		transform: "scale("+winratio+")",
+		transformOrigin: "left top"
+	  });
+	//$(window).height(parseInt(winratio*2160));
 }
 
 //nav部分的全自适应方法
@@ -154,7 +158,9 @@ function InitPopCanvas(obj) {
 	this.popUpChart = echarts.init(document.getElementById(this._obj.elementId));
 	this.lineGraphS = this._obj.lineGraphS;
 	this.setObj = function (newObj) {
-		this._obj = newObj
+		
+		this._obj = newObj;
+		console.log(this._obj);
 	}
 	this.initCanvas = function () {
 		let _colors = [];
@@ -178,6 +184,7 @@ function InitPopCanvas(obj) {
 			//if(item.className.)
 		}
 		var newOption = this.getPopOption(_colors, _series);
+		
 		this.popUpChart.setOption(newOption, {
 			notMerge: true,
 		});
@@ -346,7 +353,7 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 			return a.toFixed(1);
 		};
 		popupObj2.lineGraphS = $(this.popUpDataObj.elementClass + ' .lineGraph');
-
+       console.log(popupObj2);
 
 		return popupObj2;
 	}

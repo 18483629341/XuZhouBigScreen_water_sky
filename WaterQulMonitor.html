@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>长江大保护</title>
+	<title>水环境质量大屏</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/common.css" />
 	<link rel="stylesheet" type="text/css" href="./css/main.css" />
@@ -26,117 +26,107 @@
 						<!-- 徐州市数据中心综合展示大屏 -->
 					</div>
 					<div class="TitleImg"></div>
-					<div class="SubTitleP">徐州水环境</div>
+					<div class="SubTitleP">水环境质量</div>
 				</div>
-				
+
 			</div>
 
 		</header>
 		<section class="section">
 			<!--水质监测   water quality monitoring  box-->
 			<div class="TabContent WaterQulMonitor" id='WaterQulMonitor' data-index="1">
-				<div class="MapBox  map2 active" data-type="isQulified">
+				<div class="MapBox  map2 active" data-type="waterMonitor">
 					<div class="ax_default ax_default_shou" data-name="sha">
 						<img class="img " src="./img/icon_remark13.png">
 					</div>
 					<div class="ax_default ax_default_zi" data-name="zi">
 						<img class="img " src="./img/icon_remark14.png">
 					</div>
-					<!-- <div class="goWuhan show">进入市区</div> -->
 				</div>
-				<div class="MapBox  map21 " data-type="waterMonitor">
-					<!-- <div class="goWuhan show">进入市区</div> -->
+				<div class="MapBox  map21 " data-type="isQulified">
 				</div>
-					<!-- <div class="MapBox map61 ">
-						<div class="goWuhan show">进入市区</div>
-					</div> -->
-				<!-- <div class="MapBox mapWuhan ">
-					<div class="ax_default ax_default_shou" data-name="sha">
-						<img class="img " src="./img/icon_remark13.png">
-					</div>
-					<div class="ax_default ax_default_zi" data-name="zi">
-						<img class="img " src="./img/icon_remark14.png">
-					</div>
-				</div> -->
 				<div class="P2LeftSummary ">
 
 					<div class="LeftHeader ">
 						<p class="LeftHeaderTitle js_title">水质监测状况</p>
 					</div>
 					<div class="XuanLine"></div>
-					<div class=" P2LeftContent " data-type="waterMonitor">
-						<div class="LeftConBox">
-							<p class="conTheme">
-								<i class="icon iconPoi"></i>
-								手工断面统计
-							</p>
-							<p class="LeftConTitle LeftConTitle2 alignRight inlineBlock">2018年11月</p>
+					<div class=" P2LeftContent">
+						<div class="leftPane active" data-type="waterMonitor">
+							<div class="LeftConBox">
+								<p class="conTheme">
+									<i class="icon iconPoi"></i>
+									手工断面统计
+								</p>
+								<p class="LeftConTitle LeftConTitle2 alignRight inlineBlock">2018年11月</p>
+							</div>
+							<ul class="contentList P2ContentList">
+								<li class="contentLi">
+									<span class="contentLiFont">全省手工断面</span>
+									<span class="contentLiMount">
+										<b>80</b>个
+									</span>
+								</li>
+								<li class="contentLi">
+									<span class="contentLiFont">有效监测手工断面</span>
+									<span class="contentLiMount">
+										<b>77</b>个</span>
+								</li>
+							</ul>
+							<div class="typePiecanvasBox active" id="typePiecanvasBox"></div>
 						</div>
-						<ul class="contentList P2ContentList">
-							<li class="contentLi">
-								<span class="contentLiFont">全省手工断面</span>
-								<span class="contentLiMount">
-									<b>80</b>个
-								</span>
-							</li>
-							<li class="contentLi">
-								<span class="contentLiFont">有效监测手工断面</span>
-								<span class="contentLiMount">
-									<b>77</b>个</span>
-							</li>
-						</ul>
-						<div class="typePiecanvasBox active" id="typePiecanvasBox"></div>
+						<div class="leftPane" data-type="isQulified">
+							<div class="LeftConBox">
+								<p class="conTheme">
+									<i class="icon iconPoi"></i>
+									断面达标统计
+								</p>
+								<p class="LeftConTitle LeftConTitle2 alignRight inlineBlock">2018年11月</p>
+							</div>
+							<ul class="contentList P2ContentList">
+								<li class="contentLi">
+									<span class="contentLiFont">达标断面</span>
+									<span class="contentLiMount">
+										<b>55</b>个
+									</span>
+								</li>
+								<li class="contentLi">
+									<span class="contentLiFont">不达标断面</span>
+									<span class="contentLiMount">
+										<b>5</b>个</span>
+								</li>
+							</ul>
+							<div class="radioPiecanvasBox" id="radioPiecanvasBox"></div>
+						</div>
+						<div class="splitLine"></div>
+						<div class="padding80">
+							<div class="LeftHeader secondHeader">
+								<p class="LeftHeaderTitle">徐州市水质告警信息</p>
+							</div>
+							<div class="LeftConBox">
+								<p class="conTheme">
+									<i class="icon iconPoi"></i>
+									断面达标统计
+								</p>
+								<p class="LeftConTitle LeftConTitle2 alignRight inlineBlock">2018年11月</p>
+							</div>
+							<div class="warnCon">
+								<p class="warnBox">水质达标率同比去年下降10%的区县有：</p>
+								<p class="warnBox">
+									<span class="rightMount downItem ">鼓楼区（80%）</span>、
+									<span class="rightMount downItem ">沛县（77%）</span>
+								</p>
+							</div>
+							<div class="warnCon">
+								<p class="warnBox">水质达标率同比去年下降10%的河流有：</p>
+								<p class="warnBox">
+									<span class="rightMount downItem ">鼓楼区（80%）</span>、
+									<span class="rightMount downItem ">沛县（77%）</span>
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="P2LeftContent active" data-type="isQulified">
-						<div class="LeftConBox">
-							<p class="conTheme">
-								<i class="icon iconPoi"></i>
-								断面达标统计
-							</p>
-							<p class="LeftConTitle LeftConTitle2 alignRight inlineBlock">2018年11月</p>
-						</div>
-						<ul class="contentList P2ContentList">
-							<li class="contentLi">
-								<span class="contentLiFont">达标断面</span>
-								<span class="contentLiMount">
-									<b>55</b>个
-								</span>
-							</li>
-							<li class="contentLi">
-								<span class="contentLiFont">不达标断面</span>
-								<span class="contentLiMount">
-									<b>5</b>个</span>
-							</li>
-						</ul>
-						<div class="radioPiecanvasBox" id="radioPiecanvasBox"></div>
-					</div>
-					<div class="splitLine"></div>
-					<div class="padding80">
-						<div class="LeftHeader secondHeader">
-							<p class="LeftHeaderTitle">徐州市水质告警信息</p>
-						</div>
-						<div class="LeftConBox">
-							<p class="conTheme">
-								<i class="icon iconPoi"></i>
-								断面达标统计
-							</p>
-							<p class="LeftConTitle LeftConTitle2 alignRight inlineBlock">2018年11月</p>
-						</div>
-						<div class="warnCon">
-							<p class="warnBox">水质达标率同比去年下降10%的区县有：</p>
-							<p class="warnBox">
-								<span class="rightMount downItem ">鼓楼区（80%）</span>、
-								<span class="rightMount downItem ">沛县（77%）</span>
-							</p>
-						</div>
-						<div class="warnCon">
-							<p class="warnBox">水质达标率同比去年下降10%的河流有：</p>
-							<p class="warnBox">
-								<span class="rightMount downItem ">鼓楼区（80%）</span>、
-								<span class="rightMount downItem ">沛县（77%）</span>
-							</p>
-						</div>
-					</div>
+
 
 				</div>
 				<div class="RightBox2 P6RightBox show">
@@ -399,6 +389,12 @@
 						</tbody>
 					</table>
 				</div>
+                <!-- 页面跳转  -->
+				<div class="LoginDiv floatRight">
+					<a href="#" class="linkA">
+						<p class="LoginText">空气环境质量大屏</p>
+					</a>
+				</div>
 			</div>
 		</section>
 
@@ -409,7 +405,7 @@
 		<div class="PopUpBox  P2PopUpBox PopUpBox_sha" id="PopUpBox_sha">
 			<div class="PopUpHeader">
 				<div class="PaddingContent">
-					<h3>纱帽</h3>
+					<h3>蔺家坝</h3>
 					<span class="inlineBlock PopUpclose"></span>
 				</div>
 			</div>
@@ -428,10 +424,10 @@
 							<div class="contentList">
 								<div class="contentLi flexBlock">
 									<div class="leftRow flex1">所属流域：
-										<span class="leftRowValue"> 长江干流</span>
+										<span class="leftRowValue"> 淮河</span>
 									</div>
 									<div class="leftRow flex1">所属区域：
-										<span class="leftRowValue"> 武汉市</span>
+										<span class="leftRowValue"> 徐州市-沛县</span>
 									</div>
 								</div>
 								<div class="contentLi flexBlock">
@@ -467,7 +463,8 @@
 							<li class="LegendLi2">
 								<span class="WaterQulLine ThreeLevel"></span>
 								<span class="RemarkName">化学需氧量</span>
-							</li><br>
+							</li>
+							<br>
 							<li class="LegendLi2">
 								<span class="WaterQulLine FourLevel"></span>
 								<span class="RemarkName">溶解氧</span>
@@ -588,11 +585,13 @@
 			<!-- PopUpBottom end-->
 		</div>
 		<!-- 弹窗1 自动站 end -->
+
+
+
 	</div>
 
-	</section>
 
-	</div>
+
 	<script>
 	</script>
 	<!-- <table class="legendBar">

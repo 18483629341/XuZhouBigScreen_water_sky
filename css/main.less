@@ -1,7 +1,6 @@
 /*********************   main.html 的所有样式 start******************/
-.body1{
+.body1,.body2{
 	width: 3840px;
-	height: 2160px;
 	background-color: #000d30; 
 	color: #fff;
 	text-align: center;
@@ -9,9 +8,16 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
-.body1::-webkit-scrollbar {
+.body1{
+	height: 2160px;
+}
+.body2{
+	height: 3300px;
+}
+.body1::-webkit-scrollbar,.body2::-webkit-scrollbar {
 	display: none;
 }
+
 a,a:hover,a:link{
 	color: #fff;
 	text-decoration: none;
@@ -36,7 +42,7 @@ a,a:hover,a:link{
 	z-index: 15;
 	overflow: hidden;
 	position: relative;
-	height: 14.9%;//323/2160
+	height: 319px;//323/2160
 	//border: 1px solid white;
 	.BackDiv{
 		margin: 0 auto;
@@ -53,7 +59,7 @@ a,a:hover,a:link{
 		z-index: -1;
 	}
 	.HeaderCenter{
-		height: 71.8%;//230/323
+		height: 74%;//230/323
 		.h28{
 			height: 58.9%;
 			font-size: 1.85rem;

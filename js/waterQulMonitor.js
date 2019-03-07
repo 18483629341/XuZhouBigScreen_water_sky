@@ -69,10 +69,7 @@ var sectionData=[ //不同类型断面的情况   !!!!!需要后台传入的数�
 var qualifiedData=[//达标与否断面的情况   !!!!!需要后台传入的数据
 		{value:55, name:'达标断面'},
 		{value:5, name:'不达标断面'},
-	]
-var startRidio=parseInt(90-qualifiedData[1].value/(qualifiedData[0].value+qualifiedData[1].value)/2*360);
-var option1=getPieOption(['#4ea9ff','#0067ff','#00ff00','#ffff00','#ffd700','#fc0105'],'{text1|{b}}{value|{d}}{text2|%}',sectionData);
-var option2=getPieOption2(['#0067ff','transparent'],'{text1|{b}}\n{value|{d}}{text2|%}',startRidio,qualifiedData);
+]
 /*********popup   线框图的相关数据 /纱帽  ***** */
 /*********popup 手动站   线框图的相关数据 / 净化厂 的数据对象数组***** */
 var dataSha = {                                      //！！！！！！！！！！！！！！！！！需要后台传输的数据
@@ -91,10 +88,6 @@ var dataSha = {                                      //！！！！！！！！�
 	],
 	waterAssArr: []
 }
-$("body").on('click','.PopUpBox_sha .tabSpan',function(){
-	$(this).toggleClass('active');
-	initPopCanvas0.initCanvas();
-})
 /*********popup自动站   线框图的相关数据 /  自动站 日期类型***** */
 var dataZiDate={                                              //！！！！！！！！！！！！！！！！！需要后台传输的数据
 	xData:['10-01','10-02','10-03','10-04','10-05','10-06','10-07','10-08','10-09','10-10','10-11','10-12'],
@@ -123,6 +116,16 @@ var dataZiHour={                                              //！！！！！�
 		
 	]
 }
+
+var startRidio=parseInt(90-qualifiedData[1].value/(qualifiedData[0].value+qualifiedData[1].value)/2*360);
+var option1=getPieOption(['#4ea9ff','#0067ff','#00ff00','#ffff00','#ffd700','#fc0105'],'{text1|{b}}{value|{d}}{text2|%}',sectionData);
+var option2=getPieOption2(['#0067ff','transparent'],'{text1|{b}}\n{value|{d}}{text2|%}',startRidio,qualifiedData);
+
+$("body").on('click','.PopUpBox_sha .tabSpan',function(){
+	$(this).toggleClass('active');
+	initPopCanvas0.initCanvas();
+})
+
 
 $("body").on('click','.PopUpBox_zi .tabLi',function(){
 	$(this).toggleClass('active');
@@ -154,8 +157,8 @@ function mapToggle2(){
 		var type=$(this).attr("data-type");
 		$('.MapBox').removeClass('active');
 		$('.MapBox[data-type='+type+']').addClass('active');
-		$('.P2LeftContent').removeClass('active');
-		$('.P2LeftContent[data-type='+type+']').addClass('active');
+		$('.leftPane').removeClass('active');
+		$('.leftPane[data-type='+type+']').addClass('active');
 	    if(type=="isQulified"){
             mainActive='map21';
             $('.js_title').html('水质达标状况');           

@@ -36,15 +36,19 @@
   background-size: 100% 100%;
 }
 .map6 {
-  background: url(../img/map1.png) no-repeat;
+  background: url(../img/map4.png) no-repeat;
   background-size: 100% 100%;
 }
 .map61 {
-  background: url(../img/u1640.png) no-repeat;
+  background: url(../img/map5.png) no-repeat;
   background-size: 100% 100%;
 }
 .mapWuhan {
   background-image: url(../img/u11849.png);
+  background-size: 100% 100%;
+}
+.mapSection {
+  background-image: url(../img/map3.png);
   background-size: 100% 100%;
 }
 .ax_default {
@@ -415,9 +419,11 @@
 /*************part2  part  start  *********************/
 .P2LeftContent {
   padding: 0 2rem;
+}
+.leftPane {
   display: none;
 }
-.P2LeftContent.active {
+.leftPane.active {
   display: block;
 }
 .LeftConTitle2 {
@@ -425,8 +431,7 @@
 }
 .splitLine {
   margin: .5rem 0 .6rem 0;
-  width: 82%;
-  margin-left: 9%;
+  width: 100%;
   border-bottom: .025rem dashed #00d2ff;
 }
 .P2ContentList {
@@ -724,9 +729,6 @@
 .themeContent.active {
   display: block;
 }
-.padding80 {
-  padding: 0 2rem;
-}
 .warnCon {
   margin-bottom: 1rem;
 }
@@ -779,55 +781,76 @@
 .changeTable .downIcon {
   background: url(../img/yyl_down.png) no-repeat;
 }
-.P2RightSummary .LeftHeaderTitle {
+.P2RightSummary .LeftHeaderTitle,
+.P6RightSummary2 .LeftHeaderTitle {
   text-align: left;
   padding-left: 19%;
 }
-.P2RightSummary .citheadTr {
+.P2RightSummary .citheadTr,
+.P6RightSummary2 .citheadTr {
   height: 1.3rem;
 }
 .P2RightSummary .citheadTr .td1,
+.P6RightSummary2 .citheadTr .td1,
 .P2RightSummary .citheadTr .td2,
+.P6RightSummary2 .citheadTr .td2,
 .P2RightSummary .citheadTr .td3,
-.P2RightSummary .citheadTr .td4 {
+.P6RightSummary2 .citheadTr .td3,
+.P2RightSummary .citheadTr .td4,
+.P6RightSummary2 .citheadTr .td4 {
   color: #00d2ff;
 }
 .P2RightSummary .citheadTr .td1,
-.P2RightSummary .tbodyTr .td1 {
+.P6RightSummary2 .citheadTr .td1,
+.P2RightSummary .tbodyTr .td1,
+.P6RightSummary2 .tbodyTr .td1 {
   width: 14%;
   text-align: left;
 }
 .P2RightSummary .citheadTr .td2,
-.P2RightSummary .tbodyTr .td2 {
+.P6RightSummary2 .citheadTr .td2,
+.P2RightSummary .tbodyTr .td2,
+.P6RightSummary2 .tbodyTr .td2 {
   width: 26%;
   text-align: center;
 }
 .P2RightSummary .citheadTr .td3,
-.P2RightSummary .tbodyTr .td3 {
+.P6RightSummary2 .citheadTr .td3,
+.P2RightSummary .tbodyTr .td3,
+.P6RightSummary2 .tbodyTr .td3 {
   width: 44%;
 }
 .P2RightSummary .citheadTr .td4,
-.P2RightSummary .tbodyTr .td4 {
+.P6RightSummary2 .citheadTr .td4,
+.P2RightSummary .tbodyTr .td4,
+.P6RightSummary2 .tbodyTr .td4 {
   text-align: right!important;
   flex: 1;
 }
-.P2RightSummary .tbodyTr .td4 {
+.P2RightSummary .tbodyTr .td4,
+.P6RightSummary2 .tbodyTr .td4 {
   padding-right: 9px;
 }
-.P2RightSummary .tableContanier {
+.P2RightSummary .tableContanier,
+.P6RightSummary2 .tableContanier {
   width: 17.5rem;
   height: 11rem;
   margin: initial;
   overflow-y: hidden;
 }
-.P2RightSummary .SecondHeader {
+.P2RightSummary .SecondHeader,
+.P6RightSummary2 .SecondHeader {
   height: 1.6rem;
   padding-top: .5rem;
 }
-.P2RightContent {
+.P2RightSummary .P2RightContent,
+.P6RightSummary2 .P2RightContent,
+.P2RightSummary .P6RightContent,
+.P6RightSummary2 .P6RightContent {
   padding: .6rem 1.85rem 0.5rem 2.08rem;
 }
-.P2RightContent .ListTitle2 {
+.P2RightSummary .ListTitle2,
+.P6RightSummary2 .ListTitle2 {
   font-size: .75rem;
   line-height: .75rem;
   color: #8297bd;
@@ -1192,6 +1215,14 @@
   background-size: 100% 100%;
   font-size: .75rem;
 }
+.P6LeftSummary2 {
+  top: 42rem;
+  width: 21.075rem;
+  height: 30rem;
+  background: url(../img/warn_div.png) no-repeat;
+  background-size: 100% 100%;
+  font-size: .75rem;
+}
 .LeftHeader {
   height: 3.4rem;
   padding-top: 2rem;
@@ -1228,6 +1259,18 @@
 }
 .P6LeftContent {
   padding: .4rem  1.98rem 2.2rem 1.95rem;
+}
+.warnContainer {
+  padding: .4rem  1rem 2.2rem 1.95rem;
+}
+.warnContainer .warnCon {
+  margin-bottom: .3rem;
+}
+.CanvasNavBox {
+  margin-bottom: .7rem;
+}
+.warnTimeBox {
+  padding-right: .98rem;
 }
 .showContentLi {
   height: 6.9rem;
@@ -1558,18 +1601,63 @@
 .legendBox2 {
   right: 24.875rem;
 }
-.bottomBox {
-  padding-top: 1.3rem;
-}
 .goodWeatherCanvas {
   position: relative;
   margin-top: 1rem;
   width: 100%;
-  height: 14.1rem;
+  height: 11.1rem;
 }
 .legend2 .LegendList {
   padding-top: 1rem;
   display: block;
+}
+.navTimeBox .LeftConTitle2 {
+  margin-top: 0;
+  text-align: right;
+}
+.mapTabCon {
+  position: relative;
+}
+.mapTabCon .navTab {
+  top: 100px;
+  position: absolute;
+  width: 500px;
+  display: none;
+}
+.mapTabCon .navTab.active {
+  display: block;
+}
+.navTab {
+  height: 62px;
+  text-align: center;
+}
+.navTab .navLi {
+  line-height: 52px;
+  color: #cedffe;
+  background: #01163b;
+  border-top: 1px solid #00bdff;
+  border-bottom: 1px solid #00bdff;
+  width: 50%;
+  height: 60px;
+  float: left;
+}
+.navTab .navLi:first-child {
+  border: 1px solid #00bdff;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  border-radius: 12px 0 0 12px;
+}
+.navTab .navLi:last-child {
+  border: 1px solid #00bdff;
+  border-radius: 0 8px 8px 0;
+  border-radius: 0 12px 12px 0;
+}
+.navTab .navLi.active {
+  background: #00e5ff;
+  color: #01163b;
+}
+.navTab .navLi + .navLi {
+  border-left: 1px solid #00bdff;
 }
 .LegendLi2 {
   display: inline-block;
@@ -1910,6 +1998,30 @@
   background-size: 100% 100%;
 }
 /***popUP  end****/
+.translateBtn {
+  border: 1px solid;
+}
+.LoginDiv {
+  padding: 0 50px;
+  height: 80px;
+  background: #00e5ff;
+  border-radius: 40px;
+  position: absolute;
+  top: -80px;
+  right: 83px;
+}
+.LoginDiv:hover {
+  transform: translateY(-1px);
+  box-shadow: 0px 2px 12px 2px rgba(11, 115, 203, 0.25);
+}
+.LoginText {
+  height: 100%;
+  line-height: 80px;
+  font-size: 40px;
+  color: #01163b;
+  font-weight: 700;
+  text-align: center;
+}
 /*************part6  blueSky  end  ******************  ***/
 /************ 有滚动条的所有div *** ***/
 .P3LeftSummary .tableContanier,

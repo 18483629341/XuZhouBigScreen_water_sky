@@ -7,7 +7,7 @@ $(document).ready(function () {
 		//autoFitNav();
 		autoFitContent();
 		//tabToggle();
-        mapToggle2();
+       
         RankToggle();
         P6moduleToggle();
         setRadio();
@@ -15,10 +15,7 @@ $(document).ready(function () {
         autoScrollFun('#scrollBox2');
         autoScrollFun('#scrollBox3');
         popContorl();
-        //弹窗上的线图绘制
-        initPopCanvas=new InitPopCanvas(popupObj);
-        initPopCanvas.initCanvas();
-        // 使用刚指定的配置项和数据显示图表。
+       // 使用刚指定的配置项和数据显示图表。
         //饼图
          myChart21.setOption(option21);
          myChart22.setOption(option22);
@@ -26,7 +23,13 @@ $(document).ready(function () {
          myChart24.setOption(option24);
          //左列表线图
          myChart3.setOption(option31);
-         
+          //弹窗上的线图绘制
+          myChart4.setOption(option41);
+        // console.log(popupObj);
+        // console.log(popupObj1);
+        // initPopCanvas=new InitPopCanvas(popupObj);
+        // initPopCanvas.initCanvas();
+        
          
 	});
 });
@@ -42,6 +45,7 @@ window.onresize=function(){
     myChart23.resize();
     myChart24.resize();
     myChart3.resize();
+    myChart4.resize();
     initPopCanvas.popUpChart.resize();
     initPopCanvas.initCanvas();
 }
@@ -105,29 +109,30 @@ function setOptionfun(color,radius){
     return option;
 }
 /* 地图div的交互   */
-var mainActive = 'map6'; //主页面活动的模块div
-function mapToggle2(){
-	//P1tabLi
-	$("body").on('click','.P6tabLi',function(){
-		$(this).siblings('.P6tabLi').removeClass('active');
-		$(this).addClass('active');
-	    if($(this).attr("data-map")=="PM1"){
-			$('.map6').removeClass('active');
-            $('.map61').addClass('active');
-            mainActive='map61';
-            $('.js_title').html('全省2018年PM<sub>2.5</sub>年均浓度变化趋势');           
-            myChart3.setOption(option32);
-            $('.P6legendBox1').addClass('show');
-		}else if($(this).attr("data-map")=="GoodWeath1"){
-			$('.map61').removeClass('active');
-            $('.map6').addClass('active');
-            mainActive='map6';
-            $('.js_title').html('全省2018年优良天数比例变化趋势');
-            myChart3.setOption(option31);
-            $('.P6legendBox1').removeClass('show');
-		}
-    })
-}
+
+//P1tabLi
+$("body").on('click', '.js_typeTab .navLi', function () {
+    $('.js_typeTab .navLi').removeClass('active');
+    $(this).addClass('active');
+    var type=$(this).attr("data-type")
+    $('.MapBox').removeClass('active');
+    $('.MapBox[data-type='+type+']').addClass('active');
+})
+   
+$("body").on('click','.P6tabLi',function(){
+    $('.P6tabLi').removeClass('active');
+    $(this).addClass('active');
+    var type=null;
+    if(!$(this).attr("data-type")){
+        type=$(this).find('.navLi.active').attr("data-type");
+        $('.mapTabCon .navTab').addClass('active');
+    }else{
+        type=$(this).attr("data-type");
+        $('.mapTabCon .navTab').removeClass('active');
+    }
+    $('.MapBox').removeClass('active');
+    $('.MapBox[data-type='+type+']').addClass('active');
+})
 
 /* 排名相关点击交互   */
 function RankToggle(){
@@ -149,6 +154,7 @@ function RankToggle(){
  * 
  * */
 var myChart3 = echarts.init(document.getElementById('goodWeatherCanvas'));
+var myChart4 = echarts.init(document.getElementById('P6popUpcanvas'));
 var areaBack='rgba(1,53,91,.3)';
 
 //!!!!!!!需要后台引入的数据  全省年均值的数据
@@ -161,7 +167,9 @@ var goodWheatherData={
     label:'单位：%',
     formatter:'{value}',
     max:'100',
+    colors:["#72e75e","#00e4ff","#f7823c"]
 } 
+
 var PMData={
     arrMonth:['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月'],
     arrThisYear:['250', '160','240','190' ,'160','80','90', '160','80','90' ,'160','180'],
@@ -173,27 +181,60 @@ var PMData={
         var a=value.max*1.2;
         return a.toFixed(1);
     },
+    colors:["#72e75e","#00e4ff","#f7823c"]
 } 
-
+/*************
+ * 
+ *  弹窗的线图渲染
+ * 
+ * */
+//   !!!!!!!需要后台引入的数据  弹窗上某站点的数据
+var goodWheatherData1={
+    arrMonth:['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月'],
+    arrThisYear:['70', '60','80','90' ,'60','80','90', '60','80','90' ,'60','80'],
+    aIndex:'75',
+    arrLastYear:['55','55','40','60','55','40','60','55','40','60','55','40','60'],
+    label:'单位：%',
+    formatter:'{value}',
+    max:'100',
+    colors:["#72e75e","#fbe83a","#00cdff"]
+} 
+var PMData1={
+    arrMonth:['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月'],
+    arrThisYear:['250', '160','240','190' ,'160','80','90', '160','80','90' ,'160','180'],
+    aIndex:'',
+    arrLastYear:['155','155','140','160','155','140','160','155','140','160','155','140','160'],
+    label:'ug/m3',
+    formatter:'{value}',
+    max:function(value){
+        var a=value.max*1.2;
+        return a.toFixed(1);
+    },
+    colors:["#72e75e","#fbe83a","#00cdff"]
+} 
 var option31=getOption3(goodWheatherData);
 var option32=getOption3(PMData);
+var option41=getOption3(goodWheatherData1);
+var option42=getOption3(PMData1);
 function getOption3(obj){
-    var arrIndex=[];
-    for(var i=0;i<12;i++){
-        arrIndex.push(goodWheatherData.aIndex);
-    }
+    
+        var arrIndex=[];
+        for(var i=0;i<12;i++){
+            arrIndex.push(obj.aIndex);
+        }
+    
     var option= {
-        color:["#72e75e","#00e4ff","#f7823c"],//调色板
-        tooltip : {
+        color:obj.colors,//调色板
+        tooltip: {
             //show:false,
             trigger: 'axis',
             axisPointer: {
                 type: 'line',
                 label: {
-                    backgroundColor: '#6a7985'
-                },
-                //formatter: '{c}  {name|{a}}%',
-            }
+                    backgroundColor: '#6a7985',
+                    fontSize: 14
+                }
+            },
         },
         grid: {
             top:130,
@@ -205,28 +246,29 @@ function getOption3(obj){
         },
         xAxis: {
             type: 'category',
-            onZero:true,
-            boundaryGap: true,
+            onZero: true,
+            axisLine: { //X轴线的设置
+                show: false,
+                lineStyle: {
+                    color: "#324b75",
+                    type: 'dashed',
+                    align: 'right',
+                    padding: [3, 4, 5, 10]
+                }
+            },
             axisTick: {
                 show: false
             },
-            axisLabel: {        
+            axisLabel: {
                 show: true,
+                rotate: -45,
                 textStyle: {
                     color: '#c3d4ff',
-                    fontSize:26,
-                    align:'right'
+                    fontSize: 14,
                 }
             },
-            axisLine: {//X轴线的设置
-                show: false,
-                lineStyle:{
-                    color:"#324b75",
-                    type:'dashed'
-                }
-            },
-            data: obj.arrMonth,
-            boundaryGap:false
+            data:obj.arrMonth,
+            boundaryGap: false
         },
         yAxis: {
             type: 'value',
@@ -347,84 +389,38 @@ function P6moduleToggle(){
     }
 }
 /*********popup0   线框图 相关数据对象***** */
-var popData={
-        goodWheatherData:{
-            arrThisYear:['70', '60','80','90' ,'60','80','90', '60','80','90' ,'60','80'],
-        
-            arrLastYear:['55','55','40','60','55','40','60','55','40','60','55','40','60'],
-            label:'单位：%',
-            formatter:'{value}%',
-            max:'100',
-        } ,
-        PMData:{
-            arrThisYear:['250', '160','240','190' ,'160','80','90', '160','80','90' ,'160','180'],
-            arrLastYear:['155','155','140','160','155','140','160','155','140','160','155','140','160'],
-            label:'ug/m3',
-            formatter:'{value}',
-            max:function(value){
-                var a=value.max*1.2;
-                return a.toFixed(1);
-            }
-            
-        } 
-   }
-var  popupObj=getOption4(popData.goodWheatherData);
-var  popupObj1=getOption4(popData.PMData);
-function getOption4(obj){
-    var popupObj={};
-    popupObj.elementId='P6popUpcanvas';
-    popupObj.arrThisYear=obj.arrThisYear;//!!!!!!!需要后台引入的数据
-    popupObj.arrLastYear=obj.arrLastYear;//!!!!!!!需要后台引入的数据
-
-    popupObj.colorArr=["#fbe83a","#00cdff"];
-    popupObj.Yname=obj.label;
-    popupObj.min='0';    
-    popupObj.max=obj.label.max;
-    popupObj.tabSpanS=$('.tabSpan');
-    popupObj.seriesArr=[
-        {   
-            name:'空气优良天气比例',
-            type: 'line',
-            data:  obj.arrThisYear,
-            smooth: true,
-            lineStyle:{
-                width:4,
-            },
-            symbol:'none'
-
-        },
-        {
-            name:'2017年同期',
-            type:'line',
-            stack: '总量',
-            data: obj.arrLastYear,
-            smooth: true,
-            lineStyle:{
-                width:4,
-            },
-            symbol:'none'
-        }
-    ];
-    return popupObj;
-   }
-
-    console.log(popupObj1);
-    $("body").on('click','.tabSpan',function(){
-        $('.tabSpan').removeClass('active');
+// 
+   //切换弹窗上的线图  优良天数比例和PM2.5年均浓度
+    $("body").on('click','.lineGraph',function(){
+        $('.lineGraph').removeClass('active');
         $(this).addClass('active');
         if($(this).attr('data-name')=='goodWeather'){
-            // $('.js_title').html('全省2018年优良天数比例变化趋势');
-            initPopCanvas.setObj(popupObj);
-          
+            myChart4.setOption(option41);
         }else{
-            // $('.js_title').html('全省2018年PM<sub>2.5</sub>变化趋势');
-            initPopCanvas.setObj(popupObj1);
-           
+            myChart4.setOption(option42);
         }
-        initPopCanvas.initCanvas();
     })
+    //切换左列区域的线图  优良天数比例和PM2.5年均浓度
+    $("body").on('click', '.js_graghTab .navLi', function () {
+        //console.log(1);
+        $('.js_graghTab .navLi').removeClass('active');
+		$(this).addClass('active');
+		
+		if($(this).attr('data-type')=='GoodWeath4'){
+            $('.js_title').html('全省2018年优良天数比例变化趋势');
+            myChart3.setOption(option31);
+        }else{
+            $('.js_title').html('全省2018年PM<sub>2.5</sub>年均浓度变化趋势');           
+            myChart3.setOption(option32);
+        }
+    })
+$("body").on('click', '.js_warnTab .navLi', function () {
+    console.log(2);
+    $('.js_warnTab .navLi').removeClass('active');
+	$(this).addClass('active');
+})
 
-   
+ 
 
 
 

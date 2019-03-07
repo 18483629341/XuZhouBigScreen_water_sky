@@ -5,7 +5,40 @@
 @FourLevelC: #ffff00;
 @FiveLevelC: #ffd700;
 @SixLevelC: #fc0105;
-
+@radiusWidth:8px;
+@borderSliver:#ccc;
+@borderBlue:rgb(0,189,255);
+#tabs(){
+	.tabsList{
+		//width: 490px;
+		height: 62px;
+		text-align: center;
+		//margin-bottom: 5px;
+	}
+	.tabli{
+		line-height:52px;
+		color:#cedffe;
+		background:rgb(1,22,59);
+		border-top:1px solid @borderBlue;
+		border-bottom:1px solid @borderBlue;
+	}
+	.tabliFirstchild{
+		border:1px solid @borderBlue;
+		border-right:none; 
+		border-radius:@radiusWidth 0 0 @radiusWidth;
+	}
+	.selfTabLastChild{
+		border:1px solid @borderBlue;
+		border-radius:0 @radiusWidth @radiusWidth 0;
+	}
+	.tabliActive{
+		background:#00e5ff;
+       	color:rgb(1,22,59);
+	}
+	.tabliTotabli{
+		border-left:1px solid @borderBlue; 
+	}
+}
 /***********************    LeftSummary         start******** */
 .MapBox{
 	width: 100%;
@@ -44,15 +77,19 @@
 	background-size:100% 100%;
 }
 .map6{
-	background: url(../img/map1.png) no-repeat;
+	background: url(../img/map4.png) no-repeat;
 	background-size:100% 100%;
 }
 .map61{
-	background: url(../img/u1640.png) no-repeat;
+	background: url(../img/map5.png) no-repeat;
 	background-size:100% 100%;
 }
 .mapWuhan{
 	background-image: url(../img/u11849.png) ;
+	background-size:100% 100%; 
+}
+.mapSection{
+	background-image: url(../img/map3.png) ;
 	background-size:100% 100%; 
 }
 .ax_default{
@@ -457,18 +494,20 @@
 /*************part2  part  start  *********************/
 .P2LeftContent{
 	padding: 0 2rem;
+	
+}
+.leftPane{
 	display: none;
 }
-.P2LeftContent.active{
-	display: block
+.leftPane.active{
+	display: block;
 }
 .LeftConTitle2{
 	margin-top:.9rem;
 }
 .splitLine{
 	margin: .5rem 0 .6rem 0;
-    width: 82%;
-    margin-left: 9%;
+    width:100%;
 	border-bottom: .025rem dashed #00d2ff;
 }
 .P2ContentList{
@@ -809,9 +848,7 @@
 .themeContent.active{
     display: block;
 }
-.padding80{
-	padding:0 2rem;
-}
+
 .warnCon{
 	margin-bottom: 1rem;
 }
@@ -864,7 +901,7 @@
 		background: url(../img/yyl_down.png) no-repeat;
 	}
 }
-.P2RightSummary{
+.P2RightSummary,.P6RightSummary2{
 	.LeftHeaderTitle{
 		text-align: left;
 		padding-left: 19%;
@@ -911,9 +948,9 @@
 		height: 1.6rem;
 		padding-top: .5rem;
 	}
-}
-.P2RightContent {
-	padding: .6rem 1.85rem 0.5rem 2.08rem;
+	.P2RightContent,.P6RightContent {
+		padding: .6rem 1.85rem 0.5rem 2.08rem;	
+	}
 	.ListTitle2 {
 		font-size: .75rem;
 		line-height: .75rem;
@@ -922,6 +959,7 @@
 		text-align: left;
 	}
 }
+
 /*************part2  part  end  ******************  ***/
 /*************part3  part  end  ******************  ***/
 .P3LeftSummary{
@@ -1314,6 +1352,14 @@
 	font-size:.75rem;
 	
 }
+.P6LeftSummary2{
+	top:42rem;
+	width: 21.075rem;
+	height:30rem; 
+	background: url(../img/warn_div.png) no-repeat;
+	background-size:100% 100%;
+	font-size:.75rem;
+}
 .LeftHeader{
 	height:3.4rem;
 	padding-top: 2rem;
@@ -1359,6 +1405,19 @@
 
 .P6LeftContent{
 	padding:.4rem  1.98rem 2.2rem 1.95rem;
+}
+.warnContainer{
+	padding:.4rem  1rem 2.2rem 1.95rem;
+    .warnCon {
+		margin-bottom: .3rem;
+	}
+}
+.CanvasNavBox{
+	margin-bottom:.7rem;
+}
+.warnTimeBox{
+	padding-right:.98rem;
+	
 }
 .showContentLi{
 	height:6.9rem;
@@ -1706,14 +1765,14 @@
 	right: 24.875rem;
 }
 .bottomBox{
-	padding-top: 1.3rem;
+	//padding-top: 1.3rem;
 	
 }
 .goodWeatherCanvas{
 	position: relative;
 	margin-top: 1rem;
 	width: 100%;
-	height:14.1rem;
+	height:11.1rem;
 	// border: .025rem solid yellow;
 }
 .legend2 {
@@ -1722,6 +1781,54 @@
 		display: block;
 	}
 }
+.navTimeBox{
+	//height:70px;
+	.LeftConTitle2{
+		margin-top:0; 
+		text-align: right;
+	}
+}
+.mapTabCon{
+	position: relative;
+	.navTab{
+		top:100px;
+		position: absolute;
+		width:500px;
+		display: none;
+	}
+	.navTab.active{
+		display: block;
+	}
+}
+.navTab{
+
+	
+    #tabs.tabsList();
+	@smallradiusWidth:12px;
+	
+	.navLi{
+		#tabs.tabli();
+		width: 50%;
+		height:60px;
+
+		float: left;
+	}
+	.navLi:first-child{
+		#tabs.tabliFirstchild();
+		border-radius:@smallradiusWidth 0 0 @smallradiusWidth;	
+	}
+	.navLi:last-child{
+		#tabs.selfTabLastChild();
+		border-radius:0 @smallradiusWidth @smallradiusWidth 0;
+	}
+	.navLi.active{
+		#tabs.tabliActive();
+	}
+	.navLi+.navLi{
+		#tabs.tabliTotabli();
+	}
+}
+
 .LegendLi2{
 	display: inline-block;
 	font-size:.5rem; 
@@ -2079,6 +2186,30 @@
 	background-size: 100% 100%;
 }
  /***popUP  end****/
+ .translateBtn{
+    border: 1px solid 
+ }
+ .LoginDiv{
+	padding: 0 50px;
+    height: 80px;
+    background: #00e5ff;
+    border-radius: 40px;
+    position: absolute;
+    top: -80px;
+    right: 83px;
+}
+.LoginDiv:hover{
+	transform: translateY(-1px);
+	box-shadow: 0px 2px 12px 2px rgba(11, 115, 203, 0.25);
+}
+.LoginText{
+	height: 100%;
+    line-height: 80px;
+    font-size: 40px;
+    color: #01163b;
+    font-weight: 700;
+    text-align: center;
+}
 /*************part6  blueSky  end  ******************  ***/
 /************ 有滚动条的所有div *** ***/
 .P3LeftSummary,.P6RightSummary1,.P6RightSummary2{

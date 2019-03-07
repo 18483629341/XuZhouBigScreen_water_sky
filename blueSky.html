@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>蓝天保卫战</title>
+	<title>空气环境质量大屏</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/common.css" />
 	<!-- <link rel="stylesheet" type="text/css" href="./css/jquery.mCustomScrollbar.min.css" />
@@ -11,10 +11,10 @@
 	<link rel="stylesheet" type="text/css" href="./css/main.css" />
 	<link rel="stylesheet" type="text/css" href="./css/index.css" />
 	<script src="./js/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
+	<script src="./js/main.js"></script>
 </head>
 
-<body  class="body1">
+<body class="body2">
 	<script>
 		autoFit();
 	</script>
@@ -26,27 +26,27 @@
 				<div class="HeaderCenter">
 					<div class="h28"></div>
 					<div class="TitleImg"></div>
-					<div class="SubTitleP">蓝天保卫战</div>
+					<div class="SubTitleP">空气环境质量</div>
 				</div>
 			</div>
 		</header>
 		<section class="section">
 			<!--水质考核   water quality assessment box-->
 			<div class="TabContent  blueSky" id='blueSky' data-index="2">
-				<div class="MapBox  map6 active">
-					<div class="goWuhan show">进入市区</div>
+				<div class="MapBox  map6 active" data-type="GoodWeath1">
+					<!-- <div class="goWuhan show">进入市区</div> -->
 				</div>
-				<div class="MapBox map61 ">
-					<div class="goWuhan show">进入市区</div>
+				<div class="MapBox map61 " data-type="PM1">
+					<!-- <div class="goWuhan show">进入市区</div> -->
 				</div>
-				<div class="MapBox mapWuhan ">
+				<div class="MapBox mapSection " data-type="section">
 					<div class="ax_default">
 						<img id="u14643_img" class="img " src="./img/u14637.png">
 					</div>
 				</div>
 				<div class="P6LeftSummary">
 					<div class="LeftHeader">
-						<p class="LeftHeaderTitle">全省2018年空气质量考核情况</p>
+						<p class="LeftHeaderTitle">2018年空气质量考核情况</p>
 					</div>
 					<div class="XuanLine"></div>
 					<div class="P6LeftContent">
@@ -88,13 +88,15 @@
 							<div class="P6CompRateBox2">
 								<div class="P6CompRate2">
 									<p class="rem092">44.62</p>
-									<p class="rem092 scale05">ug/m<sup class="scale05">3</sup>
+									<p class="rem092 scale05">ug/m
+										<sup class="scale05">3</sup>
 									</p>
 								</div>
 							</div>
 							<div class="P6rightBox">
 								<div class="P6rightConTitleBox secondLine">
-									<span class="rightConTitle ">PM<sub>2.5</sub>年均浓度同比</span>
+									<span class="rightConTitle ">PM
+										<sub>2.5</sub>年均浓度同比</span>
 									<span class="rightMount upItem">
 										<i class="icon upIcon"></i>3.24%</span>
 									<!-- 下降class为downIcon,上升为upIcon  -->
@@ -103,13 +105,27 @@
 									<p class="description">
 										目前未达到考核总目标(
 										<span>2018</span>年达到
-										<span>47.62</span>ug/m<sup class="scale05">3</sup>)
+										<span>47.62</span>ug/m
+										<sup class="scale05">3</sup>)
 									</p>
 								</div>
 							</div>
 						</div>
 						<div class="splitLine"></div>
 						<div class="bottomBox">
+							<div class="navTimeBox CanvasNavBox">
+								<p class="LeftConTitle LeftConTitle2  ">统计时间：
+									<span>2018年11月</span>
+								</p>
+								<ul class="navTab js_graghTab">
+									<li class="navLi active" data-type="GoodWeath4">优良天数比例</li>
+									<li class="navLi" data-type="PM4">PM
+										<sub class="scale03">2.5</sub>年均浓度
+									</li>
+								</ul>
+
+							</div>
+
 							<p class="title js_title">全省2018年优良天数比例变化趋势</p>
 							<div class="goodWeatherCanvas" id="goodWeatherCanvas">
 							</div>
@@ -132,187 +148,130 @@
 						</div>
 					</div>
 				</div>
+				<div class="P6LeftSummary P6LeftSummary2">
+					<div class="LeftHeader">
+						<p class="LeftHeaderTitle">空气质量告警信息</p>
+
+					</div>
+					<div class="XuanLine"></div>
+					<div class="P6LeftContent warnContainer" id="warnContainer">
+						<div class="navTimeBox warnTimeBox">
+							<p class="LeftConTitle LeftConTitle2  ">统计时间：
+								<span>2018年11月</span>
+							</p>
+							<ul class="navTab js_warnTab">
+								<li class="navLi active">区县告警信息</li>
+								<li class="navLi">站点告警信息</li>
+							</ul>
+
+						</div>
+						<div class="WarnPane">
+							<div class="LeftConBox">
+								<p class="conTheme">
+									<i class="icon iconPoi"></i>
+									优良天数比例告警
+								</p>
+							</div>
+							<div class="warnCon">
+								<p class="warnBox">优良天数比例同比去年下降10%的区县有：
+									<span class="rightMount downItem ">鼓楼区（80%）</span>、
+									<span class="rightMount downItem ">贾汪区（77%）</span>
+								</p>
+							</div>
+							<div class="warnCon">
+								<p class="warnBox">优良天数比例同比去年下降10%的河流有：
+									<span class="rightMount downItem ">贾汪区（77%）</span>
+								</p>
+							</div>
+						</div>
+						<div class="WarnPane">
+							<div class="LeftConBox">
+								<p class="conTheme">
+									<i class="icon iconPoi"></i>
+									PM
+									<sub class="scale03">2.5</sub>年均浓度
+								</p>
+
+							</div>
+							<div class="warnCon">
+								<p class="warnBox">PM
+									<sub class="scale03">2.5</sub>年均浓度同比去年下降10%的区县有：
+									<span class="rightMount downItem ">鼓楼区（80%）</span>、
+									<span class="rightMount downItem ">沛县（77%）</span>
+								</p>
+							</div>
+							<div class="warnCon">
+								<p class="warnBox">PM
+									<sub class="scale03">2.5</sub>年均浓度同比去年下降10%的河流有：
+									<span class="rightMount downItem ">鼓楼区（80%）</span>、
+									<span class="rightMount downItem ">沛县（77%）</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<!-- 点击  返回后按钮   后显示的模块 start -->
 				<div class="RightBox2 P6RightBox show">
 					<div class="GisTabs flexBlock">
-						<div class="P6tabLi GisLeftTab active" data-map="GoodWeath1">优良天数比例</div>
-						<div class="P6tabLi GisRightTab " data-map="PM1">PM<sub class="scale03">2.5</sub>年均浓度
+						<div class="P6tabLi GisLeftTab active mapTabCon" id="mapTabCon">区县
+							<ul class="navTab  js_typeTab active">
+								<li class="navLi active" data-type="GoodWeath1">优良天数比例</li>
+								<li class="navLi " data-type="PM1">PM
+									<sub class="scale03">2.5</sub>年均浓度</li>
+							</ul>
+						</div>
+						<div class="P6tabLi GisRightTab " data-type="section">测点
 						</div>
 					</div>
 				</div>
-				<div class="P6RightSummary  P6RightSummary1 show">
-					<div class="LeftHeader">
-						<p class="LeftHeaderTitle">区域空气质量排名</p>
-					</div>
-					<div class="XuanLine"></div>
-
-					<div class="P6RightContent">
-						<div class="RightBox3">
-							<div class="GisTabs3 flexBlock">
-								<div class="P6tabLi3 GisLeftTab active" data-map="GoodWeath2">优良天数比例</div>
-								<div class="P6tabLi3 GisCenterTab " data-map="PM2">PM<sub class="scale03">2.5</sub>年均浓度</div>
-								<div class="P6tabLi3 GisRightTab " data-map="AQI">AQI</div>
-							</div>
-						</div>
-						<p class="ListTitle2">统计时间：2018-10-11</p>
-						<div class="citheadTr flexBlock ">
-							<div class=" theadTd td1">排名</div>
-							<div class=" theadTd td2">城市</div>
-							<div class=" theadTd td3 ">
-								<span>优良天气比例（%）</span>
-								<span class="TableIconBox">
-									<div class="P6ArrowIcon triangle_border_up">
-									</div>
-									<div class="P6ArrowIcon triangle_border_down active">
-									</div>
-								</span>
-							</div>
-
-						</div>
-						<div class="tableContanier tableContanier2 content" id="scrollBox1">
-							<table class="table table2">
-								<tbody>
-									<tr class="tbodyTr">
-										<td class="td1">1</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">2</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">3</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">4</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">5</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">6</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">7</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">8</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">9</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">10</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">11</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">12</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">13</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">14</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">15</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">16</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">17</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">18</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-									<tr class="tbodyTr">
-										<td class="td1">19</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-				<div class="legendBox  legendBox2 P6legendBox1">
+				<!-- <div class="legendBox  legendBox2 P6legendBox1 show">
 					<div class="legend">
 						<div class="LegendContent">
 							<ol class="LegendList">
 								<li class="LegendLi">
 									<span class="WaterQulLine OneLevel"></span>
-									<span class="RemarkName">0-35ug/m<sup>3</sup>
+									<span class="RemarkName">0-35ug/m
+										<sup>3</sup>
 									</span>
 								</li>
 								<li class="LegendLi">
 									<span class="WaterQulLine TwoLevel"></span>
-									<span class="RemarkName">35-75ug/m<sup>3</sup>
+									<span class="RemarkName">35-75ug/m
+										<sup>3</sup>
 									</span>
 								</li>
 								<li class="LegendLi">
 									<span class="WaterQulLine ThreeLevel"></span>
-									<span class="RemarkName">75-115ug/m<sup>3</sup>
+									<span class="RemarkName">75-115ug/m
+										<sup>3</sup>
 									</span>
 								</li>
 								<li class="LegendLi">
 									<span class="WaterQulLine FourLevel"></span>
-									<span class="RemarkName">115-150ug/m<sup>3</sup>
+									<span class="RemarkName">115-150ug/m
+										<sup>3</sup>
 									</span>
 								</li>
 								<li class="LegendLi">
 									<span class="WaterQulLine FiveLevel"></span>
-									<span class="RemarkName">150-250ug/m<sup>3</sup>
+									<span class="RemarkName">150-250ug/m
+										<sup>3</sup>
 									</span>
 								</li>
 								<li class="LegendLi">
 									<span class="WaterQulLine SixLevel"></span>
-									<span class="RemarkName">>=250ug/m<sup>3</sup>
+									<span class="RemarkName">>=250ug/m
+										<sup>3</sup>
 									</span>
 								</li>
 							</ol>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<!-- 点击  返回后按钮   后显示的模块 send -->
 				<!-- 点击  gis中的武汉区域内   后显示的模块 start -->
-				<div class="P6RightSummary P6RightSummary2 ">
+				<div class="P6RightSummary P6RightSummary2 show">
 					<div class="LeftHeader">
 						<p class="LeftHeaderTitle">区县空气质量排名</p>
 					</div>
@@ -321,68 +280,80 @@
 					<div class="P6RightContent">
 						<div class="RightBox3">
 							<div class="GisTabs3 flexBlock">
-								<div class="P6tabLi3 GisLeftTab active" data-map="GoodWeath2">优良天数比例</div>
-								<div class="P6tabLi3 GisCenterTab " data-map="PM2">PM<sub class="scale03">2.5</sub>年均浓度</div>
-								<div class="P6tabLi3 GisRightTab " data-map="AQI">AQI</div>
+								<div class="P6tabLi3 GisRightTab "  data-type="GoodWeath2">优良天数比例</div>
+								<div class="P6tabLi3 GisCenterTab " data-type="PM2">PM
+									<sub class="scale03">2.5</sub>年均浓度</div>
+								<div class="P6tabLi3 GisLeftTab active"  data-type="AQI">AQI</div>
 							</div>
 						</div>
 						<p class="ListTitle2">统计时间：2018-10-11</p>
 						<div class="citheadTr flexBlock ">
-							<div class="inlineBlock theadTd td1">排名</div>
-							<div class="inlineBlock theadTd td2">城市</div>
-							<div class="inlineBlock theadTd td3 flex1">
-								<span>优良天气比例（%）</span>
-								<span class="TableIconBox">
-									<div class="P6ArrowIcon triangle_border_up">
-									</div>
-									<div class="P6ArrowIcon triangle_border_down active">
-									</div>
-								</span>
+							<div class="td1">排名</div>
+							<div class="td2">区县</div>
+							<div class="td3">
+								<span>AQI</span>
 							</div>
+							<div class="td4">变化</div>
 
 						</div>
 						<div class="tableContanier tableContanier2 content" id="scrollBox2">
-							<table class="table table2">
+							<table class="table changeTable" style="margin-top: 0px;">
 								<tbody>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">1</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">丰县</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">2</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
+										<td class="td2">沛县</td>
+										<td class="td3">88</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">3</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">鼓楼区</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">4</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">泉山区</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">5</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">贾汪区</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">6</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">邳州市</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">7</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">新沂市</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">8</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">新沂市</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
 								</tbody>
 							</table>
@@ -396,68 +367,80 @@
 					<div class="P6RightContent">
 						<div class="RightBox3">
 							<div class="GisTabs3 flexBlock">
-								<div class="P6tabLi3 GisLeftTab active" data-map="GoodWeath2">优良天数比例</div>
-								<div class="P6tabLi3 GisCenterTab " data-map="PM2">PM<sub class="scale03">2.5</sub>年均浓度</div>
-								<div class="P6tabLi3 GisRightTab " data-map="AQI">AQI</div>
+								<div class="P6tabLi3 GisLeftTab active" data-type="GoodWeath2">优良天数比例</div>
+								<div class="P6tabLi3 GisCenterTab " data-type="PM2">PM
+									<sub class="scale03">2.5</sub>年均浓度</div>
+								<div class="P6tabLi3 GisRightTab " data-type="AQI">AQI</div>
 							</div>
 						</div>
 						<p class="ListTitle2">统计时间：2018-10-11</p>
 						<div class="citheadTr flexBlock ">
-							<div class="inlineBlock theadTd td1">排名</div>
-							<div class="inlineBlock theadTd td2">城市</div>
-							<div class="inlineBlock theadTd td3 flex1">
-								<span>优良天气比例（%）</span>
-								<span class="TableIconBox">
-									<div class="P6ArrowIcon triangle_border_up">
-									</div>
-									<div class="P6ArrowIcon triangle_border_down active">
-									</div>
-								</span>
+							<div class="td1">排名</div>
+							<div class="td2">区县</div>
+							<div class="td3">
+								<span>优良天数比例（%）</span>
 							</div>
+							<div class="td4">变化</div>
 
 						</div>
 						<div class="tableContanier tableContanier2 content" id="scrollBox3">
-							<table class="table table2">
+							<table class="table changeTable" style="margin-top: 0px;">
 								<tbody>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">1</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">丰县</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">2</td>
-										<td class="td2">神农架林区</td>
-										<td class="td3">91</td>
+										<td class="td2">沛县</td>
+										<td class="td3">88</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">3</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">鼓楼区</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">4</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">泉山区</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">5</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">贾汪区</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">6</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">邳州市</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">7</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">新沂市</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon upIcon'></span>1</td>
 									</tr>
-									<tr class="tbodyTr">
+									<tr class="tbodyTr" >
 										<td class="td1">8</td>
-										<td class="td2">神农架林区</td>
+										<td class="td2">新沂市</td>
 										<td class="td3">91</td>
+										<td class="td4">
+											<span class='icon downIcon'></span>1</td>
 									</tr>
 								</tbody>
 							</table>
@@ -465,7 +448,7 @@
 					</div>
 				</div>
 				<!-- 图例2 start  -->
-				<div class="legendBox2 P6legendBox2 ">
+				<!-- <div class="legendBox2 P6legendBox2 ">
 					<div class="legend">
 						<table class="LegendContent">
 							<tbody class="LegendList">
@@ -528,10 +511,10 @@
 							</tbody>
 						</table>
 					</div>
-				</div>
+				</div> -->
 				<!-- 图例2  end  -->
-				<div class="GoAwayWuhan p6GoAwayWuhan ">
-				</div>
+				<!-- <div class="GoAwayWuhan p6GoAwayWuhan ">
+				</div> -->
 				<!-- 弹窗 start -->
 				<div class="PopUpBox P6PopUpBox ">
 					<div class="PopUpHeader">
@@ -561,41 +544,51 @@
 							<div class="keyContent">
 								<div class="contentList">
 									<div class="contentLi flexBlock">
-										<div class="leftRow flex1">PM<sub>2.5</sub>：
-											<span class="leftRowValue">55ug/m<sup>3</sup>
+										<div class="leftRow flex1">PM
+											<sub>2.5</sub>：
+											<span class="leftRowValue">55ug/m
+												<sup>3</sup>
 											</span>
 										</div>
-										<div class="centerRow flex1">PM<sub>10</sub>：
-											<span class="leftRowValue">200ug/m<sup>3</sup>
+										<div class="centerRow flex1">PM
+											<sub>10</sub>：
+											<span class="leftRowValue">200ug/m
+												<sup>3</sup>
 											</span>
 										</div>
-										<div class="rightRow flex1">SO<sub>2</sub>：
-											<span class="leftRowValue">3ug/m<sup>3</sup>
+										<div class="rightRow flex1">SO
+											<sub>2</sub>：
+											<span class="leftRowValue">3ug/m
+												<sup>3</sup>
 											</span>
 										</div>
 									</div>
 									<div class="contentLi flexBlock">
 										<div class="leftRow flex1">CO：
-											<span class="leftRowValue">0.2mg/m<sup>3</sup>
+											<span class="leftRowValue">0.2mg/m
+												<sup>3</sup>
 											</span>
 											</span>
 										</div>
-										<div class="centerRow flex1">NO<sub>2</sub>：
-											<span class="leftRowValue">55ug/m<sup>3</sup>
+										<div class="centerRow flex1">NO
+											<sub>2</sub>：
+											<span class="leftRowValue">55ug/m
+												<sup>3</sup>
 											</span>
 										</div>
-										<div class="rightRow flex1">O<sub>3</sub>：
-											<span class="leftRowValue">200ug/m<sup>3</sup>
+										<div class="rightRow flex1">O
+											<sub>3</sub>：
+											<span class="leftRowValue">200ug/m
+												<sup>3</sup>
 											</span>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="canvasTab">
-								<span class="tabSpan active" data-name="goodWeather">优良天数比例</span>
-								<span class="tabSpan " data-name="pm2.5">PM<sub>2.5</sub>
-								</span>
-							</div>
+							<ul class="canvasTab flexBlock">
+								<li class="tabLi flex1 lineGraph active" data-name="goodWeather">优良天数比例</li>
+						        <li class="tabLi longerText lineGraph" data-name="pm2.5">PM<sub>2.5</sub></li>
+							</ul>
 							<div class="popUpcanvasBox" id="P6popUpcanvas">
 							</div>
 							<div class="legend2 Popuplegend">
@@ -626,6 +619,12 @@
 					<!-- PopUpBottom end-->
 				</div>
 				<!-- 弹窗 end -->
+				 <!-- 页面跳转  -->
+				<div class="LoginDiv floatRight">
+						<a href="#" class="linkA">
+							<p class="LoginText">水环境质量大屏</p>
+						</a>
+					</div>
 				<!-- 点击  gis中的武汉区域内   后显示的模块 end -->
 			</div>
 	</div>
