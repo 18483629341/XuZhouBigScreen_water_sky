@@ -1,0 +1,147 @@
+/*********************   main.html 的所有样式 start******************/
+.body1,
+.body2 {
+  width: 96rem;
+  background-color: #000d30;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.body1 {
+  height: 54rem;
+}
+.body2 {
+  height: 54rem;
+}
+.body1::-webkit-scrollbar,
+.body2::-webkit-scrollbar {
+  display: none;
+}
+a,
+a:hover,
+a:link {
+  color: #fff;
+  text-decoration: none;
+}
+.contanier {
+  height: 100%;
+  padding: 0 1.7% 1% 1.7%;
+}
+.backImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.header {
+  z-index: 15;
+  overflow: hidden;
+  position: relative;
+  height: 8rem;
+}
+.header .BackDiv {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.header .HeaderBackImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.header .HeaderCenter {
+  height: 74%;
+}
+.header .HeaderCenter .h28 {
+  height: 58.9%;
+  font-size: 1.85rem;
+  line-height: 3.1rem;
+  font-weight: 700;
+  color: #00f8ff;
+}
+.header .HeaderCenter .TitleImg {
+  display: none;
+}
+.header .HeaderCenter .SubTitleP {
+  width: 12.5rem;
+  margin: 0 auto;
+  font-size: 1.55rem;
+  line-height: 1.55rem;
+}
+/*********************   main.html 的所有样式 end******************/
+/*    ********************** fornav  start**************         */
+.nav {
+  width: 100%;
+  height: 2.25rem;
+  top: -1rem;
+  position: relative;
+}
+.nav ul {
+  height: 100%;
+}
+.nav .tabli {
+  width: 9rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  font-size: .875rem;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+.nav .tabli.active {
+  color: #020a1f;
+  font-weight: 700;
+}
+.nav .TabLiContent {
+  width: 8.45rem;
+}
+.nav .LeftNav {
+  width: 28.75rem;
+  height: 100%;
+  float: left;
+}
+.nav .LeftNav .tabli {
+  background-image: url(../img/nav_left_normal.png);
+  background-size: cover;
+}
+.nav .LeftNav .tabli.active {
+  background-image: url(../img/nav_left_hover.png);
+  background-size: cover;
+}
+.nav .RightNav {
+  width: 20rem;
+  height: 100%;
+  float: right;
+}
+.nav .RightNav .tabli {
+  background-image: url(../img/nav_right_normal.png);
+  background-size: cover;
+}
+.nav .RightNav .tabli.active {
+  background-image: url(../img/nav_right_hover.png);
+  background-size: cover;
+}
+/*    ********************** fornav  end**************         */
+/***********************for tab  和  tabContent  start******** */
+.section {
+  flex: 1;
+  height: 85.1%;
+}
+.TabContent {
+  height: 100%;
+  position: relative;
+  top: 0;
+}
+/***********************for tab  和  tabContent  end******** */
+/******scroll end*******/
+html {
+  font-size: 20px !important;
+}
