@@ -18,7 +18,6 @@
 	</script>
 	<img class="backImg" src="./img/body_back.png" alt="">
 	<div class="contanier ">
-		<!-- header -->
 		<header class="header">
 			<img class="HeaderBackImg" src="./img/header_back.png" alt="">
 			<div class="BackDiv">
@@ -33,7 +32,6 @@
 			</div>
 
 		</header>
-		<!-- section -->
 		<section class="section">
 			<!--水质监测   water quality monitoring  box-->
 			<div class="TabContent WaterQulMonitor" id='WaterQulMonitor' data-index="1">
@@ -45,16 +43,15 @@
 						<img class="img " src="./img/icon_remark14.png">
 					</div>
 				</div>
-				<div class="MapBox  map21 " data-type="Compliance">
+				<div class="MapBox  map21 " data-type="isQulified">
 				</div>
-				<!-- 左列主题模块 -->
 				<div class="IndexLeftSummary ">
 
 					<div class="LeftHeader ">
 						<p class="LeftHeaderTitle js_title">水质监测状况</p>
 					</div>
 					<div class="XuanLine"></div>
-					<div class=" IndexLeftContent">
+					<div class="P2LeftContent">
 						<div class="leftPane active" data-type="waterMonitor">
 							<div class="LeftConBox">
 								<p class="conTheme">
@@ -63,7 +60,7 @@
 								</p>
 								<p class="LeftConTitle LeftConTitle2 alignRight inlineBlock">2018年11月</p>
 							</div>
-							<ul class="contentList IndexContentList">
+							<ul class="contentList P2ContentList">
 								<li class="contentLi">
 									<span class="contentLiFont">全市手工断面</span>
 									<span class="contentLiMount">
@@ -78,7 +75,7 @@
 							</ul>
 							<div class="typePiecanvasBox active" id="typePiecanvasBox"></div>
 						</div>
-						<div class="leftPane" data-type="Compliance">
+						<div class="leftPane" data-type="isQulified">
 							<div class="LeftConBox">
 								<p class="conTheme">
 									<i class="icon iconPoi"></i>
@@ -86,7 +83,7 @@
 								</p>
 								<p class="LeftConTitle LeftConTitle2 alignRight inlineBlock">2018年11月</p>
 							</div>
-							<ul class="contentList IndexContentList">
+							<ul class="contentList P2ContentList">
 								<li class="contentLi">
 									<span class="contentLiFont">达标断面</span>
 									<span class="contentLiMount">
@@ -132,20 +129,18 @@
 
 
 				</div>
-				<!-- 主题切换TAB模块 -->
 				<div class="RightBox2 P6RightBox show">
 					<div class="GisTabs flexBlock">
 						<div class="P6tabLi GisLeftTab active" data-type="waterMonitor">水质监测</div>
-						<div class="P6tabLi GisRightTab " data-type="Compliance">达标情况</div>
+						<div class="P6tabLi GisRightTab " data-type="isQulified">达标情况</div>
 					</div>
 				</div>
-				<!-- 右列主题模块 -->
-				<div class="RightSummary  show">
+				<div class="P2RightSummary  show">
 					<div class="LeftHeader">
 						<p class="LeftHeaderTitle">区县水质达标率排名</p>
 					</div>
 					<div class="XuanLine"></div>
-					<div class="RightContent">
+					<div class="P2RightContent">
 						<p class="ListTitle2">统计时间：2018-10-11</p>
 						<div class="citheadTr flexBlock ">
 							<div class="td1">排名</div>
@@ -298,7 +293,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- 图例 -->
 				<div class="RightBoxCon P2RightBoxCon">
 					<table class="RightBox P2RightBox">
 						<thead class="LegendHeader ">
@@ -405,8 +399,8 @@
 		</section>
 
 		<!-- 图例2  end  -->
-		<!-- <div class="GoAwayWuhan p6GoAwayWuhan ">
-		</div> -->
+		<div class="GoAwayWuhan p6GoAwayWuhan ">
+		</div>
 		<!-- 弹窗1 纱帽 start -->
 		<div class="PopUpBox  P2PopUpBox PopUpBox_sha" id="PopUpBox_sha">
 			<div class="PopUpHeader">
@@ -447,7 +441,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- 线图切换 -->
 					<ul class="canvasTab flexBlock">
 						<li class="tabLi flex1 lineGraph active">氨氮</li>
 						<li class="tabLi longerText lineGraph ">高锰酸钾指数</li>
@@ -592,12 +585,38 @@
 			<!-- PopUpBottom end-->
 		</div>
 		<!-- 弹窗1 自动站 end -->
+
+
+
 	</div>
+
+
+
 	<script>
 	</script>
-	
+	<!-- <table class="legendBar">
+		<tr class="firstTr">
+			<td class="RemarkName2 ">Ⅰ类</td>
+			<td class="RemarkName2">Ⅱ类</td>
+			<td class="RemarkName2">Ⅲ类</td>
+			<td class="RemarkName2">Ⅳ类</td>
+			<td class="RemarkName2">Ⅴ类</td>
+			<td class="RemarkName2">劣Ⅵ类</td>
+		</tr>
+		<tr class="secondTr">
+			<td class="OneLevel"></td>
+			<td class="TwoLevel"></td>
+			<td class="ThreeLevel"></td>
+			<td class="FourLevel"></td>
+			<td class="FiveLevel"></td>
+			<td class="SixLevel"></td>
+
+		</tr>
+	</table> -->
 </body>
+<!-- <script src="./js/jquery.min.js"></script> -->
 <script src="./js/echarts.min.js"></script>
+<!-- <script src="./js/main.js"></script> -->
 <script src="./js/index.js"></script>
 
 </html>
