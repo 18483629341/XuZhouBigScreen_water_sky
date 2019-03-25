@@ -55,11 +55,11 @@
 	background: url(../img/map1_1.png) no-repeat;
 	background-size:100% 100%;
 }
-.mapIndex{
+.MapIndex{
 	background: url(../img/map3.png) no-repeat;
 	background-size:100% 100%; 
 }
-.mapIndex1{
+.MapIndex1{
 	background: url(../img/map4.png) no-repeat;
 	background-size:100% 100%; 
 }
@@ -75,11 +75,11 @@
 	background: url(../img/map1.png) no-repeat;
 	background-size:100% 100%;
 }
-.map6{
+.MapBlueSky{
 	background: url(../img/map4.png) no-repeat;
 	background-size:100% 100%;
 }
-.map61{
+.MapBlueSky1{
 	background: url(../img/map5.png) no-repeat;
 	background-size:100% 100%;
 }
@@ -91,7 +91,7 @@
 	background-image: url(../img/map3.png) ;
 	background-size:100% 100%; 
 }
-.ax_default{
+.Default{
 	border-width: 0;
 	position: absolute;
 	left: 50%;
@@ -103,21 +103,21 @@
 		height: 100%;
 	}
 }
-.ax_default_zi,.ax_default_qi{
+.DefaultShou{
 	left: 45%;
     top: 60%;
 }
-.ax_default_pai{
+.DefaultZi{
 	left:60%;
     top: 45%;
 }
 .PopUpBox_da{
 	width: initial!important;
-	.contentLi {
-		.leftRow:first-child{
+	.ContentLi {
+		.LeftRow:first-child{
 			width:45%!important;
 		}
-		.leftRow:last-child{
+		.LeftRow:last-child{
 			flex: 1;
 		}
 	}
@@ -158,18 +158,22 @@
     display: -ms-flexbox; 
     display: -webkit-flex; 
 }
-.conTheme{
+.ConTheme{
    display: inline-block;
    color:#00e3ff;
    font-size: 1.0rem;
    line-height: 1.0rem;
    margin:.75rem 0 .88rem 0;
 }
-.iconPoi{
+.IconPoi{
 	width: .85rem;
 	height:.85rem;
 	background: url(../img/water_list.png) no-repeat;
 	background-size:100% 100%;
+}
+.LeftConTitleIndex{
+	display: inline-block;
+	text-align: right;
 }
 .LeftConTitle{
 	font-size: .75rem;
@@ -182,15 +186,15 @@
 .alignRight{
 	text-align: right;
 }
-.contentList{
+.ContentList{
 	
-	.contentLiFont{
+	.ContentLiFont{
 		display: inline-block;
 		font-size: 1rem;
 		width: 9.5rem;
 		text-align: left;
 	}
-	.contentLiMount{
+	.ContentLiMount{
 
 		font-size: .9rem;
 		b{
@@ -201,8 +205,8 @@
 	}
 }
 .WaterQulAssess{
-	.contentList{
-		.contentLiFont{
+	.ContentList{
+		.ContentLiFont{
 			display: inline-block;
 			font-size: 1rem;
 			width: 10.5rem;
@@ -211,16 +215,16 @@
 		
 	}
 }
-.contentLi{
+.ContentLi{
 
-	.leftRow,.centerRow,.rightRow{
+	.LeftRow,.centerRow,.rightRow{
 		color:#cfdcfd;
 	}
-	.leftRowValue{
+	.LeftRowValue{
 		color:#fff;
 	}
 }
-.contentLi0{
+.ContentLi0{
 	height:2.83rem;
 }
 .GenIcon{
@@ -496,33 +500,33 @@
 	padding: 0 2rem;
 	
 }
-.leftPane{
+.LeftPane{
 	display: none;
 }
-.leftPane.active{
+.LeftPane.active{
 	display: block;
 }
 .LeftConTitle2{
 	margin-top:.9rem;
 }
-.splitLine{
+.SplitLine{
 	margin: .5rem 0 .6rem 0;
     width:100%;
 	border-bottom: .025rem dashed #00d2ff;
 }
-.P2ContentList{
+.LeftContentList{
 	width:100%;
-	.contentLi{
+	.ContentLi{
 		clear:both;
 		height: 2.4rem;
 	}
-	.contentLiFont{
+	.ContentLiFont{
 		width:13.5rem;
 		float: left;
 		padding:.7rem 0;
 		font-size: 1rem;
 	}
-	.contentLiMount{
+	.ContentLiMount{
 		float: right;
 		font-size: 0.9rem;
 		padding:.75rem 0;
@@ -640,10 +644,10 @@
 			background-color: #ff00cc;
 		}
 	}
-	.splitLineBox{
+	.SplitLineBox{
 		padding: 0 .8rem;
 	}
-	.splitLine {
+	.SplitLine {
 		margin: .3rem 0 .4rem 0;
 		
 		//width: 100%;
@@ -717,13 +721,13 @@
 		color: @SixLevelC;
 	}
  }
-.PopUpBox_sha{
+.PopUpBoxShou{
 	.levelContainer{
 		margin-bottom: .5rem;
 	}
 	.keyContent{
 		padding:.3rem .2rem;
-		.contentLi{
+		.ContentLi{
 			height: 1.4rem!important;
 			line-height:1.4rem;
 			padding-left: 0; 
@@ -843,7 +847,7 @@
 	transform:rotate(180deg);
 	transform-origin: center;
 }	
-.typePiecanvasBox,.radioPiecanvasBox{
+.TypePiecanvasBox,.RadioPiecanvasBox{
 	width: 20rem;
     position: relative;
     left: -1.1rem;
@@ -888,7 +892,7 @@
 			text-align: center;
 		}
 	}
-	.splitLine {
+	.SplitLine {
 		margin: .5rem auto;
 		width: 82%;
 	}
@@ -1067,17 +1071,17 @@
 }
 .P3ContentList{
 	width:100%;
-	.contentLi{
+	.ContentLi{
 		clear:both;
 		height: 2rem;
 	}
-	.contentLiFont{
+	.ContentLiFont{
 		width:12rem;
 		float: left;
 		padding:.5rem 0;
 		font-size: 1rem;
 	}
-	.contentLiMount{
+	.ContentLiMount{
 		float: right;
 		font-size: 0.9rem;
 		padding:.55rem 0;
@@ -1220,7 +1224,7 @@
 	height: 1.6rem;
 	line-height: 1.6rem;
 }
-.superLine .leftRowValue{
+.superLine .LeftRowValue{
 	margin-right: .8rem;
 }
 @media only screen and (max-width: 1920px) {
@@ -1310,7 +1314,7 @@
 	}
 }
 
-.P5ContentList .contentLiFont{
+.P5ContentList .ContentLiFont{
 	width: 11.5rem;
 }
 /*************part5  part  end  ******************  ***/
@@ -1776,7 +1780,7 @@
 		background-color: #a3062b;
 	}
 }
-.GoAwayWuhan,.P6GoAwayWuhan,.legendBox2{
+.legendBox2{
 	right: 24.875rem;
 }
 .bottomBox{
@@ -1876,11 +1880,11 @@
 	
 }
 .P6RightBox,.P6RightSummary1,.P6RightSummary2,
-.P6legendBox1,.P6legendBox2,.p6GoAwayWuhan,.goWuhan,.PopUpBox,{
+.P6legendBox1,.P6legendBox2,.goWuhan,.PopUpBox,{
     display:none;
 }
 .P6RightBox.show,.P6RightSummary1.show,.P6RightSummary2.show,
-.P6legendBox1.show,.P6legendBox2.show,.p6GoAwayWuhan.show,.goWuhan.show,.PopUpBox.show{
+.P6legendBox1.show,.P6legendBox2.show,.goWuhan.show,.PopUpBox.show{
     display:block;
 }
 .citheadTr {
@@ -1974,21 +1978,7 @@
 		background-size:100% 100%;
 	}
 }
-.GoAwayWuhan{
-	position: absolute;
-	width: 2.25rem;
-	height:2.25rem;
-	background: url(../img/map_return_normal.png) no-repeat;
-	background-size: 100% 100%;
-	top: 1rem;
-	cursor: pointer;
-}
-.GoAwayWuhan:hover{
-	background: url(../img/map_return_hover.png) no-repeat;
-	background-size: 100% 100%;
-}
-.p6GoAwayWuhan{
-}
+
     /***popUP  start****/
 .PopUpBox{
 	position: absolute;
@@ -2064,22 +2054,22 @@
 		width: 25%;
 	}
 }
-.keyContent{
+.KeyContent{
 	padding: .4rem 0;
 	border: .025rem dashed #0d7296;
-	.contentList{
-		.contentLi{
+	.ContentList{
+		.ContentLi{
 			min-height:1.45rem;
 			padding-left:  .8rem;
 			padding-right:  .8rem;
 		}
 	}
-	.leftRow,.rightRow,.centerRow{
+	.LeftRow,.rightRow,.centerRow{
 		font-size: .75rem;
 		line-height: 1.45rem;
 		height: 1.45rem; 
 	}
-	.leftRow{
+	.LeftRow{
 		text-align: left;
 	}
 	.centerRow{
@@ -2093,8 +2083,8 @@
 
 .keyContent1{
 	border: none;
-	.contentList{
-		.contentLi{
+	.ContentList{
+		.ContentLi{
 			padding-left: 0;
 			padding-right: 0;
 		}

@@ -4,20 +4,20 @@ $(document).ready(function () {
 		autoFit();
 		listToggle();
 		P2popContorl();
-		moduleToggle('.mapIndex');
+		moduleToggle('.MapIndex');
 		setRadio();
 		mapToggle2();
 		autoScrollFun('#scrollBox1');
 		autoScrollFun('#scrollBox2');
 		//绘制饼图 
-			var Pie1=echarts.init(document.getElementById('typePiecanvasBox'));
+			var Pie1=echarts.init(document.getElementById('TypePiecanvasBox'));
 			Pie1.setOption(option1);
-			var Pie2=echarts.init(document.getElementById('radioPiecanvasBox'));
+			var Pie2=echarts.init(document.getElementById('RadioPiecanvasBox'));
 			Pie2.setOption(option2);
 			PieAutoHighLight(Pie2,qualifiedData);
 
 		//手动站 纱帽弹窗上的线图   绘制
-			initPopupObjByData0 = new InitPopupObjByData('.PopUpBox_sha', dataSha);
+			initPopupObjByData0 = new InitPopupObjByData('.PopUpBoxShou', dataSha);
 			popupObj0 = initPopupObjByData0.init('P2comCanvas');
 			initPopCanvas0= new InitPopCanvas(popupObj0);
 			initPopCanvas0.initCanvas();
@@ -116,7 +116,7 @@ var startRidio=parseInt(90-qualifiedData[1].value/(qualifiedData[0].value+qualif
 var option1=getPieOption(['#4ea9ff','#0067ff','#00ff00','#ffff00','#ffd700','#fc0105'],'{text1|{b}}{value|{d}}{text2|%}',sectionData);
 var option2=getPieOption2(['#0067ff','transparent'],'{text1|{b}}\n{value|{d}}{text2|%}',startRidio,qualifiedData);
 
-$("body").on('click','.PopUpBox_sha .tabSpan',function(){
+$("body").on('click','.PopUpBoxShou .tabSpan',function(){
 	$(this).toggleClass('active');
 	initPopCanvas0.initCanvas();
 })
@@ -143,7 +143,7 @@ $("body").on('click','.PopUpBox_zi .timeTypeSpan',function(){
 })
 
 /* 地图div的交互   */
-var mainActive = 'mapIndex'; //主页面活动的模块div
+var mainActive = 'MapIndex'; //主页面活动的模块div
 function mapToggle2(){
 	//P1tabLi
 	$("body").on('click','.P6tabLi',function(){
@@ -152,24 +152,24 @@ function mapToggle2(){
 		var type=$(this).attr("data-type");
 		$('.MapBox').removeClass('active');
 		$('.MapBox[data-type='+type+']').addClass('active');
-		$('.leftPane').removeClass('active');
-		$('.leftPane[data-type='+type+']').addClass('active');
+		$('.LeftPane').removeClass('active');
+		$('.LeftPane[data-type='+type+']').addClass('active');
 	    if(type=="Compliance"){
-            mainActive='mapIndex1';
+            mainActive='MapIndex1';
 			$('.js_title').html('水质达标状况');
 			$('.P2RightBox').css({display:'none'});           
-		}else if(type=="waterMonitor"){
-            mainActive='mapIndex';
+		}else if(type=="WaterMonitor"){
+            mainActive='MapIndex';
 			$('.js_title').html('水质监测状况');
 			$('.P2RightBox').css({display:'block'});  
 		}
     })
 }
 
-	$("body").on('click', '.PopUpBox_sha .lineGraph', function () {
-		console.log(1);
+	$("body").on('click', '.PopUpBoxShou .lineGraph', function () {
+		
 		$(this).toggleClass('active');
-		$('.PopUpBox_sha .lineCanvas').addClass('active');
+		$('.PopUpBoxShou .lineCanvas').addClass('active');
 		initPopCanvas0.initCanvas();
 	})
 

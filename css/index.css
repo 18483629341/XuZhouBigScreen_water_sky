@@ -15,11 +15,11 @@
   background: url(../img/map1_1.png) no-repeat;
   background-size: 100% 100%;
 }
-.mapIndex {
+.MapIndex {
   background: url(../img/map3.png) no-repeat;
   background-size: 100% 100%;
 }
-.mapIndex1 {
+.MapIndex1 {
   background: url(../img/map4.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -35,11 +35,11 @@
   background: url(../img/map1.png) no-repeat;
   background-size: 100% 100%;
 }
-.map6 {
+.MapBlueSky {
   background: url(../img/map4.png) no-repeat;
   background-size: 100% 100%;
 }
-.map61 {
+.MapBlueSky1 {
   background: url(../img/map5.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -51,7 +51,7 @@
   background-image: url(../img/map3.png);
   background-size: 100% 100%;
 }
-.ax_default {
+.Default {
   border-width: 0;
   position: absolute;
   left: 50%;
@@ -59,26 +59,25 @@
   width: 1rem;
   height: 1rem;
 }
-.ax_default .img {
+.Default .img {
   width: 100%;
   height: 100%;
 }
-.ax_default_zi,
-.ax_default_qi {
+.DefaultShou {
   left: 45%;
   top: 60%;
 }
-.ax_default_pai {
+.DefaultZi {
   left: 60%;
   top: 45%;
 }
 .PopUpBox_da {
   width: initial!important;
 }
-.PopUpBox_da .contentLi .leftRow:first-child {
+.PopUpBox_da .ContentLi .LeftRow:first-child {
   width: 45%!important;
 }
-.PopUpBox_da .contentLi .leftRow:last-child {
+.PopUpBox_da .ContentLi .LeftRow:last-child {
   flex: 1;
 }
 .PopUpBox_pai {
@@ -115,18 +114,22 @@
   display: -ms-flexbox;
   display: -webkit-flex;
 }
-.conTheme {
+.ConTheme {
   display: inline-block;
   color: #00e3ff;
   font-size: 1.0rem;
   line-height: 1.0rem;
   margin: .75rem 0 .88rem 0;
 }
-.iconPoi {
+.IconPoi {
   width: .85rem;
   height: .85rem;
   background: url(../img/water_list.png) no-repeat;
   background-size: 100% 100%;
+}
+.LeftConTitleIndex {
+  display: inline-block;
+  text-align: right;
 }
 .LeftConTitle {
   font-size: .75rem;
@@ -138,35 +141,35 @@
 .alignRight {
   text-align: right;
 }
-.contentList .contentLiFont {
+.ContentList .ContentLiFont {
   display: inline-block;
   font-size: 1rem;
   width: 9.5rem;
   text-align: left;
 }
-.contentList .contentLiMount {
+.ContentList .ContentLiMount {
   font-size: .9rem;
 }
-.contentList .contentLiMount b {
+.ContentList .ContentLiMount b {
   font-size: 1rem;
   margin-right: .4rem;
   color: #00d2ff;
 }
-.WaterQulAssess .contentList .contentLiFont {
+.WaterQulAssess .ContentList .ContentLiFont {
   display: inline-block;
   font-size: 1rem;
   width: 10.5rem;
   text-align: left;
 }
-.contentLi .leftRow,
-.contentLi .centerRow,
-.contentLi .rightRow {
+.ContentLi .LeftRow,
+.ContentLi .centerRow,
+.ContentLi .rightRow {
   color: #cfdcfd;
 }
-.contentLi .leftRowValue {
+.ContentLi .LeftRowValue {
   color: #fff;
 }
-.contentLi0 {
+.ContentLi0 {
   height: 2.83rem;
 }
 .GenIcon {
@@ -421,34 +424,34 @@
 .IndexLeftContent {
   padding: 0 2rem;
 }
-.leftPane {
+.LeftPane {
   display: none;
 }
-.leftPane.active {
+.LeftPane.active {
   display: block;
 }
 .LeftConTitle2 {
   margin-top: .9rem;
 }
-.splitLine {
+.SplitLine {
   margin: .5rem 0 .6rem 0;
   width: 100%;
   border-bottom: .025rem dashed #00d2ff;
 }
-.P2ContentList {
+.LeftContentList {
   width: 100%;
 }
-.P2ContentList .contentLi {
+.LeftContentList .ContentLi {
   clear: both;
   height: 2.4rem;
 }
-.P2ContentList .contentLiFont {
+.LeftContentList .ContentLiFont {
   width: 13.5rem;
   float: left;
   padding: .7rem 0;
   font-size: 1rem;
 }
-.P2ContentList .contentLiMount {
+.LeftContentList .ContentLiMount {
   float: right;
   font-size: 0.9rem;
   padding: .75rem 0;
@@ -537,10 +540,10 @@
 .P2PopUpBox .Popuplegend .FiveLevel {
   background-color: #ff00cc;
 }
-.P2PopUpBox .splitLineBox {
+.P2PopUpBox .SplitLineBox {
   padding: 0 .8rem;
 }
-.P2PopUpBox .splitLine {
+.P2PopUpBox .SplitLine {
   margin: .3rem 0 .4rem 0;
   border-bottom: .025rem dashed #0f5a6d;
 }
@@ -610,13 +613,13 @@
   border: 0.05rem dashed #fc0105;
   color: #fc0105;
 }
-.PopUpBox_sha .levelContainer {
+.PopUpBoxShou .levelContainer {
   margin-bottom: .5rem;
 }
-.PopUpBox_sha .keyContent {
+.PopUpBoxShou .keyContent {
   padding: .3rem .2rem;
 }
-.PopUpBox_sha .keyContent .contentLi {
+.PopUpBoxShou .keyContent .ContentLi {
   height: 1.4rem!important;
   line-height: 1.4rem;
   padding-left: 0;
@@ -723,8 +726,8 @@
   transform: rotate(180deg);
   transform-origin: center;
 }
-.typePiecanvasBox,
-.radioPiecanvasBox {
+.TypePiecanvasBox,
+.RadioPiecanvasBox {
   width: 20rem;
   position: relative;
   left: -1.1rem;
@@ -769,7 +772,7 @@
   line-height: 1.6rem;
   text-align: center;
 }
-.IndexRightSummary .splitLine {
+.IndexRightSummary .SplitLine {
   margin: .5rem auto;
   width: 82%;
 }
@@ -962,17 +965,17 @@
 .P3ContentList {
   width: 100%;
 }
-.P3ContentList .contentLi {
+.P3ContentList .ContentLi {
   clear: both;
   height: 2rem;
 }
-.P3ContentList .contentLiFont {
+.P3ContentList .ContentLiFont {
   width: 12rem;
   float: left;
   padding: .5rem 0;
   font-size: 1rem;
 }
-.P3ContentList .contentLiMount {
+.P3ContentList .ContentLiMount {
   float: right;
   font-size: 0.9rem;
   padding: .55rem 0;
@@ -1093,7 +1096,7 @@
   height: 1.6rem;
   line-height: 1.6rem;
 }
-.superLine .leftRowValue {
+.superLine .LeftRowValue {
   margin-right: .8rem;
 }
 @media only screen and (max-width: 1920px) {
@@ -1170,7 +1173,7 @@
   right: 0;
   top: .5rem;
 }
-.P5ContentList .contentLiFont {
+.P5ContentList .ContentLiFont {
   width: 11.5rem;
 }
 /*************part5  part  end  ******************  ***/
@@ -1605,8 +1608,6 @@
 .legendBox2 .SixLevel {
   background-color: #a3062b;
 }
-.GoAwayWuhan,
-.P6GoAwayWuhan,
 .legendBox2 {
   right: 24.875rem;
 }
@@ -1701,7 +1702,6 @@
 .P6RightSummary2,
 .P6legendBox1,
 .P6legendBox2,
-.p6GoAwayWuhan,
 .goWuhan,
 .PopUpBox {
   display: none;
@@ -1711,7 +1711,6 @@
 .P6RightSummary2.show,
 .P6legendBox1.show,
 .P6legendBox2.show,
-.p6GoAwayWuhan.show,
 .goWuhan.show,
 .PopUpBox.show {
   display: block;
@@ -1799,19 +1798,6 @@
   background: url(../img/u14640.png) no-repeat;
   background-size: 100% 100%;
 }
-.GoAwayWuhan {
-  position: absolute;
-  width: 2.25rem;
-  height: 2.25rem;
-  background: url(../img/map_return_normal.png) no-repeat;
-  background-size: 100% 100%;
-  top: 1rem;
-  cursor: pointer;
-}
-.GoAwayWuhan:hover {
-  background: url(../img/map_return_hover.png) no-repeat;
-  background-size: 100% 100%;
-}
 /***popUP  start****/
 .PopUpBox {
   position: absolute;
@@ -1884,35 +1870,35 @@
 .PopUpContent .contentItem:nth-child(1) {
   width: 25%;
 }
-.keyContent {
+.KeyContent {
   padding: .4rem 0;
   border: .025rem dashed #0d7296;
 }
-.keyContent .contentList .contentLi {
+.KeyContent .ContentList .ContentLi {
   min-height: 1.45rem;
   padding-left: .8rem;
   padding-right: .8rem;
 }
-.keyContent .leftRow,
-.keyContent .rightRow,
-.keyContent .centerRow {
+.KeyContent .LeftRow,
+.KeyContent .rightRow,
+.KeyContent .centerRow {
   font-size: .75rem;
   line-height: 1.45rem;
   height: 1.45rem;
 }
-.keyContent .leftRow {
+.KeyContent .LeftRow {
   text-align: left;
 }
-.keyContent .centerRow {
+.KeyContent .centerRow {
   text-align: center;
 }
-.keyContent .rightRow {
+.KeyContent .rightRow {
   text-align: right;
 }
 .keyContent1 {
   border: none;
 }
-.keyContent1 .contentList .contentLi {
+.keyContent1 .ContentList .ContentLi {
   padding-left: 0;
   padding-right: 0;
 }

@@ -64,7 +64,7 @@ function popContorl(){
     $("body").on('click','.PopUpclose',function(){
         $('.PopUpBox').removeClass('show');
     })
-    $("body").on('click','.ax_default',function(){
+    $("body").on('click','.Default',function(){
         $('.PopUpBox').toggleClass('show');
     })
 }
@@ -78,10 +78,10 @@ function P2popContorl(){
     $("body").on('click','.PopUpclose',function(){
         $('.PopUpBox').removeClass('show');
     })
-    $("body").on('click','.ax_default',function(){
+    $("body").on('click','.Default',function(){	
 		let name=$(this).attr('data-name');
 		$('.PopUpBox').removeClass('show');
-		$(".PopUpBox_"+name).addClass('show');
+		$(".PopUpBox"+name).addClass('show');
     })
 }
 function hasActive(str){

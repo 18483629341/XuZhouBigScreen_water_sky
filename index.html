@@ -16,7 +16,7 @@
 	<script>
 		autoFit();
 	</script>
-	<img class="backImg" src="./img/body_back.png" alt="">
+	<img class="BackImg" src="./img/body_back.png" alt="">
 	<div class="contanier ">
 		<header class="header">
 			<img class="HeaderBackImg" src="./img/header_back.png" alt="">
@@ -35,15 +35,15 @@
 		<section class="section">
 			<!--水质监测   water quality monitoring  box-->
 			<div class="TabContent WaterQulMonitor" id='WaterQulMonitor' data-index="1">
-				<div class="MapBox  mapIndex active" data-type="waterMonitor">
-					<div class="ax_default ax_default_shou" data-name="sha">
+				<div class="MapBox  MapIndex active" data-type="WaterMonitor">
+					<div class="Default DefaultShou" data-name="Shou">
 						<img class="img " src="./img/icon_remark13.png">
 					</div>
-					<div class="ax_default ax_default_zi" data-name="zi">
+					<div class="Default DefaultZi" data-name="Zi">
 						<img class="img " src="./img/icon_remark14.png">
 					</div>
 				</div>
-				<div class="MapBox  mapIndex1 " data-type="Compliance">
+				<div class="MapBox  MapIndex1 " data-type="Compliance">
 				</div>
 				<div class="IndexLeftSummary ">
 
@@ -52,63 +52,63 @@
 					</div>
 					<div class="XuanLine"></div>
 					<div class="IndexLeftContent">
-						<div class="leftPane active" data-type="waterMonitor">
+						<div class="LeftPane active" data-type="WaterMonitor">
 							<div class="LeftConBox">
-								<p class="conTheme">
-									<i class="icon iconPoi"></i>
+								<p class="ConTheme">
+									<i class="icon IconPoi"></i>
 									手工断面统计
 								</p>
-								<p class="LeftConTitle LeftConTitleIndex alignRight inlineBlock">2018年11月</p>
+								<p class="LeftConTitle LeftConTitleIndex">2018年11月</p>
 							</div>
-							<ul class="contentList P2ContentList">
-								<li class="contentLi">
-									<span class="contentLiFont">全市手工断面</span>
-									<span class="contentLiMount">
+							<ul class="ContentList LeftContentList">
+								<li class="ContentLi">
+									<span class="ContentLiFont">全市手工断面</span>
+									<span class="ContentLiMount">
 										<b>80</b>个
 									</span>
 								</li>
-								<li class="contentLi">
-									<span class="contentLiFont">有效监测手工断面</span>
-									<span class="contentLiMount">
+								<li class="ContentLi">
+									<span class="ContentLiFont">有效监测手工断面</span>
+									<span class="ContentLiMount">
 										<b>77</b>个</span>
 								</li>
 							</ul>
-							<div class="typePiecanvasBox active" id="typePiecanvasBox"></div>
+							<div class="TypePiecanvasBox active" id="TypePiecanvasBox"></div>
 						</div>
-						<div class="leftPane" data-type="Compliance">
+						<div class="LeftPane" data-type="Compliance">
 							<div class="LeftConBox">
-								<p class="conTheme">
-									<i class="icon iconPoi"></i>
+								<p class="ConTheme">
+									<i class="icon IconPoi"></i>
 									断面达标统计
 								</p>
-								<p class="LeftConTitle LeftConTitleIndex alignRight inlineBlock">2018年11月</p>
+								<p class="LeftConTitle LeftConTitleIndex">2018年11月</p>
 							</div>
-							<ul class="contentList P2ContentList">
-								<li class="contentLi">
-									<span class="contentLiFont">达标断面</span>
-									<span class="contentLiMount">
+							<ul class="ContentList LeftContentList">
+								<li class="ContentLi">
+									<span class="ContentLiFont">达标断面</span>
+									<span class="ContentLiMount">
 										<b>55</b>个
 									</span>
 								</li>
-								<li class="contentLi">
-									<span class="contentLiFont">不达标断面</span>
-									<span class="contentLiMount">
+								<li class="ContentLi">
+									<span class="ContentLiFont">不达标断面</span>
+									<span class="ContentLiMount">
 										<b>5</b>个</span>
 								</li>
 							</ul>
-							<div class="radioPiecanvasBox" id="radioPiecanvasBox"></div>
+							<div class="RadioPiecanvasBox" id="RadioPiecanvasBox"></div>
 						</div>
-						<div class="splitLine"></div>
+						<div class="SplitLine"></div>
 						<div class="padding80">
 							<div class="LeftHeader secondHeader">
 								<p class="LeftHeaderTitle">徐州市水质告警信息</p>
 							</div>
 							<div class="LeftConBox">
-								<p class="conTheme">
-									<i class="icon iconPoi"></i>
+								<p class="ConTheme">
+									<i class="icon IconPoi"></i>
 									断面达标统计
 								</p>
-								<p class="LeftConTitle LeftConTitleIndex alignRight inlineBlock">2018年11月</p>
+								<p class="LeftConTitle LeftConTitleIndex">2018年11月</p>
 							</div>
 							<div class="warnCon">
 								<p class="warnBox">水质达标率同比去年下降10%的区县有：</p>
@@ -131,7 +131,7 @@
 				</div>
 				<div class="RightBox2 P6RightBox show">
 					<div class="GisTabs flexBlock">
-						<div class="P6tabLi GisLeftTab active" data-type="waterMonitor">水质监测</div>
+						<div class="P6tabLi GisLeftTab active" data-type="WaterMonitor">水质监测</div>
 						<div class="P6tabLi GisRightTab " data-type="Compliance">达标情况</div>
 					</div>
 				</div>
@@ -398,11 +398,9 @@
 			</div>
 		</section>
 
-		<!-- 图例2  end  -->
-		<div class="GoAwayWuhan p6GoAwayWuhan ">
-		</div>
+		
 		<!-- 弹窗1 纱帽 start -->
-		<div class="PopUpBox  P2PopUpBox PopUpBox_sha" id="PopUpBox_sha">
+		<div class="PopUpBox  P2PopUpBox PopUpBoxShou" id="PopUpBoxShou">
 			<div class="PopUpHeader">
 				<div class="PaddingContent">
 					<h3>蔺家坝</h3>
@@ -420,22 +418,22 @@
 								劣Ⅵ
 							</div>
 						</div>
-						<div class="keyContent flex1">
-							<div class="contentList">
-								<div class="contentLi flexBlock">
-									<div class="leftRow flex1">所属流域：
-										<span class="leftRowValue"> 淮河</span>
+						<div class="KeyContent flex1">
+							<div class="ContentList">
+								<div class="ContentLi flexBlock">
+									<div class="LeftRow flex1">所属流域：
+										<span class="LeftRowValue"> 淮河</span>
 									</div>
-									<div class="leftRow flex1">所属区域：
-										<span class="leftRowValue"> 徐州市-沛县</span>
+									<div class="LeftRow flex1">所属区域：
+										<span class="LeftRowValue"> 徐州市-沛县</span>
 									</div>
 								</div>
-								<div class="contentLi flexBlock">
-									<div class="leftRow flex1">控制级别：
-										<span class="leftRowValue"> 国控</span>
+								<div class="ContentLi flexBlock">
+									<div class="LeftRow flex1">控制级别：
+										<span class="LeftRowValue"> 国控</span>
 									</div>
-									<div class="leftRow flex1">水质类别：
-										<span class="leftRowValue"> 劣Ⅵ类</span>
+									<div class="LeftRow flex1">水质类别：
+										<span class="LeftRowValue"> 劣Ⅵ类</span>
 									</div>
 								</div>
 							</div>
@@ -491,7 +489,7 @@
 		</div>
 		<!-- 弹窗1 纱帽 end -->
 		<!-- 弹窗1 自动站 start -->
-		<div class="PopUpBox  P2PopUpBox PopUpBox_zi" id="PopUpBox_zi">
+		<div class="PopUpBox  P2PopUpBox PopUpBoxZi" id="PopUpBoxZi">
 			<div class="PopUpHeader">
 				<div class="PaddingContent">
 					<h3>和平桥水站</h3>
@@ -504,38 +502,38 @@
 					<p class="ListTitle floatLeft">统计时间：2018-10-11 12:00</p>
 					<p class="ListTitle floatRight">数据来源：江苏省监测中心</p>
 					<div class="clear"></div>
-					<div class="keyContent">
-						<div class="contentList">
-							<div class="contentLi flexBlock">
-								<div class="leftRow flex1">所属流域：
-									<span class="leftRowValue">淮河</span>
+					<div class="KeyContent">
+						<div class="ContentList">
+							<div class="ContentLi flexBlock">
+								<div class="LeftRow flex1">所属流域：
+									<span class="LeftRowValue">淮河</span>
 								</div>
 								<div class="rightRow flex1">所属区域：
-									<span class="leftRowValue">徐州市-沛县</span>
+									<span class="LeftRowValue">徐州市-沛县</span>
 								</div>
 							</div>
-							<div class="contentLi flexBlock">
-								<div class="leftRow flex1">控制级别：
-									<span class="leftRowValue"> 国控</span>
+							<div class="ContentLi flexBlock">
+								<div class="LeftRow flex1">控制级别：
+									<span class="LeftRowValue"> 国控</span>
 								</div>
 								<div class="rightRow flex1">水质类别：
-									<span class="leftRowValue"> 劣Ⅵ类</span>
+									<span class="LeftRowValue"> 劣Ⅵ类</span>
 								</div>
 
 							</div>
-							<div class="splitLineBox">
-								<div class="splitLine"></div>
+							<div class="SplitLineBox">
+								<div class="SplitLine"></div>
 							</div>
 
-							<div class="contentLi flexBlock">
-								<div class="leftRow flex1">氨氮：
-									<span class="leftRowValue"> 2mg/L</span>
+							<div class="ContentLi flexBlock">
+								<div class="LeftRow flex1">氨氮：
+									<span class="LeftRowValue"> 2mg/L</span>
 								</div>
 								<div class="centerRow " style="flex: initial;">高锰酸钾指数：
-									<span class="leftRowValue"> 5mg/L</span>
+									<span class="LeftRowValue"> 5mg/L</span>
 								</div>
 								<div class="rightRow flex1">总磷：
-									<span class="leftRowValue">5mg/L</span>
+									<span class="LeftRowValue">5mg/L</span>
 								</div>
 							</div>
 						</div>

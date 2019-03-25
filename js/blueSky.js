@@ -370,33 +370,8 @@ function getOption3(obj){
     return option;
 }
 
-var mainActive='map61';//主页面活动的模块div
-/* 市区显示和主页面交替   */
-function P6moduleToggle(){
-    $("body").on('click','.goWuhan',function(){
-        intoggle();
-      
-        $('.map6').removeClass('active') ; 
-        $('.map61').removeClass('active') ;
-    })
-    $("body").on('click','.GoAwayWuhan',function(){
-        intoggle();
-        $('.MapBox').removeClass('active') ; 
-        $('.'+mainActive).addClass('active');
-    })
-    function intoggle(){
-        $('.goWuhan').toggleClass('show');
-        $('.P6RightBox').toggleClass('show');
-        $('.P6RightSummary1').toggleClass('show');
-        $('.P6RightSummary2').toggleClass('show');
-        $('.P6legendBox1').toggleClass('show');
-        $('.P6legendBox2').toggleClass('show');
-        $('.GoAwayWuhan').toggleClass('show');
-        $('.mapWuhan').toggleClass('active');   
-    }
-}
 /*********popup0   线框图 相关数据对象***** */
-// 
+ 
    //切换弹窗上的线图  优良天数比例和PM2.5年均浓度
     $("body").on('click','.lineGraph',function(){
         $('.lineGraph').removeClass('active');
