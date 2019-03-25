@@ -15,11 +15,11 @@
   background: url(../img/map1_1.png) no-repeat;
   background-size: 100% 100%;
 }
-.map2 {
+.mapIndex {
   background: url(../img/map3.png) no-repeat;
   background-size: 100% 100%;
 }
-.map21 {
+.mapIndex1 {
   background: url(../img/map4.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -749,7 +749,7 @@
   color: #f7823c;
 }
 .IndexLeftSummary,
-.P2RightSummary {
+.IndexRightSummary {
   top: 0;
   position: absolute;
   width: 21.075rem;
@@ -758,18 +758,18 @@
   background-size: 100% 100%;
   font-size: .75rem;
 }
-.P2RightSummary {
+.IndexRightSummary {
   right: .8rem;
 }
-.P2RightSummary .secondHeader {
+.IndexRightSummary .secondHeader {
   height: 1.6rem;
   padding-top: 0rem;
 }
-.P2RightSummary .secondHeader .LeftHeaderTitle {
+.IndexRightSummary .secondHeader .LeftHeaderTitle {
   line-height: 1.6rem;
   text-align: center;
 }
-.P2RightSummary .splitLine {
+.IndexRightSummary .splitLine {
   margin: .5rem auto;
   width: 82%;
 }
@@ -790,75 +790,75 @@
   background: url(../img/yyl_down.png) no-repeat;
   background-size: 100% 100%;
 }
-.P2RightSummary .LeftHeaderTitle,
+.IndexRightSummary .LeftHeaderTitle,
 .P6RightSummary2 .LeftHeaderTitle {
   text-align: left;
   padding-left: 19%;
 }
-.P2RightSummary .citheadTr,
+.IndexRightSummary .citheadTr,
 .P6RightSummary2 .citheadTr {
   height: 1.3rem;
 }
-.P2RightSummary .citheadTr .td1,
+.IndexRightSummary .citheadTr .td1,
 .P6RightSummary2 .citheadTr .td1,
-.P2RightSummary .citheadTr .td2,
+.IndexRightSummary .citheadTr .td2,
 .P6RightSummary2 .citheadTr .td2,
-.P2RightSummary .citheadTr .td3,
+.IndexRightSummary .citheadTr .td3,
 .P6RightSummary2 .citheadTr .td3,
-.P2RightSummary .citheadTr .td4,
+.IndexRightSummary .citheadTr .td4,
 .P6RightSummary2 .citheadTr .td4 {
   color: #00d2ff;
 }
-.P2RightSummary .citheadTr .td1,
+.IndexRightSummary .citheadTr .td1,
 .P6RightSummary2 .citheadTr .td1,
-.P2RightSummary .tbodyTr .td1,
+.IndexRightSummary .tbodyTr .td1,
 .P6RightSummary2 .tbodyTr .td1 {
   width: 14%;
   text-align: left;
 }
-.P2RightSummary .citheadTr .td2,
+.IndexRightSummary .citheadTr .td2,
 .P6RightSummary2 .citheadTr .td2,
-.P2RightSummary .tbodyTr .td2,
+.IndexRightSummary .tbodyTr .td2,
 .P6RightSummary2 .tbodyTr .td2 {
   width: 26%;
   text-align: center;
 }
-.P2RightSummary .citheadTr .td3,
+.IndexRightSummary .citheadTr .td3,
 .P6RightSummary2 .citheadTr .td3,
-.P2RightSummary .tbodyTr .td3,
+.IndexRightSummary .tbodyTr .td3,
 .P6RightSummary2 .tbodyTr .td3 {
   width: 44%;
 }
-.P2RightSummary .citheadTr .td4,
+.IndexRightSummary .citheadTr .td4,
 .P6RightSummary2 .citheadTr .td4,
-.P2RightSummary .tbodyTr .td4,
+.IndexRightSummary .tbodyTr .td4,
 .P6RightSummary2 .tbodyTr .td4 {
   text-align: right!important;
   flex: 1;
 }
-.P2RightSummary .tbodyTr .td4,
+.IndexRightSummary .tbodyTr .td4,
 .P6RightSummary2 .tbodyTr .td4 {
   padding-right: .225rem;
 }
-.P2RightSummary .tableContanier,
+.IndexRightSummary .tableContanier,
 .P6RightSummary2 .tableContanier {
   width: 17.5rem;
   height: 11rem;
   margin: initial;
   overflow-y: hidden;
 }
-.P2RightSummary .SecondHeader,
+.IndexRightSummary .SecondHeader,
 .P6RightSummary2 .SecondHeader {
   height: 1.6rem;
   padding-top: .5rem;
 }
-.P2RightSummary .P2RightContent,
-.P6RightSummary2 .P2RightContent,
-.P2RightSummary .P6RightContent,
+.IndexRightSummary .IndexRightContent,
+.P6RightSummary2 .IndexRightContent,
+.IndexRightSummary .P6RightContent,
 .P6RightSummary2 .P6RightContent {
   padding: .6rem 1.85rem 0.5rem 2.08rem;
 }
-.P2RightSummary .ListTitle2,
+.IndexRightSummary .ListTitle2,
 .P6RightSummary2 .ListTitle2 {
   font-size: .75rem;
   line-height: .75rem;
@@ -1255,6 +1255,9 @@
 }
 .IndexLeftSummary .title {
   font-size: .8rem;
+}
+.IndexLeftContent {
+  padding: 0 2rem;
 }
 .P6LeftSummary .LeftHeader {
   text-align: right;

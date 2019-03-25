@@ -4,7 +4,7 @@ $(document).ready(function () {
 		autoFit();
 		listToggle();
 		P2popContorl();
-		moduleToggle('.map2');
+		moduleToggle('.mapIndex');
 		setRadio();
 		mapToggle2();
 		autoScrollFun('#scrollBox1');
@@ -36,8 +36,6 @@ $(document).ready(function () {
 
 window.onresize = function () {
 	autoFit();
-	autoFitNav();
-	autoFitContent();
 	setRadio();  
 	initPopCanvas0.popUpChart.resize();  
 	initPopCanvas0.initCanvas();
@@ -145,7 +143,7 @@ $("body").on('click','.PopUpBox_zi .timeTypeSpan',function(){
 })
 
 /* 地图div的交互   */
-var mainActive = 'map2'; //主页面活动的模块div
+var mainActive = 'mapIndex'; //主页面活动的模块div
 function mapToggle2(){
 	//P1tabLi
 	$("body").on('click','.P6tabLi',function(){
@@ -156,12 +154,12 @@ function mapToggle2(){
 		$('.MapBox[data-type='+type+']').addClass('active');
 		$('.leftPane').removeClass('active');
 		$('.leftPane[data-type='+type+']').addClass('active');
-	    if(type=="isQulified"){
-            mainActive='map21';
+	    if(type=="Compliance"){
+            mainActive='mapIndex1';
 			$('.js_title').html('水质达标状况');
 			$('.P2RightBox').css({display:'none'});           
 		}else if(type=="waterMonitor"){
-            mainActive='map2';
+            mainActive='mapIndex';
 			$('.js_title').html('水质监测状况');
 			$('.P2RightBox').css({display:'block'});  
 		}
