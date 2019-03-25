@@ -94,7 +94,7 @@
 }
 .LeftSummary,
 .P6LeftSummary,
-.P2LeftSummary {
+.IndexLeftSummary {
   left: 1rem;
 }
 .XuanLine {
@@ -418,7 +418,7 @@
 }
 /***********************    Right      end      ******** */
 /*************part2  part  start  *********************/
-.P2LeftContent {
+.IndexLeftContent {
   padding: 0 2rem;
 }
 .leftPane {
@@ -435,20 +435,20 @@
   width: 100%;
   border-bottom: .025rem dashed #00d2ff;
 }
-.P2ContentList {
+.IndexContentList {
   width: 100%;
 }
-.P2ContentList .contentLi {
+.IndexContentList .contentLi {
   clear: both;
   height: 2.4rem;
 }
-.P2ContentList .contentLiFont {
+.IndexContentList .contentLiFont {
   width: 13.5rem;
   float: left;
   padding: .7rem 0;
   font-size: 1rem;
 }
-.P2ContentList .contentLiMount {
+.IndexContentList .contentLiMount {
   float: right;
   font-size: 0.9rem;
   padding: .75rem 0;
@@ -748,8 +748,8 @@
 .warnBox .downItem {
   color: #f7823c;
 }
-.P2LeftSummary,
-.P2RightSummary {
+.IndexLeftSummary,
+.RightSummary {
   top: 0;
   position: absolute;
   width: 21.075rem;
@@ -852,8 +852,8 @@
   height: 1.6rem;
   padding-top: .5rem;
 }
-.P2RightSummary .P2RightContent,
-.P6RightSummary2 .P2RightContent,
+.P2RightSummary .RightContent,
+.P6RightSummary2 .RightContent,
 .P2RightSummary .P6RightContent,
 .P6RightSummary2 .P6RightContent {
   padding: .6rem 1.85rem 0.5rem 2.08rem;
@@ -1243,17 +1243,17 @@
   color: #00e4ff;
   line-height: 1.2rem;
 }
-.P2LeftSummary .LeftHeader {
+.IndexLeftSummary .LeftHeader {
   text-align: right;
   padding-right: 2.3rem;
 }
-.P2LeftSummary .padding80 .LeftHeader {
+.IndexLeftSummary .padding80 .LeftHeader {
   text-align: center;
   padding-right: 2.3rem;
   padding-top: 0.9rem;
   height: 2.3rem;
 }
-.P2LeftSummary .title {
+.IndexLeftSummary .title {
   font-size: .8rem;
 }
 .P6LeftSummary .LeftHeader {

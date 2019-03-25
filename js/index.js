@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	//
-	$(window).load(function () {
+	
 		autoFit();
 		listToggle();
 		P2popContorl();
@@ -31,7 +31,7 @@ $(document).ready(function () {
 			initPopCanvas1.initCanvas();
     
 		
-	});
+
 });
 
 window.onresize = function () {
@@ -156,7 +156,7 @@ function mapToggle2(){
 		$('.MapBox[data-type='+type+']').addClass('active');
 		$('.leftPane').removeClass('active');
 		$('.leftPane[data-type='+type+']').addClass('active');
-	    if(type=="isQulified"){
+	    if(type=="Compliance"){
             mainActive='map21';
 			$('.js_title').html('水质达标状况');
 			$('.P2RightBox').css({display:'none'});           
