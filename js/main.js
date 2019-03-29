@@ -19,18 +19,19 @@ function autoFit(){
 	//}
 }
 //resize();
+
 //整屏等比缩放
-
-
 function resize() {
 	var winratio = $(window).width()/1920;
 	$('.body1').css({
 	  transform: "scale("+winratio+")",
-	  transformOrigin: "left top"
+	  transformOrigin: "left top",
+	  height:1080+'px'
 	});
 	$('.body2').css({
 		transform: "scale("+winratio+")",
-		transformOrigin: "left top"
+		transformOrigin: "left top",
+		//height:1080*winratio+'px'
 	  });
 	//$(window).height(parseInt(winratio*2160));
 }
@@ -53,7 +54,7 @@ function listToggle(){
 }
 
 /**************弹窗显示/隐藏控制****** */
-
+    //一般页的弹窗控制
 function popContorl(){
     $(document).mouseup(function(e){
         var _con = $('.PopUpBox '); // 设置目标区域 
@@ -68,7 +69,8 @@ function popContorl(){
         $('.PopUpBox').toggleClass('show');
     })
 }
-function P2popContorl(){
+   //首页的弹窗控制
+function IndexPopContorl(){
     $(document).mouseup(function(e){
         var _con = $('.PopUpBox '); // 设置目标区域 
        if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
@@ -99,14 +101,14 @@ function moduleToggle(Prodiv) {
 		$(Prodiv).removeClass('active');
 		
 	})
-	$("body").on('click', '.GoAwayWuhan', function () {
+	$("body").on('click', '.BeOutWuhan', function () {
 		intoggle();
 		$(Prodiv).addClass('active');
 	})
 
 	function intoggle() {
 		$('.goWuhan').toggleClass('show');
-		$('.GoAwayWuhan').toggleClass('show');
+		$('.BeOutWuhan').toggleClass('show');
 		$('.mapWuhan').toggleClass('active');
 	}
 }
