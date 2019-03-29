@@ -26,19 +26,19 @@ function resize() {
 	$('.body1').css({
 	  transform: "scale("+winratio+")",
 	  transformOrigin: "left top",
-	  height:1080+'px'
+	
 	});
 	$('.body2').css({
 		transform: "scale("+winratio+")",
 		transformOrigin: "left top",
-		//height:1080*winratio+'px'
+	
 	  });
-	//$(window).height(parseInt(winratio*2160));
+
 }
 
 
 
-
+//图例的显示隐藏控制
 var flag=false;
 function listToggle(){
     $("body").on('click','.tableIcon',function(){
@@ -112,8 +112,8 @@ function moduleToggle(Prodiv) {
 		$('.MapWuhan').toggleClass('active');
 	}
 }
-/************scroll bar 封装方法******* */
 
+/************scroll bar 封装方法******* */
 //使某个容器自动滚动
 function autoScrollFun(element){//参数为需要滚动的容器
 	var $this = $(element);
@@ -156,11 +156,11 @@ function InitPopCanvas(obj) {
 	this.unit = this._obj.unit;
 	this.popUpChart = echarts.init(document.getElementById(this._obj.elementId));
 	this.lineGraphS = this._obj.lineGraphS;
-	//重置对象
+	//重置对象obj
 	this.setObj = function (newObj) {
 		this._obj = newObj;
 	}
-	//绘图
+	//根据active类名绘图
 	this.initCanvas = function () {
 		let _colors = [];//暂存 有active类名来展示相应的    颜色的数组
 		let _series = [];//暂存 有active类名来展示相应的    sery的数组

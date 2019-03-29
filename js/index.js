@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	//根据窗口大小自动缩放
-	autoFit();
+	
 	//图例的显示隐藏控制
 	listToggle();
 	//首页弹窗的显示隐藏控制
