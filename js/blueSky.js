@@ -24,8 +24,7 @@ $(document).ready(function () {
     myChart4.setOption(option32);
     //弹窗上的线图绘制
     myChart5.setOption(option41);
-    // console.log(popupObj);
-    // console.log(popupObj1);
+   
     // initPopCanvas=new InitPopCanvas(popupObj);
     // initPopCanvas.initCanvas();
 
@@ -37,7 +36,7 @@ window.onresize = function () {
     autoFit();
     autoFitContent();
     setRadio();
-    console.log(W, radio);
+    
     // changeTop()
     myChart21.resize();//根据窗口的大小 变动图表 --- 重点 
     myChart22.resize();
@@ -110,8 +109,8 @@ function setOptionfun(color, radius) {
 /* 地图div的交互   */
 
 //tabLi
-$("body").on('click', '.TypeTab .navLi', function () {
-    $('.TypeTab .navLi').removeClass('active');
+$("body").on('click', '.TypeTab .NavLi', function () {
+    $('.TypeTab .NavLi').removeClass('active');
     $(this).addClass('active');
     var type = $(this).attr("data-type")
     $('.MapBox').removeClass('active');
@@ -125,7 +124,7 @@ $("body").on('click', '.GisTabLi', function () {
     $(this).addClass('active');
     var type = null;
     if (!$(this).attr("data-type")) {
-        type = $(this).find('.navLi.active').attr("data-type");
+        type = $(this).find('.NavLi.active').attr("data-type");
         $('.mapTabCon .navTab').addClass('active');
 
     } else {
@@ -382,16 +381,9 @@ $("body").on('click', '.lineGraph', function () {
     }
 })
 //切换左列区域的线图  优良天数比例和PM2.5年均浓度
-$("body").on('click', '.js_graghTab .navLi', function () {
-    //console.log(1);
-    $('.js_graghTab .navLi').removeClass('active');
-    $(this).addClass('active');
 
-
-})
-$("body").on('click', '.js_warnTab .navLi', function () {
-    console.log(2);
-    $('.js_warnTab .navLi').removeClass('active');
+$("body").on('click', '.WarnTab .NavLi', function () {
+    $('.WarnTab .NavLi').removeClass('active');
     $(this).addClass('active');
 })
 

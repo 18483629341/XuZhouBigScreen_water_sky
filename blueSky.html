@@ -14,8 +14,10 @@
 
 <body class="body2">
 	<script>
-		 //根据窗口大小自动缩放
-		autoFit();
+		//根据窗口大小自动缩放
+		$(function(){
+			autoFit();
+		})
 	</script>
 	<img class="BackImg" src="./img/body_back.png" alt="">
 	<div class="contanier">
@@ -73,7 +75,7 @@
 									<span class="rem092 scale05">%</span>
 								</div>
 							</div>
-							<div class="SkyRightBox">
+							<div class="SkyRightBox ">
 								<div class="SkyrightConTitleBox firstLine">
 									<span class="rightConTitle">优良天气比例同比</span>
 									<span class="rightMount downItem ">
@@ -99,7 +101,7 @@
 								</p>
 							</div> -->
 
-							<p class="title js_title">全市2018年优良天数比例变化趋势</p>
+							<p class="title LeftSummaryTitle">全市2018年优良天数比例变化趋势</p>
 							<div class="GoodWeatherCanvas" id="GoodWeatherCanvas">
 							</div>
 							<div class=" legend2">
@@ -125,9 +127,9 @@
 							<!-- <p class="LeftConTitle LeftConTitle2  ">统计时间：
 								<span>2018年11月</span>
 							</p> -->
-							<ul class="navTab js_warnTab">
-								<li class="navLi active">区县告警信息</li>
-								<li class="navLi">站点告警信息</li>
+							<ul class="navTab WarnTab">
+								<li class="NavLi active">区县告警信息</li>
+								<li class="NavLi">站点告警信息</li>
 							</ul>
 
 						</div>
@@ -193,7 +195,7 @@
 									<span>2018年11月</span>
 								</p>
 							</div> -->
-							<p class="title js_title">全市2018年PM<sub>2.5</sub>年均浓度变化趋势</p>
+							<p class="title LeftSummaryTitle">全市2018年PM<sub>2.5</sub>年均浓度变化趋势</p>
 							<div class="GoodWeatherCanvas" id="PmCanvas">
 							</div>
 							<div class=" legend2">
@@ -219,9 +221,9 @@
 							<!-- <p class="LeftConTitle LeftConTitle2  ">统计时间：
 								<span>2018年11月</span>
 							</p> -->
-							<!-- <ul class="navTab js_warnTab">
-								<li class="navLi active">区县告警信息</li>
-								<li class="navLi">站点告警信息</li>
+							<!-- <ul class="navTab WarnTab">
+								<li class="NavLi active">区县告警信息</li>
+								<li class="NavLi">站点告警信息</li>
 							</ul> -->
 
 						</div>
@@ -255,8 +257,8 @@
 					<div class="GisTabs flexBlock">
 						<div class="GisTabLi GisLeftTab active mapTabCon" id="mapTabCon">区县
 							<ul class="navTab  TypeTab active">
-								<li class="navLi active" data-type="GoodWeath1">优良天数比例</li>
-								<li class="navLi " data-type="PM1">PM<sub class="scale03">2.5</sub>年均浓度</li>
+								<li class="NavLi active" data-type="GoodWeath1">优良天数比例</li>
+								<li class="NavLi " data-type="PM1">PM<sub class="scale03">2.5</sub>年均浓度</li>
 							</ul>
 						</div>
 						<div class="GisTabLi GisRightTab " data-type="section">测点

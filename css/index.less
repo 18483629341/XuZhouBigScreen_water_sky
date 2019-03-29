@@ -1826,25 +1826,25 @@
     #tabs.tabsList();
 	@smallradiusWidth:.3rem;
 	
-	.navLi{
+	.NavLi{
 		#tabs.tabli();
 		width: 48%;
 		height:1.5rem;
 
 		float: left;
 	}
-	.navLi:first-child{
+	.NavLi:first-child{
 		#tabs.tabliFirstchild();
 		border-radius:@smallradiusWidth 0 0 @smallradiusWidth;	
 	}
-	.navLi:last-child{
+	.NavLi:last-child{
 		#tabs.selfTabLastChild();
 		border-radius:0 @smallradiusWidth @smallradiusWidth 0;
 	}
-	.navLi.active{
+	.NavLi.active{
 		#tabs.tabliActive();
 	}
-	.navLi+.navLi{
+	.NavLi+.NavLi{
 		#tabs.tabliTotabli();
 	}
 }
@@ -1880,11 +1880,11 @@
 	border: .025rem solid rgb(59, 3, 3);
 	
 }
-.SkyRightBox,.SkyRightSummary1,.SkyRightSummary2,
+.SkyRightSummary1,.SkyRightSummary2,
 .SkylegendBox1,.SkylegendBox2,.GoWuhan,.PopUpBox,{
     display:none;
 }
-.SkyRightBox.show,.SkyRightSummary1.show,.SkyRightSummary2.show,
+.SkyRightSummary1.show,.SkyRightSummary2.show,
 .SkylegendBox1.show,.SkylegendBox2.show,.GoWuhan.show,.PopUpBox.show{
     display:block;
 }

@@ -314,10 +314,10 @@ function InitPopupObjByData(elementClass, Obj) {
 	}
 	this.init = function (elementId) {
 		//生成需要渲染第一排污口的线图的 数据  
-		console.log(elementId);
+		
 		let obj = this.setPopupObj(this.dataArr[0]);
 		obj.elementId = elementId;
-		console.log(obj);
+		
 		return obj
 	}
 	this.setPopupObj = function (obj) { //初始化或更新数据源
@@ -355,8 +355,6 @@ function InitPopupObjByData(elementClass, Obj) {
 			return a.toFixed(1);
 		};
 		popupObj2.lineGraphS = $(this.popUpDataObj.elementClass + ' .lineGraph');
-       console.log(popupObj2);
-
 		return popupObj2;
 	}
 }
@@ -391,7 +389,7 @@ function PieAutoHighLight(chartNum,data){
 			dataIndex: 0
 		});
         chartNum.on('mouseover', function(params) {
-            console.log('over');
+            
             if (params.name == data[0].name) {
                 chartNum.dispatchAction({
                     type: 'highlight',
@@ -408,7 +406,7 @@ function PieAutoHighLight(chartNum,data){
         });
     
         chartNum.on('mouseout', function(params) {
-            console.log('out');
+            
             chartNum.dispatchAction({
                 type: 'highlight',
                 seriesIndex: 0,

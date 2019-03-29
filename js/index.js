@@ -152,7 +152,7 @@ $("body").on('click', '.PopUpBoxZi .timeTypeSpan', function () {
 	initPopCanvas1.initCanvas();
 })
 
-/* 地图div的交互   */
+/* skyblue页面 地图div的交互   */
 var mainActive = 'MapIndex'; //主页面活动的模块div
 function mapToggle2() {
 	//P1tabLi
@@ -166,11 +166,11 @@ function mapToggle2() {
 		$('.LeftPane[data-type=' + type + ']').addClass('active');
 		if (type == "Compliance") {
 			mainActive = 'MapIndex1';
-			$('.js_title').html('水质达标状况');
+			$('.LeftSummaryTitle').html('水质达标状况');
 			$('.P2RightBox').css({ display: 'none' });
 		} else if (type == "WaterMonitor") {
 			mainActive = 'MapIndex';
-			$('.js_title').html('水质监测状况');
+			$('.LeftSummaryTitle').html('水质监测状况');
 			$('.P2RightBox').css({ display: 'block' });
 		}
 	})

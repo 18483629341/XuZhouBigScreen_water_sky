@@ -1645,7 +1645,7 @@
   height: 1.55rem;
   text-align: center;
 }
-.navTab .navLi {
+.navTab .NavLi {
   line-height: 1.3rem;
   color: #cedffe;
   background: #01163b;
@@ -1654,22 +1654,22 @@
   height: 1.5rem;
   float: left;
 }
-.navTab .navLi:first-child {
+.navTab .NavLi:first-child {
   border: 1px solid #00bdff;
   border-right: none;
   border-radius: 8px 0 0 8px;
   border-radius: 0.3rem 0 0 0.3rem;
 }
-.navTab .navLi:last-child {
+.navTab .NavLi:last-child {
   border: 1px solid #00bdff;
   border-radius: 0 8px 8px 0;
   border-radius: 0 0.3rem 0.3rem 0;
 }
-.navTab .navLi.active {
+.navTab .NavLi.active {
   background: #00e5ff;
   color: #01163b;
 }
-.navTab .navLi + .navLi {
+.navTab .NavLi + .NavLi {
   border-left: 1px solid #00bdff;
 }
 .LegendLi2 {
@@ -1702,7 +1702,6 @@
   background: rgba(1, 39, 76, 0.5);
   border: 0.025rem solid #3b0303;
 }
-.SkyRightBox,
 .SkyRightSummary1,
 .SkyRightSummary2,
 .SkylegendBox1,
@@ -1711,7 +1710,6 @@
 .PopUpBox {
   display: none;
 }
-.SkyRightBox.show,
 .SkyRightSummary1.show,
 .SkyRightSummary2.show,
 .SkylegendBox1.show,
