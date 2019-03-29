@@ -43,7 +43,7 @@
   background: url(../img/map5.png) no-repeat;
   background-size: 100% 100%;
 }
-.mapWuhan {
+.MapWuhan {
   background-image: url(../img/u11849.png);
   background-size: 100% 100%;
 }
@@ -1341,11 +1341,12 @@
 .rem061 {
   font-size: .6rem;
 }
-.SkyrightBox {
+.SkyRightBox,
+.IndexRightBox {
   flex: 1;
-  height: 100%;
 }
-.SkyrightBox .SkyrightConTitleBox {
+.SkyRightBox .SkyrightConTitleBox,
+.IndexRightBox .SkyrightConTitleBox {
   text-align: justify;
   text-justify: inter-word;
   position: relative;
@@ -1353,16 +1354,20 @@
   height: 2.15rem;
   padding-top: .68rem;
 }
-.SkyrightBox .rightConTitle {
+.SkyRightBox .rightConTitle,
+.IndexRightBox .rightConTitle {
   font-size: .8rem;
 }
-.SkyrightBox .rightMount {
+.SkyRightBox .rightMount,
+.IndexRightBox .rightMount {
   float: right;
 }
-.SkyrightBox .downItem {
+.SkyRightBox .downItem,
+.IndexRightBox .downItem {
   color: #f7823c;
 }
-.SkyrightBox .upItem {
+.SkyRightBox .upItem,
+.IndexRightBox .upItem {
   color: #72e75e;
 }
 .secondLine .downItem {
@@ -1611,7 +1616,7 @@
 .legendBox2 {
   right: 24.875rem;
 }
-.goodWeatherCanvas {
+.GoodWeatherCanvas {
   position: relative;
   width: 17.2rem;
   height: 11.1rem;
@@ -1687,7 +1692,7 @@
 .LegendLi2 + .LegendLi2 {
   margin-left: .5rem;
 }
-.goWuhan {
+.GoWuhan {
   width: 6rem;
   height: 2rem;
   position: relative;
@@ -1702,7 +1707,7 @@
 .SkyRightSummary2,
 .SkylegendBox1,
 .SkylegendBox2,
-.goWuhan,
+.GoWuhan,
 .PopUpBox {
   display: none;
 }
@@ -1711,7 +1716,7 @@
 .SkyRightSummary2.show,
 .SkylegendBox1.show,
 .SkylegendBox2.show,
-.goWuhan.show,
+.GoWuhan.show,
 .PopUpBox.show {
   display: block;
 }

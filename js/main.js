@@ -96,7 +96,7 @@ function setRadio(){
 }
 /*  主页面和市区页面交替   */
 function moduleToggle(Prodiv) {
-	$("body").on('click', '.goWuhan', function () {
+	$("body").on('click', '.GoWuhan', function () {
 		intoggle();
 		$(Prodiv).removeClass('active');
 		
@@ -107,12 +107,14 @@ function moduleToggle(Prodiv) {
 	})
 
 	function intoggle() {
-		$('.goWuhan').toggleClass('show');
+		$('.GoWuhan').toggleClass('show');
 		$('.BeOutWuhan').toggleClass('show');
-		$('.mapWuhan').toggleClass('active');
+		$('.MapWuhan').toggleClass('active');
 	}
 }
 /************scroll bar 封装方法******* */
+
+//使某个容器自动滚动
 function autoScrollFun(element){//参数为需要滚动的容器
 	var $this = $(element);
     var scrollTimer;
@@ -125,22 +127,26 @@ function autoScrollFun(element){//参数为需要滚动的容器
     }).trigger("mouseleave");
 
     function scrollNews(obj) {
-		//console.log($(element).find(".table"));
 		if(obj.find(".table").length){
 			var $self = obj.find(".table");
+			//获得第一个tr的高度
 			var lineHeight = $self.find("tr:first").height(); 
+			//并根据此高度向上移动
 			$self.animate({
 				"marginTop": -lineHeight + "px"
 			}, 600, function() {
 				$self.css({
 					marginTop: 0
+				//恢复marginTop,将第一个tr元素，排列放置到末尾，达到循环播放的目的
 				}).find("tr:first").appendTo($self);
+				
 			})
 		}
-    }
-		
+    }		
 }
-var arrMonth4=['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月']  //!!!!!!!需要后台引入的数据
+
+//默认显示 的横轴内容
+var arrMonth4=['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月']  
 
 function InitPopCanvas(obj) {
 	this._obj = obj
@@ -150,15 +156,16 @@ function InitPopCanvas(obj) {
 	this.unit = this._obj.unit;
 	this.popUpChart = echarts.init(document.getElementById(this._obj.elementId));
 	this.lineGraphS = this._obj.lineGraphS;
+	//重置对象
 	this.setObj = function (newObj) {
-		
 		this._obj = newObj;
-		console.log(this._obj);
 	}
+	//绘图
 	this.initCanvas = function () {
-		let _colors = [];
-		let _series = [];
+		let _colors = [];//暂存 有active类名来展示相应的    颜色的数组
+		let _series = [];//暂存 有active类名来展示相应的    sery的数组
 		var noActiveN = 0;
+		//遍历污染物标签，根据 标签有active类名来展示相应的线图
 		for (let i = 0; i < this.lineGraphS.length; i++) {
 			var item = this.lineGraphS[i];
 			//if(item.className.)
@@ -168,8 +175,8 @@ function InitPopCanvas(obj) {
 			} else {
 				noActiveN++;
 			}
-
-			if (noActiveN == this.lineGraphS.length) { //至少显示第一条
+             //至少突出第一个污染物，和展示对应的线图
+			if (noActiveN == this.lineGraphS.length) {
 				_colors = this._obj.colorArr[0];
 				_series = this._obj.seriesArr[0];
 				$(this.lineGraphS[0]).addClass('active');
@@ -182,6 +189,7 @@ function InitPopCanvas(obj) {
 			notMerge: true,
 		});
 	}
+	//根据数据来达到option
 	this.getPopOption = function (colorP, seriesP) {
 		var option = {
 			color: colorP, //调色板
@@ -271,10 +279,10 @@ function InitPopCanvas(obj) {
 		};
 		return option;
 	}
-
 }
 
-function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 针对排污情况P4页面的方法  需要的含数组的对象
+//将数据库转化为绘图 针对排污情况P4页面的方法  需要的含数组的对象
+function InitPopupObjByData(elementClass, Obj) { 
 	//elementClass 弹窗的最大容器的独特的类  ,如‘.PopUpBox_jing’
 	this.popUpDataObj = {};
 	this.popUpDataObj.elementClass = elementClass,
@@ -282,7 +290,8 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 	this.popUpDataObj.popupObjArr = [];
 	this.dataArr = Obj.dataArr;
 	this.pollNameList=Obj.pollNameList;
-	this.initTablist = function () { //初始化某个弹幕的选框的dom
+	//初始化某个弹幕的选框的dom,可根据需要来展示，不需要的话，不展示此列
+	this.initTablist = function () { 
 		let inhtml = '';
 		inhtml = '<span class="selectSpan ">' +
 			'<span class="spanInner active" data-key="'+this.pollNameList[0].pollId+'" >' + this.pollNameList[0].pollName + '</span>' +
@@ -366,8 +375,10 @@ function cloneObj(origin, target) {
 	}
 	return target;
 }
+
+
 /*************饼图 至少是设置一个高亮******* */
-/******
+/******   hover某个圆环上某个元素是，进行高亮显示
  * chartNum  饼图原型对象
  * data      需要需然的数据对象
  */
@@ -406,6 +417,7 @@ function PieAutoHighLight(chartNum,data){
         });
     }, 1000);
 }
+
 /**
  * 
  * @param {*} colors 图形的颜色设置组合
@@ -470,7 +482,9 @@ function getPieOption(colors, format, data) {
     };
     return option;
 }
-function getPieOption2(colors, format,startRadio, data){
+
+//startAngle：饼图达到左右对称的参数
+function getPieOption2(colors, format,startAngle, data){
 	var option = {
         grid: {
 			top: 0,
@@ -485,7 +499,7 @@ function getPieOption2(colors, format,startRadio, data){
                 center: ['50%', '50%'],
                 radius: ['60%', '70%'],
                 avoidLabelOverlap: false,
-				startAngle:startRadio,
+				startAngle:startAngle,
                 label: {
                     normal: {
                         show: false,

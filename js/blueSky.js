@@ -109,9 +109,9 @@ function setOptionfun(color, radius) {
 }
 /* 地图div的交互   */
 
-//P1tabLi
-$("body").on('click', '.js_typeTab .navLi', function () {
-    $('.js_typeTab .navLi').removeClass('active');
+//tabLi
+$("body").on('click', '.TypeTab .navLi', function () {
+    $('.TypeTab .navLi').removeClass('active');
     $(this).addClass('active');
     var type = $(this).attr("data-type")
     $('.MapBox').removeClass('active');
@@ -141,13 +141,10 @@ $("body").on('click', '.GisTabLi', function () {
 /* 排名相关点击交互   */
 function RankToggle() {
     $("body").on('click', '.RankTabLi', function () {
-        
         $(this).siblings('.RankTabLi').removeClass('active');
         $(this).addClass('active');
-
     })
     $("body").on('click', '.SkyArrowIcon', function () {
-       
         $(this).siblings('.SkyArrowIcon').removeClass('active');
         $(this).addClass('active');
     })
@@ -157,8 +154,8 @@ function RankToggle() {
  * 左边列表页面的线图渲染
  * 
  * */
-var myChart3 = echarts.init(document.getElementById('goodWeatherCanvas'));
-var myChart4 = echarts.init(document.getElementById('PMCanvas'));
+var myChart3 = echarts.init(document.getElementById('GoodWeatherCanvas'));
+var myChart4 = echarts.init(document.getElementById('PmCanvas'));
 var myChart5 = echarts.init(document.getElementById('SkypopUpcanvas'));
 var areaBack = 'rgba(1,53,91,.3)';
 
