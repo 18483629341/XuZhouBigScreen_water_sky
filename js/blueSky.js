@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     /* 排名相关点击交互   */
     RankToggle();
-    //P6moduleToggle();
+    //SkymoduleToggle();
     //设置页面与标准窗口的比例
     setRadio();
     //自动滚动
@@ -116,8 +116,8 @@ $("body").on('click', '.js_typeTab .navLi', function () {
     var type = $(this).attr("data-type")
     $('.MapBox').removeClass('active');
     $('.MapBox[data-type=' + type + ']').addClass('active');
-    $('.P6LeftSummary').removeClass('show');
-    $('.P6LeftSummary[data-type=' + type + ']').addClass('show');
+    $('.SkyLeftSummary').removeClass('show');
+    $('.SkyLeftSummary[data-type=' + type + ']').addClass('show');
 })
 
 $("body").on('click', '.GisTabLi', function () {
@@ -146,9 +146,9 @@ function RankToggle() {
         $(this).addClass('active');
 
     })
-    $("body").on('click', '.P6ArrowIcon', function () {
+    $("body").on('click', '.SkyArrowIcon', function () {
        
-        $(this).siblings('.P6ArrowIcon').removeClass('active');
+        $(this).siblings('.SkyArrowIcon').removeClass('active');
         $(this).addClass('active');
     })
 }
@@ -159,7 +159,7 @@ function RankToggle() {
  * */
 var myChart3 = echarts.init(document.getElementById('goodWeatherCanvas'));
 var myChart4 = echarts.init(document.getElementById('PMCanvas'));
-var myChart5 = echarts.init(document.getElementById('P6popUpcanvas'));
+var myChart5 = echarts.init(document.getElementById('SkypopUpcanvas'));
 var areaBack = 'rgba(1,53,91,.3)';
 
 //!!!!!!!需要后台引入的数据  全省年均值的数据
