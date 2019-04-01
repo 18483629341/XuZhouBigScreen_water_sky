@@ -31,10 +31,9 @@ $(document).ready(function () {
 
 
 });
-let initPopCanvas = null;
+var initPopCanvas = null;
 window.onresize = function () {
     autoFit();
-    autoFitContent();
     setRadio();
     
     // changeTop()
@@ -374,7 +373,7 @@ function getOption3(obj) {
 $("body").on('click', '.lineGraph', function () {
     $('.lineGraph').removeClass('active');
     $(this).addClass('active');
-    if ($(this).attr('data-name') == 'goodWeather') {
+    if ($(this).attr('data-name') === 'goodWeather') {
         myChart5.setOption(option41);
     } else {
         myChart5.setOption(option42);

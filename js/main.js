@@ -81,7 +81,7 @@ function IndexPopContorl(){
         $('.PopUpBox').removeClass('show');
     })
     $("body").on('click','.Default',function(){	
-		let name=$(this).attr('data-name');
+		var name=$(this).attr('data-name');
 		$('.PopUpBox').removeClass('show');
 		$(".PopUpBox"+name).addClass('show');
     })
@@ -162,11 +162,11 @@ function InitPopCanvas(obj) {
 	}
 	//根据active类名绘图
 	this.initCanvas = function () {
-		let _colors = [];//暂存 有active类名来展示相应的    颜色的数组
-		let _series = [];//暂存 有active类名来展示相应的    sery的数组
+		var _colors = [];//暂存 有active类名来展示相应的    颜色的数组
+		var _series = [];//暂存 有active类名来展示相应的    sery的数组
 		var noActiveN = 0;
 		//遍历污染物标签，根据 标签有active类名来展示相应的线图
-		for (let i = 0; i < this.lineGraphS.length; i++) {
+		for (var i = 0; i < this.lineGraphS.length; i++) {
 			var item = this.lineGraphS[i];
 			//if(item.className.)
 			if (hasActive(item.className)) {
@@ -176,7 +176,7 @@ function InitPopCanvas(obj) {
 				noActiveN++;
 			}
              //至少突出第一个污染物，和展示对应的线图
-			if (noActiveN == this.lineGraphS.length) {
+			if (noActiveN === this.lineGraphS.length) {
 				_colors = this._obj.colorArr[0];
 				_series = this._obj.seriesArr[0];
 				$(this.lineGraphS[0]).addClass('active');
@@ -292,30 +292,30 @@ function InitPopupObjByData(elementClass, Obj) {
 	this.pollNameList=Obj.pollNameList;
 	//初始化某个弹幕的选框的dom,可根据需要来展示，不需要的话，不展示此列
 	this.initTablist = function () { 
-		let inhtml = '';
-		inhtml = '<span class="selectSpan ">' +
+		var innerHtml = '';
+		innerHtml = '<span class="selectSpan ">' +
 			'<span class="spanInner active" data-key="'+this.pollNameList[0].pollId+'" >' + this.pollNameList[0].pollName + '</span>' +
 			'<i class="icon dropIcon"></i>' +
 			'</span>' +
 			'<ul class="TreeList" >';
-		let listArr = '';
-		for (let i = 0; i < this.pollNameList.length; i++) {
-			let lihtml = '';
-			if (i == 0) {
+		var listArr = '';
+		for (var i = 0; i < this.pollNameList.length; i++) {
+			var lihtml = '';
+			if (i === 0) {
 				lihtml = '<li class="treeLi active" data-index="'+this.pollNameList[0].pollId+'" >' + this.pollNameList[i].pollName + '</li>'
 			} else {
 				lihtml = '<li class="treeLi" data-index="'+this.pollNameList[i].pollId+'">' + this.pollNameList[i].pollName + '</li>'
 			}
 			listArr += lihtml;
 		}
-		inhtml += listArr;
-		inhtml += '</ul>';
-		$(this.popUpDataObj.elementClass + ' .selectLi').html(inhtml);
+		innerHtml += listArr;
+		innerHtml += '</ul>';
+		$(this.popUpDataObj.elementClass + ' .selectLi').html(innerHtml);
 	}
 	this.init = function (elementId) {
 		//生成需要渲染第一排污口的线图的 数据  
 		
-		let obj = this.setPopupObj(this.dataArr[0]);
+		var obj = this.setPopupObj(this.dataArr[0]);
 		obj.elementId = elementId;
 		
 		return obj
@@ -328,8 +328,8 @@ function InitPopupObjByData(elementClass, Obj) {
 		popupObj2.unit = Obj.unit||'mg/l';
 		var keys = Object.keys(obj);
 		popupObj2.seriesArr = [];
-		for (let i = 0; i < keys.length; i++) {
-			let item = keys[i];
+		for (var i = 0; i < keys.length; i++) {
+			var item = keys[i];
 			var seryObj = {
 				name: Obj.promtArr[i],
 				type: 'line',
@@ -364,7 +364,7 @@ function cloneObj(origin, target) {
 	var target = target || {};
 	if (origin instanceof Array) {
 		target = [];
-	} else if (origin == null) {//null或者undefined时
+	} else if (origin === null) {//null或者undefined时
 		target = origin;
 	}
 	for (var key in origin) { //此方法即可遍历对象，也可遍历数组
@@ -390,7 +390,7 @@ function PieAutoHighLight(chartNum,data){
 		});
         chartNum.on('mouseover', function(params) {
             
-            if (params.name == data[0].name) {
+            if (params.name === data[0].name) {
                 chartNum.dispatchAction({
                     type: 'highlight',
                     seriesIndex: 0,

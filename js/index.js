@@ -48,8 +48,8 @@ window.onresize = function () {
 	initPopCanvas1.initCanvas();
 
 }
-let initPopCanvas0 = null;
-let initPopCanvas1 = null;
+var initPopCanvas0 = null;
+var initPopCanvas1 = null;
 var initPopupObjByData0 = null;
 var popupObj0 = null;
 var initPopupObjByData10 = null;
@@ -141,7 +141,7 @@ $("body").on('click', '.PopUpBoxZi .timeTypeSpan', function () {
 	$('.PopUpBoxZi .timeTypeSpan').removeClass('active');
 	$(this).toggleClass('active');
 	var type = $(this).attr('data-name');
-	if (type == 'hour') {
+	if (type === 'hour') {
 		initPopCanvas1 = new InitPopCanvas(popupObj11);
 		initPopCanvas1.initCanvas();
 	} else {
@@ -164,11 +164,11 @@ function mapToggle2() {
 		$('.MapBox[data-type=' + type + ']').addClass('active');
 		$('.LeftPane').removeClass('active');
 		$('.LeftPane[data-type=' + type + ']').addClass('active');
-		if (type == "Compliance") {
+		if (type === "Compliance") {
 			mainActive = 'MapIndex1';
 			$('.LeftSummaryTitle').html('水质达标状况');
 			$('.P2RightBox').css({ display: 'none' });
-		} else if (type == "WaterMonitor") {
+		} else if (type === "WaterMonitor") {
 			mainActive = 'MapIndex';
 			$('.LeftSummaryTitle').html('水质监测状况');
 			$('.P2RightBox').css({ display: 'block' });
