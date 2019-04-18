@@ -1456,19 +1456,19 @@
   background: url(../img/map_tabback_hover.png) no-repeat;
   background-size: 100% 100%;
 }
-.tableContanier2 {
+.tableContanierSection {
   width: 17rem;
   margin: 0 auto;
 }
-.SkyRightSummaryTwo .tableContanier2 {
+.SkyRightSummaryTwo .tableContanierSection {
   width: 17.5rem;
   height: 9.8rem;
   margin: initial;
 }
-.SkyRightSummaryTwo .tableContanier2 .theadTr .td3 {
+.SkyRightSummaryTwo .tableContanierSection .theadTr .td3 {
   padding-right: .5rem;
 }
-.SkyRightSummaryTwo .tableContanier2 .td2 {
+.SkyRightSummaryTwo .tableContanierSection .td2 {
   text-align: center;
 }
 .SkyRightSummaryTwo .mCSB_inside > .mCSB_container {

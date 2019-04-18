@@ -1,13 +1,9 @@
-
-
 $(document).ready(function () {
 
-    /* 排名相关点击交互   */
-    RankToggle();
-    //SkymoduleToggle();
-    //设置页面与标准窗口的比例
-    setRadio();
-    //自动滚动
+    // 排名相关点击交互  
+    rankToggle();
+
+    //自动滚动  
     autoScrollFun('#scrollBox1');
     autoScrollFun('#scrollBox2');
     autoScrollFun('#scrollBox3');
@@ -24,7 +20,7 @@ $(document).ready(function () {
     myChart4.setOption(option32);
     //弹窗上的线图绘制
     myChart5.setOption(option41);
-   
+
     // initPopCanvas=new InitPopCanvas(popupObj);
     // initPopCanvas.initCanvas();
 
@@ -34,10 +30,9 @@ $(document).ready(function () {
 var initPopCanvas = null;
 window.onresize = function () {
     autoFit();
-    setRadio();
-    
-    // changeTop()
-    myChart21.resize();//根据窗口的大小 变动图表 --- 重点 
+
+    //根据窗口的大小 变动图表 --- 重点 
+    myChart21.resize();
     myChart22.resize();
     myChart23.resize();
     myChart24.resize();
@@ -47,11 +42,7 @@ window.onresize = function () {
     initPopCanvas.initCanvas();
 }
 
-/*************
- * 
- * 相应也页面的饼状图渲染
- * 
- * */
+/* 相应也页面的饼状图渲染  */
 var myChart21 = echarts.init(document.getElementById('CompRateCanvas021'));
 var myChart22 = echarts.init(document.getElementById('CompRateCanvas022'));
 var myChart23 = echarts.init(document.getElementById('CompRateCanvas023'));
@@ -61,17 +52,23 @@ var option22 = setOptionfun('#03143a', '93%');
 var option23 = setOptionfun('#023157', '70%');
 var option24 = setOptionfun('#03143a', '64.5%');
 
-// 指定饼状图的配置项和数据
+/**   功能 指定饼状图的配置项和数据
+ * @param {*} color  颜色数组
+ * * @param {*} radius  最大半径的比例
+ */
 function setOptionfun(color, radius) {
-    var arr = [78.5, 21.5]; //达标的数据和不达标的数据组成的数组     //!!!!!!!需要后台引入的数据
+    //达标的数据和不达标的数据组成的数组     //!!!!!!!需要后台引入的数据
+    var arr = [78.5, 21.5];
     var option = {
-        color: [color], //调色板，这里为圆环的底色
+        color: [color],
         series: [{
             name: 'Line 1',
             type: 'pie',
             clockWise: true,
-            startAngle: 0,//圆环的绘画的起始角度
-            radius: [0, radius],//圆环的半径比例
+            //圆环的绘画的起始角度
+            startAngle: 0,
+            //圆环的半径比例
+            radius: [0, radius],
             itemStyle: {
                 normal: {
                     label: {
@@ -84,7 +81,8 @@ function setOptionfun(color, radius) {
             },
             hoverAnimation: false,
             data: [{
-                value: arr[0],//注意：这里是达标的数据1，还需要不达标的数据2（在下面），才能展示正确的百分比
+                //注意：这里是达标的数据1，还需要不达标的数据2（在下面），才能展示正确的百分比
+                value: arr[0],
                 name: '01',
                 itemStyle: {
                     normal: {
@@ -99,14 +97,15 @@ function setOptionfun(color, radius) {
                 }
             }, {
                 name: '02',
-                value: arr[1],//注意：这里是不达标的数据2
+                //注意：这里是不达标的数据2
+                value: arr[1],
             }]
         }]
     };
     return option;
 }
 
-/* 地图div的交互   start*/
+/*   地图div的交互   */
 $("body").on('click', '.TypeTab .NavLi', function () {
     $('.TypeTab .NavLi').removeClass('active');
     $(this).addClass('active');
@@ -135,10 +134,10 @@ $("body").on('click', '.GisTabLi', function () {
     $('.MapBox[data-type=' + type + ']').addClass('active');
 
 })
-/* 地图div的交互   end*/
+
 
 /* 排名相关点击交互   */
-function RankToggle() {
+function rankToggle() {
     $("body").on('click', '.RankTabLi', function () {
         $(this).siblings('.RankTabLi').removeClass('active');
         $(this).addClass('active');
@@ -148,18 +147,13 @@ function RankToggle() {
         $(this).addClass('active');
     })
 }
-/*************
- * 
- * 左边列表页面的线图渲染
- * 
- * */
+
+/* 左边列表页面的线图渲染   */
 var myChart3 = echarts.init(document.getElementById('GoodWeatherCanvas'));
 var myChart4 = echarts.init(document.getElementById('PmCanvas'));
 var myChart5 = echarts.init(document.getElementById('SkypopUpcanvas'));
 var areaBack = 'rgba(1,53,91,.3)';
-
 //!!!!!!!需要后台引入的数据  全省年均值的数据
-
 var goodWheatherData = {
     arrMonth: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
     arrThisYear: ['70', '60', '80', '90', '60', '80', '90', '60', '80', '90', '60', '80'],
@@ -184,12 +178,9 @@ var PMData = {
     },
     colors: ["#00e4ff", "#f7823c", "#72e75e"]
 }
-/*************
- * 
- *  弹窗的线图渲染
- * 
- * */
-//   !!!!!!!需要后台引入的数据  弹窗上某站点的数据
+
+/*弹窗的线图渲染数据        */
+//!!!!!!!需要后台引入的数据 弹窗上某站点的数据
 var goodWheatherData1 = {
     arrMonth: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
     arrThisYear: ['70', '60', '80', '90', '60', '80', '90', '60', '80', '90', '60', '80'],
@@ -217,9 +208,14 @@ var option31 = getOption3(goodWheatherData);
 var option32 = getOption3(PMData);
 var option41 = getOption3(goodWheatherData1);
 var option42 = getOption3(PMData1);
+
+/**
+ * 
+ * @param {*} obj 对象，图形渲染来源 
+ */
 function getOption3(obj) {
     var option = {
-        color: obj.colors,//调色板
+        color: obj.colors, //调色板
         tooltip: {
             //show:false,
             trigger: 'axis',
@@ -275,7 +271,7 @@ function getOption3(obj) {
                 fontSize: 14,
                 padding: [0, 0, 0, 0]
             },
-            splitLine: {//Y轴线的设置
+            splitLine: { //Y轴线的设置
                 show: true,
                 lineStyle: {
                     color: ["#324b75"],
@@ -291,10 +287,10 @@ function getOption3(obj) {
                 },
                 formatter: obj.formatter
             },
-            axisLine: {//Y轴线的设置
+            axisLine: { //Y轴线的设置
                 show: false,
             },
-            splitLine: {//Y轴线的设置
+            splitLine: { //Y轴线的设置
                 show: true,
                 lineStyle: {
                     color: ["#324b75"],
@@ -314,7 +310,9 @@ function getOption3(obj) {
                 name: '空气优良天气比例',
                 data: obj.arrThisYear,
                 type: 'line',
-                areaStyle: { normal: {} },
+                areaStyle: {
+                    normal: {}
+                },
                 smooth: true,
                 lineStyle: {
                     //  color:"#00e4ff",
@@ -331,7 +329,9 @@ function getOption3(obj) {
                 name: '2017年同期',
                 type: 'line',
                 stack: '总量',
-                areaStyle: { normal: {} },
+                areaStyle: {
+                    normal: {}
+                },
                 data: obj.arrLastYear,
                 smooth: true,
                 lineStyle: {
@@ -369,7 +369,6 @@ function getOption3(obj) {
 }
 
 /*********popup0   线框图 相关数据对象***** */
-
 //切换弹窗上的线图  优良天数比例和PM2.5年均浓度
 $("body").on('click', '.lineGraph', function () {
     $('.lineGraph').removeClass('active');
@@ -386,21 +385,3 @@ $("body").on('click', '.WarnTab .NavLi', function () {
     $('.WarnTab .NavLi').removeClass('active');
     $(this).addClass('active');
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
