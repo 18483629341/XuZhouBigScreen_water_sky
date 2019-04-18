@@ -106,10 +106,10 @@ function setOptionfun(color, radius) {
 }
 
 /*   地图div的交互   */
-$("body").on('click', '.TypeTab .NavLi', function () {
+$('body').on('click', '.TypeTab .NavLi', function () {
     $('.TypeTab .NavLi').removeClass('active');
     $(this).addClass('active');
-    var type = $(this).attr("data-type")
+    var type = $(this).attr('data-type')
     $('.MapBox').removeClass('active');
     $('.MapBox[data-type=' + type + ']').addClass('active');
     $('.SkyLeftSummary').removeClass('show');
@@ -117,16 +117,16 @@ $("body").on('click', '.TypeTab .NavLi', function () {
 })
 
 
-$("body").on('click', '.GisTabLi', function () {
+$('body').on('click', '.GisTabLi', function () {
     $('.GisTabLi').removeClass('active');
     $(this).addClass('active');
     var type = null;
-    if (!$(this).attr("data-type")) {
-        type = $(this).find('.NavLi.active').attr("data-type");
+    if (!$(this).attr('data-type')) {
+        type = $(this).find('.NavLi.active').attr('data-type');
         $('.mapTabCon .navTab').addClass('active');
 
     } else {
-        type = $(this).attr("data-type");
+        type = $(this).attr('data-type');
         $('.mapTabCon .navTab').removeClass('active');
 
     }
@@ -138,11 +138,11 @@ $("body").on('click', '.GisTabLi', function () {
 
 /* 排名相关点击交互   */
 function rankToggle() {
-    $("body").on('click', '.RankTabLi', function () {
+    $('body').on('click', '.RankTabLi', function () {
         $(this).siblings('.RankTabLi').removeClass('active');
         $(this).addClass('active');
     })
-    $("body").on('click', '.SkyArrowIcon', function () {
+    $('body').on('click', '.SkyArrowIcon', function () {
         $(this).siblings('.SkyArrowIcon').removeClass('active');
         $(this).addClass('active');
     })
@@ -162,7 +162,7 @@ var goodWheatherData = {
     label: '单位：%',
     formatter: '{value}',
     max: '100',
-    colors: ["#00e4ff", "#f7823c", "#72e75e"]
+    colors: ['#00e4ff', '#f7823c', '#72e75e']
 }
 
 var PMData = {
@@ -176,7 +176,7 @@ var PMData = {
         var a = value.max * 1.2;
         return a.toFixed(1);
     },
-    colors: ["#00e4ff", "#f7823c", "#72e75e"]
+    colors: ['#00e4ff', '#f7823c', '#72e75e']
 }
 
 /*弹窗的线图渲染数据        */
@@ -189,7 +189,7 @@ var goodWheatherData1 = {
     label: '单位：%',
     formatter: '{value}',
     max: '100',
-    colors: ["#00cdff", "#fbe83a"]
+    colors: ['#00cdff', '#fbe83a']
 }
 var PMData1 = {
     arrMonth: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
@@ -202,7 +202,7 @@ var PMData1 = {
         var a = value.max * 1.2;
         return a.toFixed(1);
     },
-    colors: ["#00cdff", "#fbe83a"]
+    colors: ['#00cdff', '#fbe83a']
 }
 var option31 = getOption3(goodWheatherData);
 var option32 = getOption3(PMData);
@@ -241,7 +241,7 @@ function getOption3(obj) {
             axisLine: { //X轴线的设置
                 show: false,
                 lineStyle: {
-                    color: "#324b75",
+                    color: '#324b75',
                     type: 'dashed',
                     align: 'right',
                     padding: [3, 4, 5, 10]
@@ -274,7 +274,7 @@ function getOption3(obj) {
             splitLine: { //Y轴线的设置
                 show: true,
                 lineStyle: {
-                    color: ["#324b75"],
+                    color: ['#324b75'],
                     type: 'dashed'
                 }
             },
@@ -293,7 +293,7 @@ function getOption3(obj) {
             splitLine: { //Y轴线的设置
                 show: true,
                 lineStyle: {
-                    color: ["#324b75"],
+                    color: ['#324b75'],
                     type: 'dashed'
                 }
             },
@@ -315,7 +315,7 @@ function getOption3(obj) {
                 },
                 smooth: true,
                 lineStyle: {
-                    //  color:"#00e4ff",
+                    //  color:'#00e4ff',
                     width: 2,
                 },
                 areaStyle: {
@@ -335,7 +335,7 @@ function getOption3(obj) {
                 data: obj.arrLastYear,
                 smooth: true,
                 lineStyle: {
-                    // color:"#f7823c",
+                    // color:'#f7823c',
                     width: 2,
                 },
                 areaStyle: {
@@ -357,7 +357,7 @@ function getOption3(obj) {
             data: arrIndex,
             type: 'line',
             lineStyle: {
-                // color:"#72e75e",
+                // color:'#72e75e',
                 width: 2,
             },
             smooth: true,
@@ -370,7 +370,7 @@ function getOption3(obj) {
 
 /*********popup0   线框图 相关数据对象***** */
 //切换弹窗上的线图  优良天数比例和PM2.5年均浓度
-$("body").on('click', '.lineGraph', function () {
+$('body').on('click', '.lineGraph', function () {
     $('.lineGraph').removeClass('active');
     $(this).addClass('active');
     if ($(this).attr('data-name') === 'goodWeather') {
@@ -381,7 +381,7 @@ $("body").on('click', '.lineGraph', function () {
 })
 
 //切换左列区域的线图  优良天数比例和PM2.5年均浓度  
-$("body").on('click', '.WarnTab .NavLi', function () {
+$('body').on('click', '.WarnTab .NavLi', function () {
     $('.WarnTab .NavLi').removeClass('active');
     $(this).addClass('active');
 })

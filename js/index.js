@@ -148,19 +148,19 @@ var option2 = getPieOption2(['#0067ff', 'transparent'], '{text1|{b}}\n{value|{d}
 
 
 /* 手动站弹窗   线图的污染物的切换，引起线图的相应的改变   */
-$("body").on('click', '.PopUpBoxShou .tabSpan', function () {
+$('body').on('click', '.PopUpBoxShou .tabSpan', function () {
 	$(this).toggleClass('active');
 	initPopCanvas0.initCanvas();
 })
 
 /* 自动站弹窗   线图的污染物的切换，引起线图的相应的改变   */
-$("body").on('click', '.PopUpBoxZi .tabLi', function () {
+$('body').on('click', '.PopUpBoxZi .tabLi', function () {
 	$(this).toggleClass('active');
 	initPopCanvas1.initCanvas();
 })
 
 /* 自动站弹窗   线图的：日/小时 切换   */
-$("body").on('click', '.PopUpBoxZi .TimeTypeSpan', function () {
+$('body').on('click', '.PopUpBoxZi .TimeTypeSpan', function () {
 	$('.PopUpBoxZi .TimeTypeSpan').removeClass('active');
 	$(this).toggleClass('active');
 	var type = $(this).attr('data-name');
@@ -181,7 +181,7 @@ var mainActive = 'MapIndex';
 
 /* skyblue页面 地图div的交互   */
 function mapToggleSky() {
-	$("body").on('click', '.GisTabLi', function () {
+	$('body').on('click', '.GisTabLi', function () {
 		$(this).siblings('.GisTabLi').removeClass('active');
 		$(this).addClass('active');
 		var type = $(this).attr("data-type");
@@ -206,7 +206,7 @@ function mapToggleSky() {
 }
 
 /* 线条展示的tab   */
-$("body").on('click', '.PopUpBoxShou .lineGraph', function () {
+$('body').on('click', '.PopUpBoxShou .lineGraph', function () {
 	$(this).toggleClass('active');
 	$('.PopUpBoxShou .lineCanvas').addClass('active');
 	initPopCanvas0.initCanvas();

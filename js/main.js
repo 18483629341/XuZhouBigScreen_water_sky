@@ -13,13 +13,13 @@ function autoFit() {
 function resize() {
 	var winratio = $(window).width() / 1920;
 	$('.body1').css({
-		transform: "scale(" + winratio + ")",
-		transformOrigin: "left top",
+		transform: 'scale(' + winratio + ')',
+		transformOrigin: 'left top',
 
 	});
 	$('.body2').css({
-		transform: "scale(" + winratio + ")",
-		transformOrigin: "left top",
+		transform: 'scale(' + winratio + ')',
+		transformOrigin: 'left top',
 
 	});
 
@@ -30,7 +30,7 @@ function resize() {
 var flag = false;
 
 function listToggle() {
-	$("body").on('click', '.tableIcon', function () {
+	$('body').on('click', '.tableIcon', function () {
 		$(this).toggleClass('rotate180');
 		if (!flag) {
 			var w = $('.RightBox').outerWidth();
@@ -52,10 +52,10 @@ function popContorl() {
 			$('.PopUpBox').removeClass('show');
 		}
 	});
-	$("body").on('click', '.PopUpclose', function () {
+	$('body').on('click', '.PopUpclose', function () {
 		$('.PopUpBox').removeClass('show');
 	})
-	$("body").on('click', '.Default', function () {
+	$('body').on('click', '.Default', function () {
 		$('.PopUpBox').toggleClass('show');
 	})
 }
@@ -71,10 +71,10 @@ function indexPopContorl() {
 			$('.PopUpBox').removeClass('show');
 		}
 	});
-	$("body").on('click', '.PopUpclose', function () {
+	$('body').on('click', '.PopUpclose', function () {
 		$('.PopUpBox').removeClass('show');
 	})
-	$("body").on('click', '.Default', function () {
+	$('body').on('click', '.Default', function () {
 		var name = $(this).attr('data-name');
 		$('.PopUpBox').removeClass('show');
 		$(".PopUpBox" + name).addClass('show');
@@ -90,13 +90,16 @@ function hasActive(str) {
 }
 
 /*  主页面和市区页面交替   */
+/**   功能 使某个容器自动滚动
+ * @param {*} Prodiv  项目容器
+ */
 function moduleToggle(Prodiv) {
-	$("body").on('click', '.GoWuhan', function () {
+	$('body').on('click', '.GoWuhan', function () {
 		intoggle();
 		$(Prodiv).removeClass('active');
 
 	})
-	$("body").on('click', '.BeOutWuhan', function () {
+	$('body').on('click', '.BeOutWuhan', function () {
 		intoggle();
 		$(Prodiv).addClass('active');
 	})
@@ -121,21 +124,21 @@ function autoScrollFun(element) {
 		scrollTimer = setInterval(function () {
 			scrollNews($this);
 		}, 2000);
-	}).trigger("mouseleave");
+	}).trigger('mouseleave');
 
 	function scrollNews(obj) {
-		if (obj.find(".table").length) {
-			var $self = obj.find(".table");
+		if (obj.find('.table').length) {
+			var $self = obj.find('.table');
 			//获得第一个tr的高度
-			var lineHeight = $self.find("tr:first").height();
+			var lineHeight = $self.find('tr:first').height();
 			//并根据此高度向上移动
 			$self.animate({
-				"marginTop": -lineHeight + "px"
+				'marginTop': -lineHeight + 'px'
 			}, 600, function () {
 				$self.css({
 					marginTop: 0
 					//恢复marginTop,将第一个tr元素，排列放置到末尾，达到循环播放的目的
-				}).find("tr:first").appendTo($self);
+				}).find('tr:first').appendTo($self);
 
 			})
 		}
@@ -217,7 +220,7 @@ function InitPopCanvas(obj) {
 				axisLine: { //X轴线的设置
 					show: false,
 					lineStyle: {
-						color: "#324b75",
+						color: '#324b75',
 						type: 'dashed',
 						align: 'right',
 						padding: [3, 4, 5, 10]
@@ -266,7 +269,7 @@ function InitPopCanvas(obj) {
 				splitLine: { //Y轴线的设置
 					show: true,
 					lineStyle: {
-						color: ["#324b75"],
+						color: ['#324b75'],
 						type: 'dashed'
 					}
 				},
@@ -327,7 +330,7 @@ function InitPopupObjByData(elementClass, Obj) {
 		var popupObj2 = {};
 		popupObj2.xData = Obj.xData; //注意Obj为原型参数
 		//cloneObj(origin, target)
-		popupObj2.colorArr = ["#fd4800", "#f1ec3f", "#72e75e", '#0067ff', '#ff00cc', "#b51663", "#ff1a1a"];
+		popupObj2.colorArr = ['#fd4800', '#f1ec3f', '#72e75e', '#0067ff', '#ff00cc', '#b51663', '#ff1a1a'];
 		popupObj2.unit = Obj.unit || 'mg/l';
 		var keys = Object.keys(obj);
 		popupObj2.seriesArr = [];
