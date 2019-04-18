@@ -4,21 +4,16 @@
  *          tab切换时对样式的控制
  *     
  * *************** */
-// var LeftNav=document.querySelector(".LeftNav");
-// var RightNav=document.querySelector(".RightNav");
-// var tablis=document.querySelectorAll(".tabli");
-// var TabLiContents=document.querySelectorAll(".TabLiContent");
+
 var swidth =null;
-var W=null;
+
 //header部分里面的所有元素的宽高全自适应方法
 
 function autoFit(){
-	 swidth = $(window).width();
-	//if(swidth > 1366 || swidth === 1366){
-		resize();
-	//}
+	swidth = $(window).width();
+	resize();
 }
-//resize();
+
 
 //整屏等比缩放
 function resize() {

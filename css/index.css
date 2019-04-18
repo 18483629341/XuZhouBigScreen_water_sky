@@ -162,8 +162,8 @@
   text-align: left;
 }
 .ContentLi .LeftRow,
-.ContentLi .centerRow,
-.ContentLi .rightRow {
+.ContentLi .CenterRow,
+.ContentLi .RightRow {
   color: #cfdcfd;
 }
 .ContentLi .LeftRowValue {
@@ -272,7 +272,7 @@
   vertical-align: middle;
   text-align: center;
 }
-.P2RightBox {
+.IndexRightBox {
   margin-top: 0;
 }
 .IconListBox {
@@ -456,7 +456,7 @@
   font-size: 0.9rem;
   padding: .75rem 0;
 }
-.P2RightBox .IconListBox {
+.IndexRightBox .IconListBox {
   margin-top: 0;
 }
 .legendBox {
@@ -522,28 +522,28 @@
 .SixLevel {
   background-color: #fc0105;
 }
-.P2PopUpBox .Popuplegend .LegendLi2 + .LegendLi2 {
+.IndexPopUpBox .Popuplegend .LegendLi2 + .LegendLi2 {
   margin-left: 1.2rem;
 }
-.P2PopUpBox .Popuplegend .OneLevel {
+.IndexPopUpBox .Popuplegend .OneLevel {
   background-color: #fd4800;
 }
-.P2PopUpBox .Popuplegend .TwoLevel {
+.IndexPopUpBox .Popuplegend .TwoLevel {
   background-color: #f1ec3f;
 }
-.P2PopUpBox .Popuplegend .ThreeLevel {
+.IndexPopUpBox .Popuplegend .ThreeLevel {
   background-color: #72e75e;
 }
-.P2PopUpBox .Popuplegend .FourLevel {
+.IndexPopUpBox .Popuplegend .FourLevel {
   background-color: #0067ff;
 }
-.P2PopUpBox .Popuplegend .FiveLevel {
+.IndexPopUpBox .Popuplegend .FiveLevel {
   background-color: #ff00cc;
 }
-.P2PopUpBox .SplitLineBox {
+.IndexPopUpBox .SplitLineBox {
   padding: 0 .8rem;
 }
-.P2PopUpBox .SplitLine {
+.IndexPopUpBox .SplitLine {
   margin: .3rem 0 .4rem 0;
   border-bottom: .025rem dashed #0f5a6d;
 }
@@ -625,14 +625,14 @@
   padding-left: 0;
   padding-right: 0;
 }
-.timeTypeBox {
+.TimeTypeBox {
   float: right;
   text-align: center;
   width: 4.53rem;
   height: 1.3rem;
   line-height: 1.3rem;
 }
-.timeTypeBox .timeTypeSpan {
+.TimeTypeBox .TimeTypeSpan {
   width: 50%;
   height: 100%;
   line-height: 1.1rem;
@@ -642,14 +642,14 @@
   border: .025rem solid #00d1eb;
   cursor: pointer;
 }
-.timeTypeBox .timeTypeSpan:first-child {
+.TimeTypeBox .TimeTypeSpan:first-child {
   border-radius: .2rem 0 0 .2rem;
 }
-.timeTypeBox .timeTypeSpan:last-child {
+.TimeTypeBox .TimeTypeSpan:last-child {
   border-radius: 0  .2rem .2rem 0;
   border-left: none;
 }
-.timeTypeBox .timeTypeSpan.active {
+.TimeTypeBox .TimeTypeSpan.active {
   background: #00d1eb;
   color: #030d2b;
 }
@@ -659,7 +659,7 @@
   display: block;
   margin-top: -0.5rem;
 }
-.PopUpBox_zi .timeTypeBox .timeTypeSpan {
+.PopUpBox_zi .TimeTypeBox .TimeTypeSpan {
   line-height: 1.2rem;
 }
 .InfoListContent {
@@ -776,7 +776,7 @@
   margin: .5rem auto;
   width: 82%;
 }
-.P2RightBoxCon {
+.IndexRightBoxCon {
   top: 2rem;
 }
 .changeTable .upIcon,
@@ -794,75 +794,75 @@
   background-size: 100% 100%;
 }
 .IndexRightSummary .LeftHeaderTitle,
-.SkyRightSummary2 .LeftHeaderTitle {
+.SkyRightSummaryTwo .LeftHeaderTitle {
   text-align: left;
   padding-left: 19%;
 }
 .IndexRightSummary .citheadTr,
-.SkyRightSummary2 .citheadTr {
+.SkyRightSummaryTwo .citheadTr {
   height: 1.3rem;
 }
 .IndexRightSummary .citheadTr .td1,
-.SkyRightSummary2 .citheadTr .td1,
+.SkyRightSummaryTwo .citheadTr .td1,
 .IndexRightSummary .citheadTr .td2,
-.SkyRightSummary2 .citheadTr .td2,
+.SkyRightSummaryTwo .citheadTr .td2,
 .IndexRightSummary .citheadTr .td3,
-.SkyRightSummary2 .citheadTr .td3,
+.SkyRightSummaryTwo .citheadTr .td3,
 .IndexRightSummary .citheadTr .td4,
-.SkyRightSummary2 .citheadTr .td4 {
+.SkyRightSummaryTwo .citheadTr .td4 {
   color: #00d2ff;
 }
 .IndexRightSummary .citheadTr .td1,
-.SkyRightSummary2 .citheadTr .td1,
+.SkyRightSummaryTwo .citheadTr .td1,
 .IndexRightSummary .tbodyTr .td1,
-.SkyRightSummary2 .tbodyTr .td1 {
+.SkyRightSummaryTwo .tbodyTr .td1 {
   width: 14%;
   text-align: left;
 }
 .IndexRightSummary .citheadTr .td2,
-.SkyRightSummary2 .citheadTr .td2,
+.SkyRightSummaryTwo .citheadTr .td2,
 .IndexRightSummary .tbodyTr .td2,
-.SkyRightSummary2 .tbodyTr .td2 {
+.SkyRightSummaryTwo .tbodyTr .td2 {
   width: 26%;
   text-align: center;
 }
 .IndexRightSummary .citheadTr .td3,
-.SkyRightSummary2 .citheadTr .td3,
+.SkyRightSummaryTwo .citheadTr .td3,
 .IndexRightSummary .tbodyTr .td3,
-.SkyRightSummary2 .tbodyTr .td3 {
+.SkyRightSummaryTwo .tbodyTr .td3 {
   width: 44%;
 }
 .IndexRightSummary .citheadTr .td4,
-.SkyRightSummary2 .citheadTr .td4,
+.SkyRightSummaryTwo .citheadTr .td4,
 .IndexRightSummary .tbodyTr .td4,
-.SkyRightSummary2 .tbodyTr .td4 {
+.SkyRightSummaryTwo .tbodyTr .td4 {
   text-align: right!important;
   flex: 1;
 }
 .IndexRightSummary .tbodyTr .td4,
-.SkyRightSummary2 .tbodyTr .td4 {
+.SkyRightSummaryTwo .tbodyTr .td4 {
   padding-right: .225rem;
 }
 .IndexRightSummary .tableContanier,
-.SkyRightSummary2 .tableContanier {
+.SkyRightSummaryTwo .tableContanier {
   width: 17.5rem;
   height: 11rem;
   margin: initial;
   overflow-y: hidden;
 }
 .IndexRightSummary .SecondHeader,
-.SkyRightSummary2 .SecondHeader {
+.SkyRightSummaryTwo .SecondHeader {
   height: 1.6rem;
   padding-top: .5rem;
 }
 .IndexRightSummary .IndexRightContent,
-.SkyRightSummary2 .IndexRightContent,
+.SkyRightSummaryTwo .IndexRightContent,
 .IndexRightSummary .SkyRightContent,
-.SkyRightSummary2 .SkyRightContent {
+.SkyRightSummaryTwo .SkyRightContent {
   padding: .6rem 1.85rem 0.5rem 2.08rem;
 }
 .IndexRightSummary .ListTitle2,
-.SkyRightSummary2 .ListTitle2 {
+.SkyRightSummaryTwo .ListTitle2 {
   font-size: .75rem;
   line-height: .75rem;
   color: #8297bd;
@@ -871,18 +871,6 @@
 }
 /*************part2  part  end  ******************  ***/
 /*************part3  part  end  ******************  ***/
-.P3LeftSummary {
-  width: 21.225rem;
-  height: 39.5rem;
-  background: url(../img/part_air_div.png) no-repeat;
-  background-size: 100% 100%;
-}
-.P3LeftSummary .tableContanier1 {
-  height: 12.5rem;
-}
-.P3LeftContent {
-  padding: .65rem  2rem 0.8rem 2rem;
-}
 .showContent {
   height: 7.5rem;
   margin-bottom: 0.6rem;
@@ -996,10 +984,10 @@
 .citheadTr .theadTd:nth-child(2) {
   min-width: 24%;
 }
-.SkyRightSummary2 .citheadTr .theadTd:nth-child(1) {
+.SkyRightSummaryTwo .citheadTr .theadTd:nth-child(1) {
   min-width: 18%;
 }
-.SkyRightSummary2 .citheadTr .theadTd:nth-child(2) {
+.SkyRightSummaryTwo .citheadTr .theadTd:nth-child(2) {
   min-width: 20%;
 }
 .citheadTr .theadTd:nth-child(3) {
@@ -1011,30 +999,6 @@
 }
 .citheadTr .theadTd:last-child {
   text-align: right;
-}
-.P3LeftSummary .tableContanier .tbodyTr td:nth-child(1) {
-  min-width: 20%;
-}
-.P3LeftSummary .tableContanier .tbodyTr td:nth-child(2) {
-  min-width: 24%;
-}
-.P3LeftSummary .tableContanier .tbodyTr td:nth-child(3) {
-  min-width: 36%;
-}
-.P3LeftSummary .tableContanier .tbodyTr td:nth-child(4) {
-  flex: 1;
-}
-.P3LeftSummary .tableContanier .tbodyTr td:last-child {
-  text-align: center!important;
-}
-.P3LeftSummary .table td:nth-child(1) {
-  width: 20%;
-}
-.P3LeftSummary .table td:nth-child(2) {
-  width: 24%;
-}
-.P3LeftSummary .table td:nth-child(3) {
-  width: 36%;
 }
 .table {
   min-width: 100%;
@@ -1218,7 +1182,7 @@
 }
 .SkyLeftSummary,
 .SkyRightSummary,
-.SkyRightSummary2 {
+.SkyRightSummaryTwo {
   top: 0;
   position: absolute;
   width: 21.075rem;
@@ -1496,21 +1460,21 @@
   width: 17rem;
   margin: 0 auto;
 }
-.SkyRightSummary2 .tableContanier2 {
+.SkyRightSummaryTwo .tableContanier2 {
   width: 17.5rem;
   height: 9.8rem;
   margin: initial;
 }
-.SkyRightSummary2 .tableContanier2 .theadTr .td3 {
+.SkyRightSummaryTwo .tableContanier2 .theadTr .td3 {
   padding-right: .5rem;
 }
-.SkyRightSummary2 .tableContanier2 .td2 {
+.SkyRightSummaryTwo .tableContanier2 .td2 {
   text-align: center;
 }
-.SkyRightSummary2 .mCSB_inside > .mCSB_container {
+.SkyRightSummaryTwo .mCSB_inside > .mCSB_container {
   margin-right: 0;
 }
-.SkyRightSummary2 .mCSB_scrollTools {
+.SkyRightSummaryTwo .mCSB_scrollTools {
   right: 0;
 }
 .table2 {
@@ -1702,16 +1666,14 @@
   background: rgba(1, 39, 76, 0.5);
   border: 0.025rem solid #3b0303;
 }
-.SkyRightSummary1,
-.SkyRightSummary2,
+.SkyRightSummaryTwo,
 .SkylegendBox1,
 .SkylegendBox2,
 .GoWuhan,
 .PopUpBox {
   display: none;
 }
-.SkyRightSummary1.show,
-.SkyRightSummary2.show,
+.SkyRightSummaryTwo.show,
 .SkylegendBox1.show,
 .SkylegendBox2.show,
 .GoWuhan.show,
@@ -1721,38 +1683,32 @@
 .citheadTr {
   margin-top: .5rem;
 }
-.SkyRightSummary1 .tableContanier2 {
-  height: 27rem;
-}
-.SkyRightSummary1 .citheadTr .theadTd:last-child {
-  flex: 1;
-}
-.SkyRightSummary2 {
+.SkyRightSummaryTwo {
   background: url(../img/air_div.png) no-repeat;
   background-size: 100% 100%;
 }
-.SkyRightSummary2 .SkyRightContent {
+.SkyRightSummaryTwo .SkyRightContent {
   padding-top: 0;
   padding-bottom: .5rem;
 }
-.SkyRightSummary2 .LeftHeader {
+.SkyRightSummaryTwo .LeftHeader {
   padding-top: 2.3rem;
 }
-.SkyRightSummary2 .LeftHeader .LeftHeaderTitle {
+.SkyRightSummaryTwo .LeftHeader .LeftHeaderTitle {
   text-align: left;
   padding-left: 19%;
 }
-.SkyRightSummary2 .SecondHeader {
+.SkyRightSummaryTwo .SecondHeader {
   height: 1.4rem;
   padding-top: .5rem;
 }
-.SkyRightSummary2 .SecondHeader .XuanLine {
+.SkyRightSummaryTwo .SecondHeader .XuanLine {
   top: -0.5rem;
 }
-.SkyRightSummary2 .theadTr .td2 {
+.SkyRightSummaryTwo .theadTr .td2 {
   text-align: center;
 }
-.SkyRightSummary2 .citheadTr .theadTd:last-child {
+.SkyRightSummaryTwo .citheadTr .theadTd:last-child {
   flex: 1;
 }
 .SkylegendBox2 {
@@ -1883,8 +1839,8 @@
   padding-right: .8rem;
 }
 .KeyContent .LeftRow,
-.KeyContent .rightRow,
-.KeyContent .centerRow {
+.KeyContent .RightRow,
+.KeyContent .CenterRow {
   font-size: .75rem;
   line-height: 1.45rem;
   height: 1.45rem;
@@ -1892,10 +1848,10 @@
 .KeyContent .LeftRow {
   text-align: left;
 }
-.KeyContent .centerRow {
+.KeyContent .CenterRow {
   text-align: center;
 }
-.KeyContent .rightRow {
+.KeyContent .RightRow {
   text-align: right;
 }
 .keyContent1 {
@@ -1966,12 +1922,12 @@
   background: #00e5ff;
   color: #0f0920;
 }
-.timeTab {
+.TimeTab {
   position: relative;
 }
-.timeTab .timeTypeBox {
+.TimeTab .TimeTypeBox {
   position: absolute;
-  top: -2rem;
+  top: 18px;
   right: 0;
 }
 .SkyPopUpBox .canvasTab .tabSpan[data-name='pm2.5'] {
@@ -2016,15 +1972,11 @@
 }
 /*************part6  blueSky  end  ******************  ***/
 /************ 有滚动条的所有div *** ***/
-.P3LeftSummary .tableContanier,
-.SkyRightSummary1 .tableContanier,
-.SkyRightSummary2 .tableContanier {
+.SkyRightSummaryTwo .tableContanier {
   width: 100%;
   overflow-y: hidden;
 }
-.P3LeftSummary .tableContanier::-webkit-scrollbar,
-.SkyRightSummary1 .tableContanier::-webkit-scrollbar,
-.SkyRightSummary2 .tableContanier::-webkit-scrollbar {
+.SkyRightSummaryTwo .tableContanier::-webkit-scrollbar {
   display: none!important;
 }
 .P5scrollBox {

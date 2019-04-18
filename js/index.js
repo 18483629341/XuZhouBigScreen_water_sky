@@ -30,9 +30,9 @@ $(document).ready(function () {
 
 	//自动站弹窗上的线图线图对象   
 	initPopupObjByData10 = new InitPopupObjByData('.PopUpBoxZi', dataZiDate);
-	popupObj10 = initPopupObjByData10.init('P2ziCanvas');//初始化此对象的渲染元素
+	popupObj10 = initPopupObjByData10.init('ziCanvas');//初始化此对象的渲染元素
 	initPopupObjByData11 = new InitPopupObjByData('.PopUpBoxZi', dataZiHour);
-	popupObj11 = initPopupObjByData11.init('P2ziCanvas');//初始化此对象的渲染元素
+	popupObj11 = initPopupObjByData11.init('ziCanvas');//初始化此对象的渲染元素
 	initPopCanvas1 = new InitPopCanvas(popupObj10);
 	initPopCanvas1.initCanvas();//绘制线图
 
@@ -137,8 +137,8 @@ $("body").on('click', '.PopUpBoxZi .tabLi', function () {
 })
 
 //自动站弹窗   线图的：日/小时 切换
-$("body").on('click', '.PopUpBoxZi .timeTypeSpan', function () {
-	$('.PopUpBoxZi .timeTypeSpan').removeClass('active');
+$("body").on('click', '.PopUpBoxZi .TimeTypeSpan', function () {
+	$('.PopUpBoxZi .TimeTypeSpan').removeClass('active');
 	$(this).toggleClass('active');
 	var type = $(this).attr('data-name');
 	if (type === 'hour') {
@@ -167,11 +167,11 @@ function mapToggle2() {
 		if (type === "Compliance") {
 			mainActive = 'MapIndex1';
 			$('.LeftSummaryTitle').html('水质达标状况');
-			$('.P2RightBox').css({ display: 'none' });
+			$('.IndexRightBox').css({ display: 'none' });
 		} else if (type === "WaterMonitor") {
 			mainActive = 'MapIndex';
 			$('.LeftSummaryTitle').html('水质监测状况');
-			$('.P2RightBox').css({ display: 'block' });
+			$('.IndexRightBox').css({ display: 'block' });
 		}
 	})
 }

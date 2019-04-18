@@ -59,7 +59,7 @@ li {
 table{
 	border-collapse: collapse;
 }
-.flexBlock{
+.FlexBlock{
 	display: flex;
 	display: -webkit-box; 
    display: -moz-box;  
@@ -69,19 +69,19 @@ table{
 .flex1{
    flex: 1
 }
-.inlineBlock{
+.InlineBlock{
 	display: inline-block;
 }
 .clear{
 	clear: both;
 }
-.floatLeft{
+.FloatLeft{
 	float: left;
 }
-.floatRight{
+.FloatRight{
 	float: right;
 }
-.alignRight{
+.AlignRight{
 	text-align: right!important;
 }
 

@@ -105,9 +105,8 @@ function setOptionfun(color, radius) {
     };
     return option;
 }
-/* 地图div的交互   */
 
-//tabLi
+/* 地图div的交互   start*/
 $("body").on('click', '.TypeTab .NavLi', function () {
     $('.TypeTab .NavLi').removeClass('active');
     $(this).addClass('active');
@@ -117,6 +116,7 @@ $("body").on('click', '.TypeTab .NavLi', function () {
     $('.SkyLeftSummary').removeClass('show');
     $('.SkyLeftSummary[data-type=' + type + ']').addClass('show');
 })
+
 
 $("body").on('click', '.GisTabLi', function () {
     $('.GisTabLi').removeClass('active');
@@ -135,6 +135,7 @@ $("body").on('click', '.GisTabLi', function () {
     $('.MapBox[data-type=' + type + ']').addClass('active');
 
 })
+/* 地图div的交互   end*/
 
 /* 排名相关点击交互   */
 function RankToggle() {
@@ -379,8 +380,8 @@ $("body").on('click', '.lineGraph', function () {
         myChart5.setOption(option42);
     }
 })
-//切换左列区域的线图  优良天数比例和PM2.5年均浓度
 
+//切换左列区域的线图  优良天数比例和PM2.5年均浓度  
 $("body").on('click', '.WarnTab .NavLi', function () {
     $('.WarnTab .NavLi').removeClass('active');
     $(this).addClass('active');
